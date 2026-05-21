@@ -1,0 +1,45 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real
+-- Install configuration: ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/launch
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/launch/go2_real.launch.py
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/params
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/params/go2_nav2_real_params.yaml
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/rviz
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/rviz/go2_nav2_real.rviz
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/scripts
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/scripts/start_go2_real.sh
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/scripts/setup_sdk.sh
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/ament_index/resource_index/package_run_dependencies/go2_real
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/ament_index/resource_index/parent_prefix_path/go2_real
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/environment/ament_prefix_path.sh
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/environment/ament_prefix_path.dsv
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/environment/path.sh
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/environment/path.dsv
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/local_setup.bash
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/local_setup.sh
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/local_setup.zsh
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/local_setup.dsv
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/package.dsv
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/ament_index/resource_index/packages/go2_real
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/cmake/go2_realConfig.cmake
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/cmake/go2_realConfig-version.cmake
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/package.xml

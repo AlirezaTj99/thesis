@@ -1,0 +1,282 @@
+[0.227s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'unitree_go', 'unitree_api', 'unitree_hg']
+[0.227s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fdb8580c550>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=['unitree_go', 'unitree_api', 'unitree_hg'], packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=8, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fdb8580c550>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fdb8580ca60>)
+[0.409s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.409s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.409s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.409s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.409s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.409s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.409s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/alireza/thesis1/navigation_go2/go2_ws'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extensions ['ignore', 'ignore_ament_install']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extension 'ignore'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extension 'ignore_ament_install'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extensions ['colcon_pkg']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extension 'colcon_pkg'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extensions ['colcon_meta']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extension 'colcon_meta'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extensions ['ros']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extension 'ros'
+[0.429s] DEBUG:colcon.colcon_core.package_identification:Package 'src/go2_description' with type 'ros.ament_cmake' and name 'go2_description'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extension 'ignore'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extension 'ignore_ament_install'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extensions ['colcon_pkg']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extension 'colcon_pkg'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extensions ['colcon_meta']
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extension 'colcon_meta'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extensions ['ros']
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extension 'ros'
+[0.430s] DEBUG:colcon.colcon_core.package_identification:Package 'src/go2_gazebo' with type 'ros.ament_cmake' and name 'go2_gazebo'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extensions ['ignore', 'ignore_ament_install']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extension 'ignore'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extension 'ignore_ament_install'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extensions ['colcon_pkg']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extension 'colcon_pkg'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extensions ['colcon_meta']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extension 'colcon_meta'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extensions ['ros']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extension 'ros'
+[0.432s] DEBUG:colcon.colcon_core.package_identification:Package 'src/go2_real' with type 'ros.ament_cmake' and name 'go2_real'
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['ignore', 'ignore_ament_install']
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ignore'
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ignore_ament_install'
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['colcon_pkg']
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'colcon_pkg'
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['colcon_meta']
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'colcon_meta'
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['ros']
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ros'
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['cmake', 'python']
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'cmake'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'python'
+[0.435s] DEBUG:colcon.colcon_core.package_identification:Package 'src/livox_ros_driver2' with type 'cmake' and name 'livox_ros_driver2'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extensions ['ignore', 'ignore_ament_install']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extension 'ignore'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extension 'ignore_ament_install'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extensions ['colcon_pkg']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extension 'colcon_pkg'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extensions ['colcon_meta']
+[0.436s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extension 'colcon_meta'
+[0.436s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extensions ['ros']
+[0.436s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extension 'ros'
+[0.436s] DEBUG:colcon.colcon_core.package_identification:Package 'src/unitree_api' with type 'ros.ament_cmake' and name 'unitree_api'
+[0.436s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extensions ['ignore', 'ignore_ament_install']
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extension 'ignore'
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extension 'ignore_ament_install'
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extensions ['colcon_pkg']
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extension 'colcon_pkg'
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extensions ['colcon_meta']
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extension 'colcon_meta'
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extensions ['ros']
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extension 'ros'
+[0.438s] DEBUG:colcon.colcon_core.package_identification:Package 'src/unitree_go' with type 'ros.ament_cmake' and name 'unitree_go'
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extensions ['ignore', 'ignore_ament_install']
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extension 'ignore'
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extension 'ignore_ament_install'
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extensions ['colcon_pkg']
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extension 'colcon_pkg'
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extensions ['colcon_meta']
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extension 'colcon_meta'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extensions ['ros']
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extension 'ros'
+[0.440s] DEBUG:colcon.colcon_core.package_identification:Package 'src/unitree_hg' with type 'ros.ament_cmake' and name 'unitree_hg'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extension 'ignore'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extension 'ignore_ament_install'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extensions ['colcon_pkg']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extension 'colcon_pkg'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extensions ['colcon_meta']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extension 'colcon_meta'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extensions ['ros']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extension 'ros'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extensions ['cmake', 'python']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extension 'cmake'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extension 'python'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extensions ['python_setup_py']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extension 'python_setup_py'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/cyclonedds_ws) by extensions ['ignore', 'ignore_ament_install']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/cyclonedds_ws) by extension 'ignore'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/cyclonedds_ws) ignored
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extensions ['ignore', 'ignore_ament_install']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extension 'ignore'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extension 'ignore_ament_install'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extensions ['colcon_pkg']
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extension 'colcon_pkg'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extensions ['colcon_meta']
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extension 'colcon_meta'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extensions ['ros']
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extension 'ros'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extensions ['cmake', 'python']
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extension 'cmake'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extension 'python'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extensions ['python_setup_py']
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extension 'python_setup_py'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extensions ['ignore', 'ignore_ament_install']
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extension 'ignore'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extension 'ignore_ament_install'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extensions ['colcon_pkg']
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extension 'colcon_pkg'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extensions ['colcon_meta']
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extension 'colcon_meta'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extensions ['ros']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extension 'ros'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extensions ['cmake', 'python']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extension 'cmake'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extension 'python'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extensions ['python_setup_py']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extension 'python_setup_py'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extensions ['ignore', 'ignore_ament_install']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extension 'ignore'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extension 'ignore_ament_install'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extensions ['colcon_pkg']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extension 'colcon_pkg'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extensions ['colcon_meta']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extension 'colcon_meta'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extensions ['ros']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extension 'ros'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extensions ['cmake', 'python']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extension 'cmake'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extension 'python'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extensions ['python_setup_py']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extension 'python_setup_py'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extensions ['ignore', 'ignore_ament_install']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extension 'ignore'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extension 'ignore_ament_install'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extensions ['colcon_pkg']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extension 'colcon_pkg'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extensions ['colcon_meta']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extension 'colcon_meta'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extensions ['ros']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extension 'ros'
+[0.445s] DEBUG:colcon.colcon_core.package_identification:Package 'src/unitree_ros2/example/src' with type 'ros.ament_cmake' and name 'unitree_ros2_example'
+[0.445s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.445s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.445s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.446s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.446s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.464s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'go2_description' in 'src/go2_description'
+[0.464s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'livox_ros_driver2' in 'src/livox_ros_driver2'
+[0.464s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'go2_gazebo' in 'src/go2_gazebo'
+[0.464s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'unitree_ros2_example' in 'src/unitree_ros2/example/src'
+[0.464s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'go2_real' in 'src/go2_real'
+[0.465s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.465s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.468s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 372 installed packages in /opt/ros/foxy
+[0.471s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.573s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_args' from command line to 'None'
+[0.573s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_target' from command line to 'None'
+[0.573s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.573s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_clean_cache' from command line to 'False'
+[0.573s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_clean_first' from command line to 'False'
+[0.573s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_force_configure' from command line to 'False'
+[0.573s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'ament_cmake_args' from command line to 'None'
+[0.573s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'catkin_cmake_args' from command line to 'None'
+[0.573s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.573s] DEBUG:colcon.colcon_core.verb:Building package 'unitree_api' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api', 'merge_install': False, 'path': '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api', 'symlink_install': False, 'test_result_base': None}
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_args' from command line to 'None'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_target' from command line to 'None'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_clean_cache' from command line to 'False'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_clean_first' from command line to 'False'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_force_configure' from command line to 'False'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'ament_cmake_args' from command line to 'None'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'catkin_cmake_args' from command line to 'None'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.574s] DEBUG:colcon.colcon_core.verb:Building package 'unitree_go' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_go', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go', 'merge_install': False, 'path': '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_go', 'symlink_install': False, 'test_result_base': None}
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'cmake_args' from command line to 'None'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'cmake_target' from command line to 'None'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'cmake_clean_first' from command line to 'False'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'cmake_force_configure' from command line to 'False'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'ament_cmake_args' from command line to 'None'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.575s] DEBUG:colcon.colcon_core.verb:Building package 'unitree_hg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg', 'merge_install': False, 'path': '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg', 'symlink_install': False, 'test_result_base': None}
+[0.575s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.576s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.576s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api' with build type 'ament_cmake'
+[0.576s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api'
+[0.579s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.579s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.579s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.584s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_go' with build type 'ament_cmake'
+[0.584s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_go'
+[0.585s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.585s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.591s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg' with build type 'ament_cmake'
+[0.591s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg'
+[0.592s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.592s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.605s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api
+[0.610s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_go': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_go -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go
+[0.615s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg
+[2.024s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api
+[2.040s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(unitree_api)
+[2.045s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api' for CMake module files
+[2.047s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api' for CMake config files
+[2.047s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/bin'
+[2.047s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/pkgconfig/unitree_api.pc'
+[2.048s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages'
+[2.048s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/bin'
+[2.049s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/package.ps1'
+[2.051s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/package.dsv'
+[2.052s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/package.sh'
+[2.053s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/package.bash'
+[2.054s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/package.zsh'
+[2.055s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/colcon-core/packages/unitree_api)
+[2.291s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.291s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.291s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[2.291s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.298s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.298s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.298s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.322s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.322s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alireza/thesis1/navigation_go2/go2_ws/install/local_setup.ps1'
+[2.324s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/alireza/thesis1/navigation_go2/go2_ws/install/_local_setup_util_ps1.py'
+[2.325s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alireza/thesis1/navigation_go2/go2_ws/install/setup.ps1'
+[2.327s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alireza/thesis1/navigation_go2/go2_ws/install/local_setup.sh'
+[2.327s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/alireza/thesis1/navigation_go2/go2_ws/install/_local_setup_util_sh.py'
+[2.328s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alireza/thesis1/navigation_go2/go2_ws/install/setup.sh'
+[2.329s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alireza/thesis1/navigation_go2/go2_ws/install/local_setup.bash'
+[2.330s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alireza/thesis1/navigation_go2/go2_ws/install/setup.bash'
+[2.331s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alireza/thesis1/navigation_go2/go2_ws/install/local_setup.zsh'
+[2.331s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alireza/thesis1/navigation_go2/go2_ws/install/setup.zsh'

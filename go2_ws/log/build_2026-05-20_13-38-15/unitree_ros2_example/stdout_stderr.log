@@ -1,0 +1,267 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found unitree_go: 0.0.0 (/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/foxy/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found unitree_hg: 0.0.0 (/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake)
+-- Found unitree_api: 0.0.0 (/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake)
+-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found rosbag2_cpp: 0.3.11 (/opt/ros/foxy/share/rosbag2_cpp/cmake)
+-- Setting yaml-cpp_DIR to: '/opt/ros/foxy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/lib/cmake/yaml-cpp'
+-- Found yaml-cpp version 0.6.2
+-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include;/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common;/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/nlohmann
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROS_EDITION
+
+
+-- Build files have been written to: /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example
+Scanning dependencies of target read_low_state_hg
+Scanning dependencies of target read_wireless_controller
+Scanning dependencies of target h2_ankle_swing_example
+Scanning dependencies of target g1_ankle_swing_example
+Scanning dependencies of target low_level_ctrl_hg
+Scanning dependencies of target go2_robot_state_client
+[  1%] Building CXX object CMakeFiles/read_low_state_hg.dir/src/read_low_state_hg.cpp.o
+Scanning dependencies of target b2w_sport_client
+[  3%] Building CXX object CMakeFiles/read_wireless_controller.dir/src/read_wireless_controller.cpp.o
+[  4%] Building CXX object CMakeFiles/h2_ankle_swing_example.dir/src/h2/low_level/h2_ankle_swing_example.cpp.o
+Scanning dependencies of target g1_arm_sdk_dds_example
+[  6%] Building CXX object CMakeFiles/g1_ankle_swing_example.dir/src/g1/lowlevel/g1_ankle_swing_example.cpp.o
+[  7%] Building CXX object CMakeFiles/low_level_ctrl_hg.dir/src/h1-2/lowlevel/low_level_ctrl_hg.cpp.o
+[  9%] Building CXX object CMakeFiles/go2_robot_state_client.dir/src/go2/go2_robot_state_client.cpp.o
+[ 11%] Building CXX object CMakeFiles/b2w_sport_client.dir/src/b2w/b2w_sport_client.cpp.o
+[ 12%] Building CXX object CMakeFiles/g1_arm_sdk_dds_example.dir/src/g1/high_level/g1_arm_sdk_dds_example.cpp.o
+[ 14%] Building CXX object CMakeFiles/b2w_sport_client.dir/src/common/ros2_b2_sport_client.cpp.o
+[ 15%] Linking CXX executable read_low_state_hg
+[ 17%] Building CXX object CMakeFiles/g1_arm_sdk_dds_example.dir/src/common/motor_crc.cpp.o
+[ 17%] Built target read_low_state_hg
+[ 19%] Building CXX object CMakeFiles/low_level_ctrl_hg.dir/src/common/motor_crc_hg.cpp.o
+[ 20%] Building CXX object CMakeFiles/go2_robot_state_client.dir/src/common/motor_crc.cpp.o
+[ 22%] Building CXX object CMakeFiles/h2_ankle_swing_example.dir/src/common/motor_crc_hg.cpp.o
+[ 23%] Linking CXX executable read_wireless_controller
+[ 23%] Built target read_wireless_controller
+Scanning dependencies of target read_low_state
+[ 25%] Building CXX object CMakeFiles/read_low_state.dir/src/read_low_state.cpp.o
+[ 26%] Linking CXX executable g1_arm_sdk_dds_example
+[ 26%] Built target g1_arm_sdk_dds_example
+[ 28%] Linking CXX executable low_level_ctrl_hg
+Scanning dependencies of target low_level_ctrl
+[ 30%] Building CXX object CMakeFiles/g1_ankle_swing_example.dir/src/common/motor_crc_hg.cpp.o
+[ 31%] Building CXX object CMakeFiles/low_level_ctrl.dir/src/low_level_ctrl.cpp.o
+Scanning dependencies of target h2_loco_client
+[ 33%] Building CXX object CMakeFiles/h2_loco_client.dir/src/h2/high_level/h2_loco_client.cpp.o
+[ 33%] Built target low_level_ctrl_hg
+In file included from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/b2_base_client.hpp:16,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/h2/h2_loco_client.hpp:11,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/src/h2/high_level/h2_loco_client.cpp:9:
+/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/ut_errror.hpp:13:59: warning: backslash-newline at end of file
+   13 | #define UT_PRINT_ERR(code, error)                         \
+      |                                                            
+Scanning dependencies of target read_motion_state
+[ 34%] Building CXX object CMakeFiles/read_motion_state.dir/src/read_motion_state.cpp.o
+[ 36%] Linking CXX executable h2_ankle_swing_example
+[ 38%] Linking CXX executable b2w_sport_client
+[ 38%] Built target h2_ankle_swing_example
+Scanning dependencies of target go2_sport_client
+[ 39%] Building CXX object CMakeFiles/go2_sport_client.dir/src/go2/go2_sport_client.cpp.o
+[ 39%] Built target b2w_sport_client
+[ 41%] Building CXX object CMakeFiles/go2_sport_client.dir/src/common/ros2_sport_client.cpp.o
+[ 42%] Linking CXX executable g1_ankle_swing_example
+[ 44%] Linking CXX executable go2_robot_state_client
+[ 44%] Built target g1_ankle_swing_example
+Scanning dependencies of target b2_stand_example
+[ 46%] Building CXX object CMakeFiles/b2_stand_example.dir/src/b2/b2_stand_example.cpp.o
+In file included from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/b2_base_client.hpp:16,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/b2/b2_motion_switch_client.hpp:11,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/src/b2/b2_stand_example.cpp:11:
+/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/ut_errror.hpp:13:59: warning: backslash-newline at end of file
+   13 | #define UT_PRINT_ERR(code, error)                         \
+      |                                                            
+[ 46%] Built target go2_robot_state_client
+Scanning dependencies of target go2_stand_example
+[ 47%] Building CXX object CMakeFiles/go2_stand_example.dir/src/go2/go2_stand_example.cpp.o
+[ 49%] Building CXX object CMakeFiles/low_level_ctrl.dir/src/common/motor_crc.cpp.o
+[ 50%] Linking CXX executable low_level_ctrl
+[ 50%] Built target low_level_ctrl
+[ 52%] Linking CXX executable read_low_state
+[ 53%] Linking CXX executable read_motion_state
+[ 53%] Built target read_low_state
+[ 53%] Built target read_motion_state
+[ 55%] Building CXX object CMakeFiles/go2_stand_example.dir/src/common/motor_crc.cpp.o
+[ 57%] Linking CXX executable h2_loco_client
+[ 58%] Linking CXX executable go2_sport_client
+[ 58%] Built target h2_loco_client
+[ 58%] Built target go2_sport_client
+[ 60%] Linking CXX executable go2_stand_example
+[ 60%] Built target go2_stand_example
+Scanning dependencies of target g1_dual_arm_example
+[ 61%] Building CXX object CMakeFiles/g1_dual_arm_example.dir/src/g1/lowlevel/g1_dual_arm_example.cpp.o
+[ 63%] Building CXX object CMakeFiles/b2_stand_example.dir/src/common/motor_crc.cpp.o
+In file included from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/base_client.hpp:11,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/g1/g1_motion_switch_client.hpp:11,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/src/g1/lowlevel/g1_dual_arm_example.cpp:18:
+/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/ut_errror.hpp:13:59: warning: backslash-newline at end of file
+   13 | #define UT_PRINT_ERR(code, error)                         \
+      |                                                            
+Scanning dependencies of target g1_arm_action_example
+[ 65%] Building CXX object CMakeFiles/g1_arm_action_example.dir/src/g1/high_level/g1_arm_action_example.cpp.o
+Scanning dependencies of target b2w_stand_example
+[ 66%] Building CXX object CMakeFiles/b2w_stand_example.dir/src/b2w/b2w_stand_example.cpp.o
+In file included from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/src/g1/high_level/g1_arm_action_example.cpp:11:
+/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/ut_errror.hpp:13:59: warning: backslash-newline at end of file
+   13 | #define UT_PRINT_ERR(code, error)                         \
+      |                                                            
+In file included from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/b2_base_client.hpp:16,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/b2/b2_motion_switch_client.hpp:11,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/src/b2w/b2w_stand_example.cpp:11:
+/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/ut_errror.hpp:13:59: warning: backslash-newline at end of file
+   13 | #define UT_PRINT_ERR(code, error)                         \
+      |                                                            
+Scanning dependencies of target g1_audio_client_example
+[ 68%] Building CXX object CMakeFiles/g1_audio_client_example.dir/src/g1/audio_client/g1_audio_client_example.cpp.o
+In file included from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/base_client.hpp:11,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/g1/g1_audio_client.hpp:6,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/src/g1/audio_client/g1_audio_client_example.cpp:11:
+/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/ut_errror.hpp:13:59: warning: backslash-newline at end of file
+   13 | #define UT_PRINT_ERR(code, error)                         \
+      |                                                            
+[ 69%] Linking CXX executable b2_stand_example
+Scanning dependencies of target g1_loco_client_example
+[ 71%] Building CXX object CMakeFiles/g1_loco_client_example.dir/src/g1/high_level/loco_client_example.cpp.o
+[ 71%] Built target b2_stand_example
+[ 73%] Building CXX object CMakeFiles/g1_loco_client_example.dir/src/common/motor_crc.cpp.o
+In file included from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/base_client.hpp:11,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/g1/g1_loco_client.hpp:10,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/src/g1/high_level/loco_client_example.cpp:3:
+/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/ut_errror.hpp:13:59: warning: backslash-newline at end of file
+   13 | #define UT_PRINT_ERR(code, error)                         \
+      |                                                            
+Scanning dependencies of target g1_dex3_example
+[ 74%] Building CXX object CMakeFiles/g1_dex3_example.dir/src/g1/dex3/g1_dex3_example.cpp.o
+In file included from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/src/g1/high_level/g1_arm_action_example.cpp:12:
+/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/g1/g1_arm_action_client.hpp:45:51: warning: extra ‘;’ [-Wpedantic]
+   45 |     "sport_services_interface#Expert%20interface");
+      |                                                   ^
+[ 76%] Linking CXX executable g1_audio_client_example
+[ 77%] Building CXX object CMakeFiles/g1_dex3_example.dir/src/common/motor_crc.cpp.o
+[ 79%] Building CXX object CMakeFiles/g1_arm_action_example.dir/src/common/motor_crc.cpp.o
+[ 79%] Built target g1_audio_client_example
+[ 80%] Building CXX object CMakeFiles/g1_dual_arm_example.dir/src/common/motor_crc_hg.cpp.o
+[ 82%] Building CXX object CMakeFiles/b2w_stand_example.dir/src/common/motor_crc.cpp.o
+[ 84%] Linking CXX executable g1_loco_client_example
+[ 84%] Built target g1_loco_client_example
+[ 85%] Linking CXX executable g1_dex3_example
+[ 87%] Linking CXX executable g1_arm_action_example
+[ 87%] Built target g1_dex3_example
+[ 87%] Built target g1_arm_action_example
+[ 88%] Linking CXX executable g1_dual_arm_example
+[ 90%] Linking CXX executable b2w_stand_example
+[ 90%] Built target g1_dual_arm_example
+[ 90%] Built target b2w_stand_example
+Scanning dependencies of target b2_sport_client
+[ 92%] Building CXX object CMakeFiles/b2_sport_client.dir/src/b2/b2_sport_client.cpp.o
+[ 93%] Building CXX object CMakeFiles/b2_sport_client.dir/src/common/ros2_b2_sport_client.cpp.o
+[ 95%] Linking CXX executable b2_sport_client
+[ 95%] Built target b2_sport_client
+Scanning dependencies of target g1_low_level_example
+[ 96%] Building CXX object CMakeFiles/g1_low_level_example.dir/src/g1/lowlevel/g1_low_level_example.cpp.o
+[ 98%] Building CXX object CMakeFiles/g1_low_level_example.dir/src/common/motor_crc_hg.cpp.o
+[100%] Linking CXX executable g1_low_level_example
+[100%] Built target g1_low_level_example
+-- Install configuration: ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/low_level_ctrl
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/low_level_ctrl" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/low_level_ctrl_hg
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/low_level_ctrl_hg" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_low_level_example
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_low_level_example" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/read_low_state
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/read_low_state" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/read_low_state_hg
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/read_low_state_hg" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/read_motion_state
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/read_motion_state" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/read_wireless_controller
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/read_wireless_controller" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/go2_sport_client
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/go2_sport_client" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/go2_stand_example
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/go2_stand_example" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/go2_robot_state_client
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/go2_robot_state_client" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_arm_sdk_dds_example
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_arm_sdk_dds_example" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_arm_action_example
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_arm_action_example" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_dex3_example
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_dex3_example" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_loco_client_example
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_loco_client_example" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_ankle_swing_example
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_ankle_swing_example" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_dual_arm_example
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_dual_arm_example" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_audio_client_example
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_audio_client_example" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/h2_loco_client
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/h2_loco_client" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/h2_ankle_swing_example
+-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/h2_ankle_swing_example" to ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/ament_index/resource_index/package_run_dependencies/unitree_ros2_example
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/ament_index/resource_index/parent_prefix_path/unitree_ros2_example
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/environment/ament_prefix_path.sh
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/environment/ament_prefix_path.dsv
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/environment/path.sh
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/environment/path.dsv
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/local_setup.bash
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/local_setup.sh
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/local_setup.zsh
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/local_setup.dsv
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/package.dsv
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/ament_index/resource_index/packages/unitree_ros2_example
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/cmake/unitree_ros2_exampleConfig.cmake
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/cmake/unitree_ros2_exampleConfig-version.cmake
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/package.xml

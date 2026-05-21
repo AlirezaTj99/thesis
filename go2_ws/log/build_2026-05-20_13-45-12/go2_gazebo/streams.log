@@ -1,0 +1,43 @@
+[0.046s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo': AMENT_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/go2_gazebo -DROS_EDITION=ROS2 -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo
+[0.089s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.158s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.753s] -- Configuring done
+[0.763s] -- Generating done
+[0.766s] -- Build files have been written to: /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo
+[0.777s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo' returned '0': AMENT_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/go2_gazebo -DROS_EDITION=ROS2 -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo
+[0.779s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo': AMENT_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo -- -j8 -l8
+[0.936s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo' returned '0': AMENT_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo -- -j8 -l8
+[0.937s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo': AMENT_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo
+[0.990s] -- Install configuration: ""
+[0.992s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/launch
+[0.994s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/launch/go2_sim.launch.py
+[0.995s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/launch/set_initial_pose.py
+[0.996s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/params
+[0.997s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/params/slam_toolbox_params.yaml
+[0.998s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/params/go2_nav2_params.yaml
+[0.999s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/maps
+[1.001s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/maps/turtlebot3_world.yaml
+[1.003s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/maps/turtlebot3_world.pgm
+[1.004s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/rviz
+[1.006s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/rviz/go2_nav2.rviz
+[1.007s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/worlds
+[1.008s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/worlds/go2_world.world
+[1.009s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/worlds/go2_arena.world
+[1.011s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/lib/go2_gazebo/go2_viz.py
+[1.012s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/lib/go2_gazebo/scan_filter.py
+[1.014s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/ament_index/resource_index/package_run_dependencies/go2_gazebo
+[1.016s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/ament_index/resource_index/parent_prefix_path/go2_gazebo
+[1.018s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/environment/ament_prefix_path.sh
+[1.020s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/environment/ament_prefix_path.dsv
+[1.022s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/environment/path.sh
+[1.024s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/environment/path.dsv
+[1.026s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/local_setup.bash
+[1.028s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/local_setup.sh
+[1.030s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/local_setup.zsh
+[1.031s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/local_setup.dsv
+[1.034s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/package.dsv
+[1.036s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/ament_index/resource_index/packages/go2_gazebo
+[1.037s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/cmake/go2_gazeboConfig.cmake
+[1.038s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/cmake/go2_gazeboConfig-version.cmake
+[1.040s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/package.xml
+[1.054s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo' returned '0': AMENT_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo

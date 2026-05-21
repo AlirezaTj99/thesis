@@ -1,0 +1,17 @@
+/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/urdf/go2_real.urdf.xacro
+/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/urdf/go2.urdf.xacro
+/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/ament_index/resource_index/package_run_dependencies/go2_description
+/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/ament_index/resource_index/parent_prefix_path/go2_description
+/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/environment/ament_prefix_path.sh
+/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/environment/ament_prefix_path.dsv
+/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/environment/path.sh
+/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/environment/path.dsv
+/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/local_setup.bash
+/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/local_setup.sh
+/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/local_setup.zsh
+/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/local_setup.dsv
+/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/package.dsv
+/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/ament_index/resource_index/packages/go2_description
+/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/cmake/go2_descriptionConfig.cmake
+/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/cmake/go2_descriptionConfig-version.cmake
+/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/package.xml

@@ -1,0 +1,13 @@
+{
+  "package_name": "unitree_api",
+  "non_idl_tuples": [
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api:msg/Request.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api:msg/RequestHeader.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api:msg/RequestIdentity.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api:msg/RequestLease.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api:msg/RequestPolicy.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api:msg/Response.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api:msg/ResponseHeader.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api:msg/ResponseStatus.msg"
+  ]
+}

@@ -1,0 +1,9 @@
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real/CMakeFiles/install/strip.dir
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real/CMakeFiles/install.dir
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real/CMakeFiles/list_install_components.dir
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real/CMakeFiles/rebuild_cache.dir
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real/CMakeFiles/edit_cache.dir
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real/CMakeFiles/test.dir
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real/CMakeFiles/install/local.dir
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real/CMakeFiles/go2_real_uninstall.dir
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real/CMakeFiles/uninstall.dir

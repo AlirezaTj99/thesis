@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="go2_arena">
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <scene>
+      <shadows>false</shadows>
+    </scene>
+
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>0 0 12 0 1.5707 0</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+
+    <physics type="ode">
+      <real_time_update_rate>1000.0</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>150</iters>
+          <sor>1.4</sor>
+          <use_dynamic_moi_rescaling>1</use_dynamic_moi_rescaling>
+        </solver>
+      </ode>
+    </physics>
+
+    <!-- 6 m × 6 m flat arena  (x: -3..+3,  y: -3..+3) -->
+    <!-- Walls are 0.5 m tall so the LiDAR sees them regardless of robot pose -->
+
+    <model name="wall_north">
+      <static>true</static>
+      <pose>0 3.075 0.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>6.3 0.15 0.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>6.3 0.15 0.5</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient><diffuse>0.6 0.6 0.6 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_south">
+      <static>true</static>
+      <pose>0 -3.075 0.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>6.3 0.15 0.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>6.3 0.15 0.5</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient><diffuse>0.6 0.6 0.6 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_east">
+      <static>true</static>
+      <pose>3.075 0 0.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.15 6.0 0.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.15 6.0 0.5</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient><diffuse>0.6 0.6 0.6 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_west">
+      <static>true</static>
+      <pose>-3.075 0 0.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.15 6.0 0.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.15 6.0 0.5</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient><diffuse>0.6 0.6 0.6 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>

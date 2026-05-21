@@ -1,0 +1,44 @@
+[0.023s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg
+[0.115s] -- The C compiler identification is GNU 9.4.0
+[0.198s] -- The CXX compiler identification is GNU 9.4.0
+[0.202s] -- Check for working C compiler: /usr/bin/cc
+[0.308s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.310s] -- Detecting C compiler ABI info
+[0.412s] -- Detecting C compiler ABI info - done
+[0.427s] -- Detecting C compile features
+[0.427s] -- Detecting C compile features - done
+[0.430s] -- Check for working CXX compiler: /usr/bin/c++
+[0.546s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.547s] -- Detecting CXX compiler ABI info
+[0.663s] -- Detecting CXX compiler ABI info - done
+[0.678s] -- Detecting CXX compile features
+[0.679s] -- Detecting CXX compile features - done
+[0.682s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.718s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.718s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.055s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.114s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.127s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.265s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.314s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.465s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.636s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.674s] CMake Error at CMakeLists.txt:26 (find_package):
+[1.674s]   By not providing "Findrosidl_generator_dds_idl.cmake" in CMAKE_MODULE_PATH
+[1.674s]   this project has asked CMake to find a package configuration file provided
+[1.674s]   by "rosidl_generator_dds_idl", but CMake did not find one.
+[1.674s] 
+[1.674s]   Could not find a package configuration file provided by
+[1.674s]   "rosidl_generator_dds_idl" with any of the following names:
+[1.674s] 
+[1.675s]     rosidl_generator_dds_idlConfig.cmake
+[1.675s]     rosidl_generator_dds_idl-config.cmake
+[1.675s] 
+[1.675s]   Add the installation prefix of "rosidl_generator_dds_idl" to
+[1.675s]   CMAKE_PREFIX_PATH or set "rosidl_generator_dds_idl_DIR" to a directory
+[1.675s]   containing one of the above files.  If "rosidl_generator_dds_idl" provides
+[1.675s]   a separate development package or SDK, be sure it has been installed.
+[1.675s] 
+[1.675s] 
+[1.676s] -- Configuring incomplete, errors occurred!
+[1.676s] See also "/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg/CMakeFiles/CMakeOutput.log".

@@ -1,0 +1,28 @@
+[0.012s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api
+[0.027s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.051s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.262s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[0.286s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.290s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.420s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.508s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.528s] CMake Error at CMakeLists.txt:26 (find_package):
+[0.528s]   By not providing "Findrosidl_generator_dds_idl.cmake" in CMAKE_MODULE_PATH
+[0.529s]   this project has asked CMake to find a package configuration file provided
+[0.529s]   by "rosidl_generator_dds_idl", but CMake did not find one.
+[0.529s] 
+[0.529s]   Could not find a package configuration file provided by
+[0.529s]   "rosidl_generator_dds_idl" with any of the following names:
+[0.529s] 
+[0.529s]     rosidl_generator_dds_idlConfig.cmake
+[0.529s]     rosidl_generator_dds_idl-config.cmake
+[0.529s] 
+[0.530s]   Add the installation prefix of "rosidl_generator_dds_idl" to
+[0.530s]   CMAKE_PREFIX_PATH or set "rosidl_generator_dds_idl_DIR" to a directory
+[0.530s]   containing one of the above files.  If "rosidl_generator_dds_idl" provides
+[0.530s]   a separate development package or SDK, be sure it has been installed.
+[0.530s] 
+[0.530s] 
+[0.530s] -- Configuring incomplete, errors occurred!
+[0.531s] See also "/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api/CMakeFiles/CMakeOutput.log".
+[0.536s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api

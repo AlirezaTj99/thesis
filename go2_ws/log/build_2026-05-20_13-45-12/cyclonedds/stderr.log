@@ -1,0 +1,10 @@
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROS_EDITION
+
+
+../../../bin/idlc: symbol lookup error: ../../../bin/idlc: undefined symbol: DDS_XTypes_TypeObject_desc
+make[2]: *** [src/tools/ddsperf/CMakeFiles/ddsperf_types_generate.dir/build.make:63: src/tools/ddsperf/ddsperf_types.c] Error 127
+make[1]: *** [CMakeFiles/Makefile2:573: src/tools/ddsperf/CMakeFiles/ddsperf_types_generate.dir/all] Error 2
+make: *** [Makefile:152: all] Error 2

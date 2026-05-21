@@ -1,0 +1,50 @@
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    ROS_EDITION
+
+
+In file included from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/b2_base_client.hpp:16,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/h2/h2_loco_client.hpp:11,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/src/h2/high_level/h2_loco_client.cpp:9:
+/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/ut_errror.hpp:13:59: warning: backslash-newline at end of file
+   13 | #define UT_PRINT_ERR(code, error)                         \
+      |                                                            
+In file included from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/b2_base_client.hpp:16,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/b2/b2_motion_switch_client.hpp:11,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/src/b2/b2_stand_example.cpp:11:
+/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/ut_errror.hpp:13:59: warning: backslash-newline at end of file
+   13 | #define UT_PRINT_ERR(code, error)                         \
+      |                                                            
+In file included from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/base_client.hpp:11,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/g1/g1_motion_switch_client.hpp:11,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/src/g1/lowlevel/g1_dual_arm_example.cpp:18:
+/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/ut_errror.hpp:13:59: warning: backslash-newline at end of file
+   13 | #define UT_PRINT_ERR(code, error)                         \
+      |                                                            
+In file included from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/src/g1/high_level/g1_arm_action_example.cpp:11:
+/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/ut_errror.hpp:13:59: warning: backslash-newline at end of file
+   13 | #define UT_PRINT_ERR(code, error)                         \
+      |                                                            
+In file included from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/b2_base_client.hpp:16,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/b2/b2_motion_switch_client.hpp:11,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/src/b2w/b2w_stand_example.cpp:11:
+/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/ut_errror.hpp:13:59: warning: backslash-newline at end of file
+   13 | #define UT_PRINT_ERR(code, error)                         \
+      |                                                            
+In file included from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/base_client.hpp:11,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/g1/g1_audio_client.hpp:6,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/src/g1/audio_client/g1_audio_client_example.cpp:11:
+/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/ut_errror.hpp:13:59: warning: backslash-newline at end of file
+   13 | #define UT_PRINT_ERR(code, error)                         \
+      |                                                            
+In file included from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/base_client.hpp:11,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/g1/g1_loco_client.hpp:10,
+                 from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/src/g1/high_level/loco_client_example.cpp:3:
+/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common/ut_errror.hpp:13:59: warning: backslash-newline at end of file
+   13 | #define UT_PRINT_ERR(code, error)                         \
+      |                                                            
+In file included from /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/src/g1/high_level/g1_arm_action_example.cpp:12:
+/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/g1/g1_arm_action_client.hpp:45:51: warning: extra ‘;’ [-Wpedantic]
+   45 |     "sport_services_interface#Expert%20interface");
+      |                                                   ^

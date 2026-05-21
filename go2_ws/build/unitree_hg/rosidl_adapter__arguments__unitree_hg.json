@@ -1,0 +1,16 @@
+{
+  "package_name": "unitree_hg",
+  "non_idl_tuples": [
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg:msg/BmsCmd.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg:msg/BmsState.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg:msg/HandCmd.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg:msg/HandState.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg:msg/IMUState.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg:msg/LowCmd.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg:msg/LowState.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg:msg/MainBoardState.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg:msg/MotorCmd.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg:msg/MotorState.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg:msg/PressSensorState.msg"
+  ]
+}

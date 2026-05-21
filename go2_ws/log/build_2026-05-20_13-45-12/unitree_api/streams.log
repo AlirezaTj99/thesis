@@ -1,0 +1,282 @@
+[0.047s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api -DROS_EDITION=ROS2 -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api
+[0.116s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.117s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.117s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.541s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[0.606s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.613s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.950s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.088s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.191s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[1.660s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[3.530s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.807s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.858s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[3.859s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[3.900s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.900s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[3.901s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[4.010s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[4.035s] -- Added test 'copyright' to check source files copyright and LICENSE
+[4.039s] -- Added test 'lint_cmake' to check CMake code style
+[4.042s] -- Added test 'xmllint' to check XML markup files
+[4.054s] -- Configuring done
+[4.251s] -- Generating done
+[4.311s] -- Build files have been written to: /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api
+[4.334s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api -DROS_EDITION=ROS2 -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api
+[4.339s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api -- -j8 -l8
+[4.506s] [  1%] Built target unitree_api__cpp
+[4.507s] [ 12%] Built target unitree_api__rosidl_generator_c
+[4.548s] [ 24%] Built target unitree_api__rosidl_typesupport_introspection_cpp
+[4.562s] [ 35%] Built target unitree_api__rosidl_typesupport_cpp
+[4.578s] [ 47%] Built target unitree_api__rosidl_typesupport_c
+[4.597s] [ 58%] Built target unitree_api__rosidl_typesupport_fastrtps_cpp
+[4.620s] [ 70%] Built target unitree_api__rosidl_typesupport_introspection_c
+[4.689s] [ 81%] Built target unitree_api__rosidl_typesupport_fastrtps_c
+[4.721s] [ 81%] Built target unitree_api
+[4.785s] [ 82%] Built target unitree_api__py
+[4.852s] [ 93%] Built target unitree_api__python
+[4.943s] [ 95%] Built target unitree_api__rosidl_typesupport_introspection_c__pyext
+[4.954s] [ 97%] Built target unitree_api__rosidl_typesupport_c__pyext
+[4.961s] [100%] Built target unitree_api__rosidl_typesupport_fastrtps_c__pyext
+[4.998s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api -- -j8 -l8
+[5.001s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api
+[5.108s] -- Install configuration: ""
+[5.110s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/ament_index/resource_index/rosidl_interfaces/unitree_api
+[5.182s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api
+[5.183s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg
+[5.184s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/response_status.h
+[5.184s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/request_lease.h
+[5.185s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail
+[5.185s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__type_support.h
+[5.186s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__type_support.h
+[5.187s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__struct.h
+[5.187s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__functions.h
+[5.188s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__functions.h
+[5.188s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__functions.h
+[5.189s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__functions.c
+[5.190s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__functions.h
+[5.190s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__struct.h
+[5.191s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__struct.h
+[5.191s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__struct.h
+[5.192s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__struct.h
+[5.192s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__functions.c
+[5.201s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__struct.h
+[5.202s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__struct.h
+[5.202s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__functions.c
+[5.203s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__functions.h
+[5.203s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__functions.c
+[5.204s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__type_support.h
+[5.204s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__struct.h
+[5.213s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__functions.c
+[5.214s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__type_support.h
+[5.214s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__type_support.h
+[5.215s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__functions.h
+[5.215s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__functions.c
+[5.216s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__type_support.h
+[5.216s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__type_support.h
+[5.217s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__functions.h
+[5.217s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__type_support.h
+[5.218s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__functions.c
+[5.218s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__functions.c
+[5.219s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__functions.h
+[5.219s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/response_header.h
+[5.220s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/request_header.h
+[5.220s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/rosidl_generator_c__visibility_control.h
+[5.220s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/request.h
+[5.225s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/request_identity.h
+[5.226s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/request_policy.h
+[5.227s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/response.h
+[5.227s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/environment/library_path.sh
+[5.228s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/environment/library_path.dsv
+[5.228s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/libunitree_api__rosidl_generator_c.so
+[5.229s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api
+[5.230s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg
+[5.230s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail
+[5.231s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__rosidl_typesupport_fastrtps_c.h
+[5.231s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__rosidl_typesupport_fastrtps_c.h
+[5.232s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__rosidl_typesupport_fastrtps_c.h
+[5.232s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__rosidl_typesupport_fastrtps_c.h
+[5.233s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__rosidl_typesupport_fastrtps_c.h
+[5.233s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__rosidl_typesupport_fastrtps_c.h
+[5.234s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__rosidl_typesupport_fastrtps_c.h
+[5.234s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__rosidl_typesupport_fastrtps_c.h
+[5.235s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.235s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/libunitree_api__rosidl_typesupport_fastrtps_c.so
+[5.236s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api
+[5.236s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg
+[5.237s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.237s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail
+[5.238s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__rosidl_typesupport_fastrtps_cpp.hpp
+[5.238s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__rosidl_typesupport_fastrtps_cpp.hpp
+[5.239s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__rosidl_typesupport_fastrtps_cpp.hpp
+[5.239s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__rosidl_typesupport_fastrtps_cpp.hpp
+[5.240s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__rosidl_typesupport_fastrtps_cpp.hpp
+[5.241s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__rosidl_typesupport_fastrtps_cpp.hpp
+[5.241s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__rosidl_typesupport_fastrtps_cpp.hpp
+[5.244s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__rosidl_typesupport_fastrtps_cpp.hpp
+[5.244s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/dds_fastrtps
+[5.253s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/libunitree_api__rosidl_typesupport_fastrtps_cpp.so
+[5.254s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api
+[5.254s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg
+[5.255s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.256s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail
+[5.256s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__rosidl_typesupport_introspection_c.h
+[5.257s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__type_support.c
+[5.257s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__type_support.c
+[5.258s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__type_support.c
+[5.258s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__type_support.c
+[5.258s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__rosidl_typesupport_introspection_c.h
+[5.259s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__rosidl_typesupport_introspection_c.h
+[5.260s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__type_support.c
+[5.260s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__rosidl_typesupport_introspection_c.h
+[5.265s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__rosidl_typesupport_introspection_c.h
+[5.266s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__rosidl_typesupport_introspection_c.h
+[5.266s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__type_support.c
+[5.267s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__rosidl_typesupport_introspection_c.h
+[5.267s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__type_support.c
+[5.268s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__rosidl_typesupport_introspection_c.h
+[5.270s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__type_support.c
+[5.270s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/libunitree_api__rosidl_typesupport_introspection_c.so
+[5.271s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/libunitree_api__rosidl_typesupport_c.so
+[5.271s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api
+[5.272s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg
+[5.272s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/request_policy.hpp
+[5.272s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/request_header.hpp
+[5.273s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/request_identity.hpp
+[5.273s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/rosidl_generator_cpp__visibility_control.hpp
+[5.274s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/response_header.hpp
+[5.274s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/response_status.hpp
+[5.275s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/request_lease.hpp
+[5.276s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/response.hpp
+[5.276s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail
+[5.277s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__builder.hpp
+[5.277s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__traits.hpp
+[5.278s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__struct.hpp
+[5.278s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__builder.hpp
+[5.279s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__traits.hpp
+[5.279s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__builder.hpp
+[5.280s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__struct.hpp
+[5.280s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__traits.hpp
+[5.280s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__builder.hpp
+[5.281s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__struct.hpp
+[5.282s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__builder.hpp
+[5.282s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__type_support.hpp
+[5.282s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__type_support.hpp
+[5.283s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__type_support.hpp
+[5.283s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__struct.hpp
+[5.284s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__type_support.hpp
+[5.284s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__builder.hpp
+[5.285s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__traits.hpp
+[5.285s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__traits.hpp
+[5.286s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__builder.hpp
+[5.286s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__struct.hpp
+[5.289s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__struct.hpp
+[5.290s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__traits.hpp
+[5.290s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__type_support.hpp
+[5.291s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__type_support.hpp
+[5.291s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__struct.hpp
+[5.292s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__traits.hpp
+[5.292s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__traits.hpp
+[5.293s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__builder.hpp
+[5.294s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__type_support.hpp
+[5.294s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__type_support.hpp
+[5.295s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__struct.hpp
+[5.295s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/request.hpp
+[5.296s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api
+[5.308s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg
+[5.309s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail
+[5.310s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__type_support.cpp
+[5.310s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__rosidl_typesupport_introspection_cpp.hpp
+[5.311s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__type_support.cpp
+[5.311s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request__rosidl_typesupport_introspection_cpp.hpp
+[5.312s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__rosidl_typesupport_introspection_cpp.hpp
+[5.313s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__type_support.cpp
+[5.313s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__rosidl_typesupport_introspection_cpp.hpp
+[5.314s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__type_support.cpp
+[5.314s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__rosidl_typesupport_introspection_cpp.hpp
+[5.315s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_lease__type_support.cpp
+[5.315s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_status__type_support.cpp
+[5.315s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_header__rosidl_typesupport_introspection_cpp.hpp
+[5.316s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_policy__type_support.cpp
+[5.316s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response_header__rosidl_typesupport_introspection_cpp.hpp
+[5.317s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/response__rosidl_typesupport_introspection_cpp.hpp
+[5.317s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/include/unitree_api/msg/detail/request_identity__type_support.cpp
+[5.319s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/libunitree_api__rosidl_typesupport_introspection_cpp.so
+[5.320s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/libunitree_api__rosidl_typesupport_cpp.so
+[5.324s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/environment/pythonpath.sh
+[5.324s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/environment/pythonpath.dsv
+[5.325s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/__init__.py
+[5.482s] Compiling '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/__init__.py'...
+[5.545s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg
+[5.545s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_response_header.py
+[5.546s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_request_policy_s.c
+[5.547s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_request_identity.py
+[5.547s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/__init__.py
+[5.548s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_request_s.c
+[5.548s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_request_lease_s.c
+[5.549s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_response_header_s.c
+[5.549s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_request_identity_s.c
+[5.550s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_response_s.c
+[5.551s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_request_header_s.c
+[5.552s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_request.py
+[5.552s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_request_policy.py
+[5.553s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_response_status_s.c
+[5.553s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_response_status.py
+[5.554s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_request_lease.py
+[5.555s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_request_header.py
+[5.557s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/msg/_response.py
+[5.560s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/unitree_api_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[5.577s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/unitree_api_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[5.578s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages/unitree_api/unitree_api_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[5.578s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/libunitree_api__python.so
+[5.579s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/msg/Request.idl
+[5.579s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/msg/RequestHeader.idl
+[5.580s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/msg/RequestIdentity.idl
+[5.580s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/msg/RequestLease.idl
+[5.581s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/msg/RequestPolicy.idl
+[5.589s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/msg/Response.idl
+[5.590s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/msg/ResponseHeader.idl
+[5.591s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/msg/ResponseStatus.idl
+[5.592s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/msg/Request.msg
+[5.592s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/msg/RequestHeader.msg
+[5.594s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/msg/RequestIdentity.msg
+[5.597s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/msg/RequestLease.msg
+[5.597s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/msg/RequestPolicy.msg
+[5.598s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/msg/Response.msg
+[5.598s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/msg/ResponseHeader.msg
+[5.599s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/msg/ResponseStatus.msg
+[5.599s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/ament_index/resource_index/package_run_dependencies/unitree_api
+[5.600s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/ament_index/resource_index/parent_prefix_path/unitree_api
+[5.600s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/environment/ament_prefix_path.sh
+[5.601s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/environment/ament_prefix_path.dsv
+[5.601s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/environment/path.sh
+[5.602s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/environment/path.dsv
+[5.602s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/local_setup.bash
+[5.603s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/local_setup.sh
+[5.603s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/local_setup.zsh
+[5.604s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/local_setup.dsv
+[5.605s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/package.dsv
+[5.606s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/ament_index/resource_index/packages/unitree_api
+[5.606s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_generator_cExport.cmake
+[5.626s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_generator_cExport-noconfig.cmake
+[5.627s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_typesupport_introspection_cExport.cmake
+[5.627s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.628s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_typesupport_cExport.cmake
+[5.628s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_typesupport_cExport-noconfig.cmake
+[5.629s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_generator_cppExport.cmake
+[5.629s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_typesupport_introspection_cppExport.cmake
+[5.630s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.630s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_typesupport_cppExport.cmake
+[5.631s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_api__rosidl_typesupport_cppExport-noconfig.cmake
+[5.631s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/rosidl_cmake-extras.cmake
+[5.632s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.632s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/ament_cmake_export_libraries-extras.cmake
+[5.633s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/ament_cmake_export_targets-extras.cmake
+[5.633s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.634s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.634s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.635s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_apiConfig.cmake
+[5.635s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake/unitree_apiConfig-version.cmake
+[5.636s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/package.xml
+[5.649s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api

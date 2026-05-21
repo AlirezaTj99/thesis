@@ -1,0 +1,9 @@
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo/CMakeFiles/install/strip.dir
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo/CMakeFiles/install/local.dir
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo/CMakeFiles/install.dir
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo/CMakeFiles/list_install_components.dir
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo/CMakeFiles/rebuild_cache.dir
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo/CMakeFiles/edit_cache.dir
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo/CMakeFiles/test.dir
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo/CMakeFiles/go2_gazebo_uninstall.dir
+/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo/CMakeFiles/uninstall.dir

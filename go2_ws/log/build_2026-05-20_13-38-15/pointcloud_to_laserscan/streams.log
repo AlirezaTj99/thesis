@@ -1,0 +1,77 @@
+[0.054s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/pointcloud_to_laserscan -DROS_EDITION=ROS2 -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan
+[0.084s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.129s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.529s] -- Found laser_geometry: 2.2.0 (/opt/ros/foxy/share/laser_geometry/cmake)
+[0.543s] -- Found message_filters: 3.2.7 (/opt/ros/foxy/share/message_filters/cmake)
+[0.553s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.634s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.634s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.921s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.057s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.061s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.381s] -- Found rclcpp_components: 2.4.3 (/opt/ros/foxy/share/rclcpp_components/cmake)
+[1.483s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.950s] -- Found tf2: 0.13.14 (/opt/ros/foxy/share/tf2/cmake)
+[1.953s] -- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+[3.384s] -- Found tf2_sensor_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_sensor_msgs/cmake)
+[3.441s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[3.536s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.537s] -- Configured cppcheck include dirs: /home/alireza/thesis1/navigation_go2/go2_ws/src/pointcloud_to_laserscan/include
+[3.537s] -- Configured cppcheck exclude dirs and/or files: 
+[3.543s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[3.543s] -- Configured cpplint exclude dirs and/or files: 
+[3.544s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.545s] -- Added test 'lint_cmake' to check CMake code style
+[3.546s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[3.551s] -- Added test 'uncrustify' to check C / C++ code style
+[3.552s] -- Configured uncrustify additional arguments: 
+[3.552s] -- Added test 'xmllint' to check XML markup files
+[3.557s] -- Configuring done
+[3.630s] -- Generating done
+[3.637s] CMake Warning:
+[3.637s]   Manually-specified variables were not used by the project:
+[3.638s] 
+[3.638s]     ROS_EDITION
+[3.638s] 
+[3.638s] 
+[3.670s] -- Build files have been written to: /home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan
+[3.685s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/pointcloud_to_laserscan -DROS_EDITION=ROS2 -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan
+[3.688s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan -- -j8 -l8
+[3.804s] [ 20%] Built target pointcloud_to_laserscan_node
+[3.822s] [ 40%] Built target laserscan_to_pointcloud_node
+[3.839s] [ 80%] Built target pointcloud_to_laserscan
+[3.839s] [ 80%] Built target dummy_pointcloud_publisher
+[3.855s] [100%] Built target laserscan_to_pointcloud
+[3.880s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan -- -j8 -l8
+[3.881s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan
+[3.895s] -- Install configuration: ""
+[3.895s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/laserscan_to_pointcloud_node
+[3.896s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node
+[3.897s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/liblaserscan_to_pointcloud.so
+[3.898s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/libpointcloud_to_laserscan.so
+[3.900s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/dummy_pointcloud_publisher
+[3.900s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/include/include
+[3.901s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/include/include/pointcloud_to_laserscan
+[3.932s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/include/include/pointcloud_to_laserscan/visibility_control.h
+[3.932s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/include/include/pointcloud_to_laserscan/laserscan_to_pointcloud_node.hpp
+[3.932s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/include/include/pointcloud_to_laserscan/pointcloud_to_laserscan_node.hpp
+[3.932s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch
+[3.932s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch/sample_pointcloud_to_laserscan_launch.py
+[3.933s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch/sample_laserscan_to_pointcloud_launch.py
+[3.933s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/ament_index/resource_index/package_run_dependencies/pointcloud_to_laserscan
+[3.933s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/ament_index/resource_index/parent_prefix_path/pointcloud_to_laserscan
+[3.933s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/ament_prefix_path.sh
+[3.933s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/ament_prefix_path.dsv
+[3.935s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/path.sh
+[3.935s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/path.dsv
+[3.935s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.bash
+[3.935s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.sh
+[3.935s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.zsh
+[3.935s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.dsv
+[3.936s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv
+[3.936s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/ament_index/resource_index/packages/pointcloud_to_laserscan
+[3.936s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/ament_index/resource_index/rclcpp_components/pointcloud_to_laserscan
+[3.936s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/pointcloud_to_laserscanConfig.cmake
+[3.936s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/pointcloud_to_laserscanConfig-version.cmake
+[3.936s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.xml
+[3.937s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan

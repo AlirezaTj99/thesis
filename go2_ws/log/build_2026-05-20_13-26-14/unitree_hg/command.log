@@ -1,0 +1,1 @@
+Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg

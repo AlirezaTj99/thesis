@@ -1,0 +1,58 @@
+[  3%] Built target read_low_state_hg
+[  7%] Built target g1_ankle_swing_example
+[ 11%] Built target read_wireless_controller
+[ 15%] Built target g1_arm_sdk_dds_example
+[ 20%] Built target low_level_ctrl_hg
+[ 25%] Built target go2_robot_state_client
+[ 30%] Built target b2w_sport_client
+[ 34%] Built target h2_ankle_swing_example
+[ 38%] Built target read_motion_state
+[ 41%] Built target h2_loco_client
+[ 46%] Built target low_level_ctrl
+[ 49%] Built target read_low_state
+[ 53%] Built target b2_stand_example
+[ 58%] Built target go2_sport_client
+[ 63%] Built target g1_low_level_example
+[ 68%] Built target go2_stand_example
+[ 73%] Built target g1_loco_client_example
+[ 76%] Built target g1_audio_client_example
+[ 80%] Built target g1_dex3_example
+[ 85%] Built target b2w_stand_example
+[ 90%] Built target g1_arm_action_example
+[ 95%] Built target g1_dual_arm_example
+[100%] Built target b2_sport_client
+-- Install configuration: ""
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/low_level_ctrl
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/low_level_ctrl_hg
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_low_level_example
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/read_low_state
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/read_low_state_hg
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/read_motion_state
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/read_wireless_controller
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/go2_sport_client
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/go2_stand_example
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/go2_robot_state_client
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_arm_sdk_dds_example
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_arm_action_example
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_dex3_example
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_loco_client_example
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_ankle_swing_example
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_dual_arm_example
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_audio_client_example
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/h2_loco_client
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/h2_ankle_swing_example
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/ament_index/resource_index/package_run_dependencies/unitree_ros2_example
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/ament_index/resource_index/parent_prefix_path/unitree_ros2_example
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/environment/ament_prefix_path.sh
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/environment/path.sh
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/environment/path.dsv
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/local_setup.bash
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/local_setup.sh
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/local_setup.zsh
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/local_setup.dsv
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/package.dsv
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/ament_index/resource_index/packages/unitree_ros2_example
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/cmake/unitree_ros2_exampleConfig.cmake
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/cmake/unitree_ros2_exampleConfig-version.cmake
+-- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/package.xml

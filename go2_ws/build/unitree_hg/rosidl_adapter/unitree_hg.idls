@@ -1,0 +1,11 @@
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg/rosidl_adapter/unitree_hg:msg/BmsCmd.idl
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg/rosidl_adapter/unitree_hg:msg/BmsState.idl
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg/rosidl_adapter/unitree_hg:msg/HandCmd.idl
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg/rosidl_adapter/unitree_hg:msg/HandState.idl
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg/rosidl_adapter/unitree_hg:msg/IMUState.idl
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg/rosidl_adapter/unitree_hg:msg/LowCmd.idl
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg/rosidl_adapter/unitree_hg:msg/LowState.idl
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg/rosidl_adapter/unitree_hg:msg/MainBoardState.idl
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg/rosidl_adapter/unitree_hg:msg/MotorCmd.idl
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg/rosidl_adapter/unitree_hg:msg/MotorState.idl
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg/rosidl_adapter/unitree_hg:msg/PressSensorState.idl

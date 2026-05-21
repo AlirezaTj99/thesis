@@ -1,0 +1,264 @@
+[0.056s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/livox_ros_driver2 -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2
+[0.112s] -- livox_ros_driver2 version: 1.2.6
+[0.112s] -- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+[0.144s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.144s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.647s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.654s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.973s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.139s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.150s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[3.497s] -- Eigen found (include: /usr/include/eigen3, version: 3.3.7)
+[3.687s] -- The imported target "vtkParseOGLExt" references the file
+[3.687s]    "/usr/bin/vtkParseOGLExt-7.1"
+[3.687s] but this file does not exist.  Possible reasons include:
+[3.687s] * The file was deleted, renamed, or moved to another location.
+[3.687s] * An install or uninstall procedure did not complete successfully.
+[3.687s] * The installation package was faulty and contained
+[3.687s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[3.688s] but not all the files it references.
+[3.688s] 
+[3.689s] -- The imported target "vtkRenderingPythonTkWidgets" references the file
+[3.689s]    "/usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so"
+[3.689s] but this file does not exist.  Possible reasons include:
+[3.689s] * The file was deleted, renamed, or moved to another location.
+[3.689s] * An install or uninstall procedure did not complete successfully.
+[3.689s] * The installation package was faulty and contained
+[3.689s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[3.690s] but not all the files it references.
+[3.690s] 
+[3.690s] -- The imported target "vtk" references the file
+[3.690s]    "/usr/bin/vtk"
+[3.691s] but this file does not exist.  Possible reasons include:
+[3.691s] * The file was deleted, renamed, or moved to another location.
+[3.691s] * An install or uninstall procedure did not complete successfully.
+[3.691s] * The installation package was faulty and contained
+[3.691s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[3.691s] but not all the files it references.
+[3.692s] 
+[3.692s] -- The imported target "pvtk" references the file
+[3.692s]    "/usr/bin/pvtk"
+[3.692s] but this file does not exist.  Possible reasons include:
+[3.692s] * The file was deleted, renamed, or moved to another location.
+[3.692s] * An install or uninstall procedure did not complete successfully.
+[3.692s] * The installation package was faulty and contained
+[3.692s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[3.693s] but not all the files it references.
+[3.693s] 
+[3.736s] -- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+[3.750s] -- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)
+[3.751s] ** WARNING ** io features related to pcap will be disabled
+[3.751s] ** WARNING ** io features related to png will be disabled
+[3.781s] ** WARNING ** io features related to libusb-1.0 will be disabled
+[3.798s] -- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+[3.815s] -- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)
+[3.847s] -- QHULL found (include: /usr/include, lib: optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so)
+[3.859s] -- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+[3.887s] -- looking for PCL_COMMON
+[3.889s] -- looking for PCL_KDTREE
+[3.890s] -- looking for PCL_OCTREE
+[3.891s] -- looking for PCL_SEARCH
+[3.893s] -- looking for PCL_SAMPLE_CONSENSUS
+[3.894s] -- looking for PCL_FILTERS
+[3.896s] -- looking for PCL_2D
+[3.897s] -- looking for PCL_GEOMETRY
+[3.923s] -- looking for PCL_IO
+[3.924s] -- looking for PCL_FEATURES
+[3.924s] -- looking for PCL_ML
+[3.924s] -- looking for PCL_SEGMENTATION
+[3.924s] -- looking for PCL_VISUALIZATION
+[3.924s] -- looking for PCL_SURFACE
+[3.925s] -- looking for PCL_REGISTRATION
+[3.925s] -- looking for PCL_KEYPOINTS
+[3.925s] -- looking for PCL_TRACKING
+[3.925s] -- looking for PCL_RECOGNITION
+[3.925s] -- looking for PCL_STEREO
+[3.925s] -- looking for PCL_APPS
+[3.926s] -- looking for PCL_IN_HAND_SCANNER
+[3.926s] -- looking for PCL_POINT_CLOUD_EDITOR
+[3.926s] -- looking for PCL_OUTOFCORE
+[3.926s] -- looking for PCL_PEOPLE
+[3.952s] -- Checking for module 'apr-1'
+[3.963s] --   No package 'apr-1' found
+[4.009s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[4.319s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[5.828s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.035s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.072s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[6.073s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[6.122s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[6.122s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[6.123s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[6.300s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[6.319s] -- Added test 'copyright' to check source files copyright and LICENSE
+[6.329s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[6.335s] -- Configured cppcheck include dirs: /home/alireza/thesis1/navigation_go2/go2_ws/src/livox_ros_driver2/3rdparty;/home/alireza/thesis1/navigation_go2/go2_ws/src/livox_ros_driver2/src
+[6.335s] -- Configured cppcheck exclude dirs and/or files: 
+[6.344s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[6.345s] -- Configured cpplint exclude dirs and/or files: 
+[6.346s] -- Added test 'flake8' to check Python code syntax and style conventions
+[6.349s] -- Added test 'lint_cmake' to check CMake code style
+[6.351s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[6.361s] -- Added test 'uncrustify' to check C / C++ code style
+[6.361s] -- Configured uncrustify additional arguments: 
+[6.362s] -- Added test 'xmllint' to check XML markup files
+[6.371s] -- Configuring done
+[6.538s] -- Generating done
+[6.628s] -- Build files have been written to: /home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2
+[6.650s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/livox_ros_driver2 -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2
+[6.651s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2 -- -j8 -l8
+[6.730s] [  1%] Built target livox_interfaces2__cpp
+[6.737s] [  8%] Built target livox_interfaces2__rosidl_generator_c
+[6.751s] [ 12%] Built target livox_ros_driver2_node
+[6.776s] [ 19%] Built target livox_interfaces2__rosidl_typesupport_introspection_cpp
+[6.777s] [ 26%] Built target livox_interfaces2__rosidl_typesupport_cpp
+[6.782s] [ 33%] Built target livox_interfaces2__rosidl_typesupport_c
+[6.789s] [ 40%] Built target livox_interfaces2__rosidl_typesupport_introspection_c
+[6.791s] [ 47%] Built target livox_interfaces2__rosidl_typesupport_fastrtps_cpp
+[6.827s] [ 54%] Built target livox_interfaces2__rosidl_typesupport_fastrtps_c
+[6.852s] [ 54%] Built target livox_interfaces2
+[6.887s] [ 56%] Built target livox_interfaces2__py
+[6.911s] [ 84%] Built target livox_ros_driver2
+[6.929s] [ 89%] Built target livox_interfaces2__python
+[6.969s] [ 92%] Built target livox_ros_driver2__rosidl_typesupport_introspection_c__pyext
+[6.972s] [ 96%] Built target livox_ros_driver2__rosidl_typesupport_fastrtps_c__pyext
+[6.973s] [100%] Built target livox_ros_driver2__rosidl_typesupport_c__pyext
+[6.988s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2 -- -j8 -l8
+[6.990s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2
+[7.004s] -- Install configuration: ""
+[7.004s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/ament_index/resource_index/rosidl_interfaces/livox_ros_driver2
+[7.005s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2
+[7.005s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg
+[7.005s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail
+[7.005s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_point__struct.h
+[7.006s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_point__functions.h
+[7.006s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_msg__functions.c
+[7.006s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_msg__type_support.h
+[7.006s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_msg__struct.h
+[7.007s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_point__type_support.h
+[7.007s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_msg__functions.h
+[7.007s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_point__functions.c
+[7.007s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/custom_msg.h
+[7.007s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/rosidl_generator_c__visibility_control.h
+[7.008s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/custom_point.h
+[7.008s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/library_path.sh
+[7.008s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/library_path.dsv
+[7.008s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_generator_c.so
+[7.008s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2
+[7.008s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg
+[7.009s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail
+[7.009s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_fastrtps_c.h
+[7.009s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_fastrtps_c.h
+[7.009s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[7.009s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_fastrtps_c.so
+[7.009s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2
+[7.010s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg
+[7.010s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[7.010s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail
+[7.010s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_fastrtps_cpp.hpp
+[7.010s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[7.010s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/dds_fastrtps
+[7.010s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_fastrtps_cpp.so
+[7.010s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2
+[7.010s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg
+[7.011s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[7.011s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail
+[7.011s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_introspection_c.h
+[7.011s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_point__type_support.c
+[7.011s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_msg__type_support.c
+[7.011s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_introspection_c.h
+[7.011s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_introspection_c.so
+[7.011s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_c.so
+[7.011s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2
+[7.012s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg
+[7.012s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/custom_point.hpp
+[7.012s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/rosidl_generator_cpp__visibility_control.hpp
+[7.012s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail
+[7.012s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_msg__builder.hpp
+[7.012s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_msg__type_support.hpp
+[7.012s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_point__traits.hpp
+[7.012s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_msg__traits.hpp
+[7.012s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_point__struct.hpp
+[7.013s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_point__builder.hpp
+[7.013s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_point__type_support.hpp
+[7.013s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_msg__struct.hpp
+[7.013s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/custom_msg.hpp
+[7.013s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2
+[7.013s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg
+[7.013s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail
+[7.013s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_introspection_cpp.hpp
+[7.013s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_point__type_support.cpp
+[7.014s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_introspection_cpp.hpp
+[7.014s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/include/livox_ros_driver2/msg/detail/custom_msg__type_support.cpp
+[7.014s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_introspection_cpp.so
+[7.014s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_cpp.so
+[7.014s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/pythonpath.sh
+[7.014s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/pythonpath.dsv
+[7.014s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages/livox_ros_driver2/__init__.py
+[7.045s] Compiling '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages/livox_ros_driver2/__init__.py'...
+[7.051s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages/livox_ros_driver2/msg
+[7.051s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages/livox_ros_driver2/msg/_custom_point.py
+[7.051s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages/livox_ros_driver2/msg/__init__.py
+[7.051s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages/livox_ros_driver2/msg/_custom_msg.py
+[7.051s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages/livox_ros_driver2/msg/_custom_point_s.c
+[7.051s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages/livox_ros_driver2/msg/_custom_msg_s.c
+[7.052s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[7.052s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[7.053s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[7.053s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/liblivox_interfaces2__python.so
+[7.054s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomPoint.idl
+[7.054s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomMsg.idl
+[7.054s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomPoint.msg
+[7.054s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomMsg.msg
+[7.054s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node
+[7.055s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2.so
+[7.055s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/config
+[7.055s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/HAP_config.json
+[7.056s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/display_point_cloud_ROS1.rviz
+[7.056s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/mixed_HAP_MID360_config.json
+[7.056s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/display_point_cloud_ROS2.rviz
+[7.056s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/MID360s_config.json
+[7.056s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/MID360_config.json
+[7.056s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2
+[7.056s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/msg_HAP_launch.py
+[7.057s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/rviz_mixed.py
+[7.057s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/msg_MID360_launch.py
+[7.058s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/rviz_MID360_launch.py
+[7.058s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/rviz_MID360s_launch.py
+[7.058s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/rviz_HAP_launch.py
+[7.058s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/msg_MID360s_launch.py
+[7.058s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/ament_index/resource_index/package_run_dependencies/livox_ros_driver2
+[7.058s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/ament_index/resource_index/parent_prefix_path/livox_ros_driver2
+[7.058s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/ament_prefix_path.sh
+[7.059s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/ament_prefix_path.dsv
+[7.059s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/path.sh
+[7.059s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/path.dsv
+[7.059s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.bash
+[7.059s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.sh
+[7.059s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.zsh
+[7.059s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.dsv
+[7.059s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv
+[7.059s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/ament_index/resource_index/packages/livox_ros_driver2
+[7.060s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_generator_cExport.cmake
+[7.060s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_generator_cExport-noconfig.cmake
+[7.060s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cExport.cmake
+[7.060s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[7.060s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cExport.cmake
+[7.060s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cExport-noconfig.cmake
+[7.060s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_generator_cppExport.cmake
+[7.061s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cppExport.cmake
+[7.063s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[7.063s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cppExport.cmake
+[7.063s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cppExport-noconfig.cmake
+[7.063s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/ament_index/resource_index/rclcpp_components/livox_ros_driver2
+[7.064s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/rosidl_cmake-extras.cmake
+[7.064s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.064s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_libraries-extras.cmake
+[7.064s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_targets-extras.cmake
+[7.065s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_include_directories-extras.cmake
+[7.065s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[7.065s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[7.065s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config.cmake
+[7.065s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config-version.cmake
+[7.066s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.xml
+[7.066s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2

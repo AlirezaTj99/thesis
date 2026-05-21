@@ -1,0 +1,814 @@
+[0.211s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.211s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ff802e83670>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=8, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ff802e83670>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7ff802e83b80>)
+[0.374s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.374s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.374s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.374s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.374s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.374s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.374s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/alireza/thesis1/navigation_go2/go2_ws'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extensions ['ignore', 'ignore_ament_install']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extension 'ignore'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extension 'ignore_ament_install'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extensions ['colcon_pkg']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extension 'colcon_pkg'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extensions ['colcon_meta']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extension 'colcon_meta'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extensions ['ros']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_description) by extension 'ros'
+[0.392s] DEBUG:colcon.colcon_core.package_identification:Package 'src/go2_description' with type 'ros.ament_cmake' and name 'go2_description'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extension 'ignore'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extension 'ignore_ament_install'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extensions ['colcon_pkg']
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extension 'colcon_pkg'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extensions ['colcon_meta']
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extension 'colcon_meta'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extensions ['ros']
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_gazebo) by extension 'ros'
+[0.394s] DEBUG:colcon.colcon_core.package_identification:Package 'src/go2_gazebo' with type 'ros.ament_cmake' and name 'go2_gazebo'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extensions ['ignore', 'ignore_ament_install']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extension 'ignore'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extension 'ignore_ament_install'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extensions ['colcon_pkg']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extension 'colcon_pkg'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extensions ['colcon_meta']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extension 'colcon_meta'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extensions ['ros']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/go2_real) by extension 'ros'
+[0.395s] DEBUG:colcon.colcon_core.package_identification:Package 'src/go2_real' with type 'ros.ament_cmake' and name 'go2_real'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['ignore', 'ignore_ament_install']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ignore'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ignore_ament_install'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['colcon_pkg']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'colcon_pkg'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['colcon_meta']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'colcon_meta'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['ros']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ros'
+[0.397s] DEBUG:colcon.colcon_core.package_identification:Package 'src/livox_ros_driver2' with type 'ros.ament_cmake' and name 'livox_ros_driver2'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['ignore', 'ignore_ament_install']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ignore'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ignore_ament_install'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['colcon_pkg']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'colcon_pkg'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['colcon_meta']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'colcon_meta'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['ros']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ros'
+[0.399s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pointcloud_to_laserscan' with type 'ros.ament_cmake' and name 'pointcloud_to_laserscan'
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extensions ['ignore', 'ignore_ament_install']
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extension 'ignore'
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extension 'ignore_ament_install'
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extensions ['colcon_pkg']
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extension 'colcon_pkg'
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extensions ['colcon_meta']
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extension 'colcon_meta'
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extensions ['ros']
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_api) by extension 'ros'
+[0.400s] DEBUG:colcon.colcon_core.package_identification:Package 'src/unitree_api' with type 'ros.ament_cmake' and name 'unitree_api'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extensions ['ignore', 'ignore_ament_install']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extension 'ignore'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extension 'ignore_ament_install'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extensions ['colcon_pkg']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extension 'colcon_pkg'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extensions ['colcon_meta']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extension 'colcon_meta'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extensions ['ros']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_go) by extension 'ros'
+[0.401s] DEBUG:colcon.colcon_core.package_identification:Package 'src/unitree_go' with type 'ros.ament_cmake' and name 'unitree_go'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extensions ['ignore', 'ignore_ament_install']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extension 'ignore'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extension 'ignore_ament_install'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extensions ['colcon_pkg']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extension 'colcon_pkg'
+[0.402s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extensions ['colcon_meta']
+[0.402s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extension 'colcon_meta'
+[0.402s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extensions ['ros']
+[0.402s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_hg) by extension 'ros'
+[0.402s] DEBUG:colcon.colcon_core.package_identification:Package 'src/unitree_hg' with type 'ros.ament_cmake' and name 'unitree_hg'
+[0.402s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.402s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extension 'ignore'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extension 'ignore_ament_install'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extensions ['colcon_pkg']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extension 'colcon_pkg'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extensions ['colcon_meta']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extension 'colcon_meta'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extensions ['ros']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extension 'ros'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extensions ['cmake', 'python']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extension 'cmake'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extension 'python'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extensions ['python_setup_py']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2) by extension 'python_setup_py'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/cyclonedds_ws) by extensions ['ignore', 'ignore_ament_install']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/cyclonedds_ws) by extension 'ignore'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/cyclonedds_ws) ignored
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extensions ['ignore', 'ignore_ament_install']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extension 'ignore'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extension 'ignore_ament_install'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extensions ['colcon_pkg']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extension 'colcon_pkg'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extensions ['colcon_meta']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extension 'colcon_meta'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extensions ['ros']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extension 'ros'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extensions ['cmake', 'python']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extension 'cmake'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extension 'python'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extensions ['python_setup_py']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs) by extension 'python_setup_py'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extensions ['ignore', 'ignore_ament_install']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extension 'ignore'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extension 'ignore_ament_install'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extensions ['colcon_pkg']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extension 'colcon_pkg'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extensions ['colcon_meta']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extension 'colcon_meta'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extensions ['ros']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extension 'ros'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extensions ['cmake', 'python']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extension 'cmake'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extension 'python'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extensions ['python_setup_py']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/docs/image) by extension 'python_setup_py'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extensions ['ignore', 'ignore_ament_install']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extension 'ignore'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extension 'ignore_ament_install'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extensions ['colcon_pkg']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extension 'colcon_pkg'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extensions ['colcon_meta']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extension 'colcon_meta'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extensions ['ros']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extension 'ros'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extensions ['cmake', 'python']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extension 'cmake'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extension 'python'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extensions ['python_setup_py']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example) by extension 'python_setup_py'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extensions ['ignore', 'ignore_ament_install']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extension 'ignore'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extension 'ignore_ament_install'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extensions ['colcon_pkg']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extension 'colcon_pkg'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extensions ['colcon_meta']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extension 'colcon_meta'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extensions ['ros']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/unitree_ros2/example/src) by extension 'ros'
+[0.407s] DEBUG:colcon.colcon_core.package_identification:Package 'src/unitree_ros2/example/src' with type 'ros.ament_cmake' and name 'unitree_ros2_example'
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.408s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.408s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.408s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.408s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.426s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.426s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.429s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 9 installed packages in /home/alireza/thesis1/navigation_go2/go2_ws/install
+[0.431s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 372 installed packages in /opt/ros/foxy
+[0.434s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.530s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'cmake_args' from command line to 'None'
+[0.530s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'cmake_target' from command line to 'None'
+[0.530s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.530s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.530s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.530s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.530s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.530s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.530s] Level 5:colcon.colcon_core.verb:set package 'go2_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.530s] DEBUG:colcon.colcon_core.verb:Building package 'go2_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description', 'merge_install': False, 'path': '/home/alireza/thesis1/navigation_go2/go2_ws/src/go2_description', 'symlink_install': False, 'test_result_base': None}
+[0.531s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_args' from command line to 'None'
+[0.531s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_target' from command line to 'None'
+[0.531s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.531s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.531s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_clean_first' from command line to 'False'
+[0.531s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_force_configure' from command line to 'False'
+[0.531s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'ament_cmake_args' from command line to 'None'
+[0.531s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.531s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.531s] DEBUG:colcon.colcon_core.verb:Building package 'livox_ros_driver2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2', 'merge_install': False, 'path': '/home/alireza/thesis1/navigation_go2/go2_ws/src/livox_ros_driver2', 'symlink_install': False, 'test_result_base': None}
+[0.531s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_args' from command line to 'None'
+[0.531s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_target' from command line to 'None'
+[0.531s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.532s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_clean_cache' from command line to 'False'
+[0.532s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_clean_first' from command line to 'False'
+[0.532s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_force_configure' from command line to 'False'
+[0.532s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'ament_cmake_args' from command line to 'None'
+[0.532s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'catkin_cmake_args' from command line to 'None'
+[0.532s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.532s] DEBUG:colcon.colcon_core.verb:Building package 'pointcloud_to_laserscan' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan', 'merge_install': False, 'path': '/home/alireza/thesis1/navigation_go2/go2_ws/src/pointcloud_to_laserscan', 'symlink_install': False, 'test_result_base': None}
+[0.532s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_args' from command line to 'None'
+[0.532s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_target' from command line to 'None'
+[0.532s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.532s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_clean_cache' from command line to 'False'
+[0.532s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_clean_first' from command line to 'False'
+[0.532s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'cmake_force_configure' from command line to 'False'
+[0.532s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'ament_cmake_args' from command line to 'None'
+[0.532s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'catkin_cmake_args' from command line to 'None'
+[0.532s] Level 5:colcon.colcon_core.verb:set package 'unitree_api' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.532s] DEBUG:colcon.colcon_core.verb:Building package 'unitree_api' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api', 'merge_install': False, 'path': '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api', 'symlink_install': False, 'test_result_base': None}
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_args' from command line to 'None'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_target' from command line to 'None'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_clean_cache' from command line to 'False'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_clean_first' from command line to 'False'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'cmake_force_configure' from command line to 'False'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'ament_cmake_args' from command line to 'None'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'catkin_cmake_args' from command line to 'None'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'unitree_go' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.533s] DEBUG:colcon.colcon_core.verb:Building package 'unitree_go' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_go', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go', 'merge_install': False, 'path': '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_go', 'symlink_install': False, 'test_result_base': None}
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'cmake_args' from command line to 'None'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'cmake_target' from command line to 'None'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'cmake_clean_first' from command line to 'False'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'cmake_force_configure' from command line to 'False'
+[0.533s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'ament_cmake_args' from command line to 'None'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'unitree_hg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.534s] DEBUG:colcon.colcon_core.verb:Building package 'unitree_hg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg', 'merge_install': False, 'path': '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg', 'symlink_install': False, 'test_result_base': None}
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'go2_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'go2_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'go2_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'go2_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'go2_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'go2_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'go2_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'go2_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.534s] Level 5:colcon.colcon_core.verb:set package 'go2_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.534s] DEBUG:colcon.colcon_core.verb:Building package 'go2_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo', 'merge_install': False, 'path': '/home/alireza/thesis1/navigation_go2/go2_ws/src/go2_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'unitree_ros2_example' build argument 'cmake_args' from command line to 'None'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'unitree_ros2_example' build argument 'cmake_target' from command line to 'None'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'unitree_ros2_example' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'unitree_ros2_example' build argument 'cmake_clean_cache' from command line to 'False'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'unitree_ros2_example' build argument 'cmake_clean_first' from command line to 'False'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'unitree_ros2_example' build argument 'cmake_force_configure' from command line to 'False'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'unitree_ros2_example' build argument 'ament_cmake_args' from command line to 'None'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'unitree_ros2_example' build argument 'catkin_cmake_args' from command line to 'None'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'unitree_ros2_example' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.535s] DEBUG:colcon.colcon_core.verb:Building package 'unitree_ros2_example' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example', 'merge_install': False, 'path': '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src', 'symlink_install': False, 'test_result_base': None}
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'go2_real' build argument 'cmake_args' from command line to 'None'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'go2_real' build argument 'cmake_target' from command line to 'None'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'go2_real' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'go2_real' build argument 'cmake_clean_cache' from command line to 'False'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'go2_real' build argument 'cmake_clean_first' from command line to 'False'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'go2_real' build argument 'cmake_force_configure' from command line to 'False'
+[0.535s] Level 5:colcon.colcon_core.verb:set package 'go2_real' build argument 'ament_cmake_args' from command line to 'None'
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'go2_real' build argument 'catkin_cmake_args' from command line to 'None'
+[0.536s] Level 5:colcon.colcon_core.verb:set package 'go2_real' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.536s] DEBUG:colcon.colcon_core.verb:Building package 'go2_real' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real', 'merge_install': False, 'path': '/home/alireza/thesis1/navigation_go2/go2_ws/src/go2_real', 'symlink_install': False, 'test_result_base': None}
+[0.536s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.537s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.537s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/go2_description' with build type 'ament_cmake'
+[0.537s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/go2_description'
+[0.539s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.540s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.540s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.545s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api' with build type 'ament_cmake'
+[0.546s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api'
+[0.546s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.546s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.553s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_go' with build type 'ament_cmake'
+[0.553s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_go'
+[0.554s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.554s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.563s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/livox_ros_driver2' with build type 'ament_cmake'
+[0.563s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/livox_ros_driver2'
+[0.564s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.564s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.574s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/pointcloud_to_laserscan' with build type 'ament_cmake'
+[0.574s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/pointcloud_to_laserscan'
+[0.575s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.575s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.584s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg' with build type 'ament_cmake'
+[0.585s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg'
+[0.585s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.585s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.601s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/go2_description -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description
+[0.606s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api
+[0.612s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_go': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_go -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go
+[0.621s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/livox_ros_driver2 -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2
+[0.632s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/pointcloud_to_laserscan -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan
+[0.656s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg
+[1.170s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/go2_description -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description
+[1.172s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description -- -j8 -l8
+[1.251s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description -- -j8 -l8
+[1.296s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description
+[1.318s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_description)
+[1.323s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description' for CMake module files
+[1.324s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description' for CMake config files
+[1.325s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_description', 'cmake_prefix_path')
+[1.325s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/hook/cmake_prefix_path.ps1'
+[1.327s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description
+[1.327s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/hook/cmake_prefix_path.dsv'
+[1.328s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/hook/cmake_prefix_path.sh'
+[1.332s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/bin'
+[1.332s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/lib/pkgconfig/go2_description.pc'
+[1.333s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/lib/python3.8/site-packages'
+[1.333s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/bin'
+[1.334s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/package.ps1'
+[1.337s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/package.dsv'
+[1.341s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/package.sh'
+[1.343s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/package.bash'
+[1.344s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/package.zsh'
+[1.346s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/colcon-core/packages/go2_description)
+[1.348s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_description)
+[1.348s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description' for CMake module files
+[1.349s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description' for CMake config files
+[1.350s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_description', 'cmake_prefix_path')
+[1.351s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/hook/cmake_prefix_path.ps1'
+[1.351s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/hook/cmake_prefix_path.dsv'
+[1.352s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/hook/cmake_prefix_path.sh'
+[1.354s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/bin'
+[1.354s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/lib/pkgconfig/go2_description.pc'
+[1.354s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/lib/python3.8/site-packages'
+[1.355s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/bin'
+[1.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/package.ps1'
+[1.357s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/package.dsv'
+[1.358s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/package.sh'
+[1.358s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/package.bash'
+[1.359s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/package.zsh'
+[1.360s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/colcon-core/packages/go2_description)
+[1.363s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/go2_gazebo' with build type 'ament_cmake'
+[1.363s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/go2_gazebo'
+[1.364s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.364s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.405s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/go2_gazebo -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo
+[2.881s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/go2_gazebo -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo
+[2.891s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo -- -j8 -l8
+[3.263s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo -- -j8 -l8
+[3.293s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo
+[3.400s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_gazebo)
+[3.411s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo' for CMake module files
+[3.416s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo' for CMake config files
+[3.416s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_gazebo', 'cmake_prefix_path')
+[3.417s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/hook/cmake_prefix_path.ps1'
+[3.418s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/hook/cmake_prefix_path.dsv'
+[3.418s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/hook/cmake_prefix_path.sh'
+[3.419s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/lib'
+[3.420s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/bin'
+[3.420s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/lib/pkgconfig/go2_gazebo.pc'
+[3.420s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/lib/python3.8/site-packages'
+[3.421s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/bin'
+[3.421s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/package.ps1'
+[3.422s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/package.dsv'
+[3.414s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_gazebo
+[3.423s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/package.sh'
+[3.424s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/package.bash'
+[3.424s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/package.zsh'
+[3.425s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/colcon-core/packages/go2_gazebo)
+[3.426s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_gazebo)
+[3.426s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo' for CMake module files
+[3.427s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo' for CMake config files
+[3.428s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_gazebo', 'cmake_prefix_path')
+[3.428s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/hook/cmake_prefix_path.ps1'
+[3.429s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/hook/cmake_prefix_path.dsv'
+[3.432s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/hook/cmake_prefix_path.sh'
+[3.433s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/lib'
+[3.435s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/bin'
+[3.435s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/lib/pkgconfig/go2_gazebo.pc'
+[3.436s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/lib/python3.8/site-packages'
+[3.436s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/bin'
+[3.437s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/package.ps1'
+[3.439s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/package.dsv'
+[3.440s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/package.sh'
+[3.442s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/package.bash'
+[3.443s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/go2_gazebo/package.zsh'
+[3.444s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo/share/colcon-core/packages/go2_gazebo)
+[4.354s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg
+[4.356s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg -- -j8 -l8
+[4.467s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_api -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api
+[4.468s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api -- -j8 -l8
+[4.589s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/pointcloud_to_laserscan -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan
+[4.591s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan -- -j8 -l8
+[4.867s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan -- -j8 -l8
+[4.870s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan
+[4.905s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pointcloud_to_laserscan)
+[4.905s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan' for CMake module files
+[4.906s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan' for CMake config files
+[4.907s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan
+[4.907s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'cmake_prefix_path')
+[4.908s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.ps1'
+[4.909s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.dsv'
+[4.910s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.sh'
+[4.912s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib'
+[4.912s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'ld_library_path_lib')
+[4.912s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.ps1'
+[4.913s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.dsv'
+[4.913s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.sh'
+[4.914s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/bin'
+[4.914s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/pkgconfig/pointcloud_to_laserscan.pc'
+[4.915s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/python3.8/site-packages'
+[4.916s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/bin'
+[4.916s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.ps1'
+[4.918s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv'
+[4.918s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.sh'
+[4.919s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.bash'
+[4.920s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.zsh'
+[4.920s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/colcon-core/packages/pointcloud_to_laserscan)
+[4.922s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pointcloud_to_laserscan)
+[4.922s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan' for CMake module files
+[4.923s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan' for CMake config files
+[4.923s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'cmake_prefix_path')
+[4.924s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.ps1'
+[4.925s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.dsv'
+[4.925s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.sh'
+[4.926s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib'
+[4.926s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'ld_library_path_lib')
+[4.927s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.ps1'
+[4.928s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.dsv'
+[4.931s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.sh'
+[4.932s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/bin'
+[4.932s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/pkgconfig/pointcloud_to_laserscan.pc'
+[4.932s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/python3.8/site-packages'
+[4.933s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/bin'
+[4.933s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.ps1'
+[4.935s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv'
+[4.936s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.sh'
+[4.937s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.bash'
+[4.938s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.zsh'
+[4.938s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/colcon-core/packages/pointcloud_to_laserscan)
+[4.941s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_go' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_go -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go
+[4.943s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_go': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_go -- -j8 -l8
+[4.990s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg -- -j8 -l8
+[5.012s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg
+[5.546s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api -- -j8 -l8
+[5.552s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api
+[5.658s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(unitree_hg)
+[5.663s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg' for CMake module files
+[5.669s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg
+[5.673s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg' for CMake config files
+[5.675s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_hg', 'cmake_prefix_path')
+[5.677s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/cmake_prefix_path.ps1'
+[5.703s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/cmake_prefix_path.dsv'
+[5.713s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/cmake_prefix_path.sh'
+[5.726s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib'
+[5.758s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_hg', 'ld_library_path_lib')
+[5.761s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/ld_library_path_lib.ps1'
+[5.764s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/ld_library_path_lib.dsv'
+[5.776s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/ld_library_path_lib.sh'
+[5.785s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/bin'
+[5.786s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/pkgconfig/unitree_hg.pc'
+[5.788s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages'
+[5.790s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_hg', 'pythonpath')
+[5.791s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/pythonpath.ps1'
+[5.794s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/pythonpath.dsv'
+[5.797s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/pythonpath.sh'
+[5.802s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/bin'
+[5.805s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/package.ps1'
+[5.811s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/package.dsv'
+[5.838s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/package.sh'
+[5.886s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/package.bash'
+[5.900s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/package.zsh'
+[5.913s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/colcon-core/packages/unitree_hg)
+[5.928s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(unitree_hg)
+[5.929s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg' for CMake module files
+[5.933s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg' for CMake config files
+[5.935s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_hg', 'cmake_prefix_path')
+[5.937s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/cmake_prefix_path.ps1'
+[5.940s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/cmake_prefix_path.dsv'
+[5.956s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/cmake_prefix_path.sh'
+[5.985s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib'
+[5.986s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_hg', 'ld_library_path_lib')
+[5.988s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/ld_library_path_lib.ps1'
+[6.011s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/ld_library_path_lib.dsv'
+[6.027s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/ld_library_path_lib.sh'
+[6.041s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/bin'
+[6.041s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/pkgconfig/unitree_hg.pc'
+[6.043s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages'
+[6.043s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_hg', 'pythonpath')
+[6.044s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/pythonpath.ps1'
+[6.067s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/pythonpath.dsv'
+[6.077s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/hook/pythonpath.sh'
+[6.083s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/bin'
+[6.086s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/package.ps1'
+[6.093s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/package.dsv'
+[6.098s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/package.sh'
+[6.102s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/package.bash'
+[6.105s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/package.zsh'
+[6.110s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/colcon-core/packages/unitree_hg)
+[6.149s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(unitree_api)
+[6.151s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api' for CMake module files
+[6.155s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api' for CMake config files
+[6.158s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_api', 'cmake_prefix_path')
+[6.160s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/cmake_prefix_path.ps1'
+[6.197s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/cmake_prefix_path.dsv'
+[6.204s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/cmake_prefix_path.sh'
+[6.210s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib'
+[6.210s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_api', 'ld_library_path_lib')
+[6.212s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/ld_library_path_lib.ps1'
+[6.214s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/ld_library_path_lib.dsv'
+[6.216s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/ld_library_path_lib.sh'
+[6.219s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/bin'
+[6.219s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/pkgconfig/unitree_api.pc'
+[6.220s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages'
+[6.221s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_api', 'pythonpath')
+[6.222s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/pythonpath.ps1'
+[6.260s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/pythonpath.dsv'
+[6.262s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/pythonpath.sh'
+[6.266s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/bin'
+[6.269s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/package.ps1'
+[6.273s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/package.dsv'
+[6.275s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/package.sh'
+[6.277s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/package.bash'
+[6.281s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/package.zsh'
+[6.290s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/colcon-core/packages/unitree_api)
+[6.299s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(unitree_api)
+[6.310s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api' for CMake module files
+[6.319s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api' for CMake config files
+[6.326s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api
+[6.327s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_api', 'cmake_prefix_path')
+[6.329s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/cmake_prefix_path.ps1'
+[6.332s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/cmake_prefix_path.dsv'
+[6.335s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/cmake_prefix_path.sh'
+[6.339s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib'
+[6.340s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_api', 'ld_library_path_lib')
+[6.342s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/ld_library_path_lib.ps1'
+[6.344s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/ld_library_path_lib.dsv'
+[6.347s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/ld_library_path_lib.sh'
+[6.350s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/bin'
+[6.351s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/pkgconfig/unitree_api.pc'
+[6.352s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages'
+[6.353s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_api', 'pythonpath')
+[6.354s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/pythonpath.ps1'
+[6.357s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/pythonpath.dsv'
+[6.360s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/hook/pythonpath.sh'
+[6.364s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/bin'
+[6.367s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/package.ps1'
+[6.372s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/package.dsv'
+[6.379s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/package.sh'
+[6.382s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/package.bash'
+[6.385s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/package.zsh'
+[6.388s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/colcon-core/packages/unitree_api)
+[6.628s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_go' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_go -- -j8 -l8
+[6.631s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_go': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_go
+[6.714s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(unitree_go)
+[6.715s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go' for CMake module files
+[6.716s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_go' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_go
+[6.717s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go' for CMake config files
+[6.717s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_go', 'cmake_prefix_path')
+[6.717s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/cmake_prefix_path.ps1'
+[6.718s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/cmake_prefix_path.dsv'
+[6.719s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/cmake_prefix_path.sh'
+[6.720s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib'
+[6.720s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_go', 'ld_library_path_lib')
+[6.720s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/ld_library_path_lib.ps1'
+[6.721s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/ld_library_path_lib.dsv'
+[6.721s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/ld_library_path_lib.sh'
+[6.722s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/bin'
+[6.722s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/pkgconfig/unitree_go.pc'
+[6.722s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/python3.8/site-packages'
+[6.722s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_go', 'pythonpath')
+[6.722s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/pythonpath.ps1'
+[6.723s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/pythonpath.dsv'
+[6.723s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/pythonpath.sh'
+[6.727s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/bin'
+[6.727s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/package.ps1'
+[6.728s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/package.dsv'
+[6.729s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/package.sh'
+[6.729s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/package.bash'
+[6.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/package.zsh'
+[6.730s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/colcon-core/packages/unitree_go)
+[6.731s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(unitree_go)
+[6.731s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go' for CMake module files
+[6.732s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go' for CMake config files
+[6.732s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_go', 'cmake_prefix_path')
+[6.733s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/cmake_prefix_path.ps1'
+[6.734s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/cmake_prefix_path.dsv'
+[6.734s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/cmake_prefix_path.sh'
+[6.735s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib'
+[6.735s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_go', 'ld_library_path_lib')
+[6.735s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/ld_library_path_lib.ps1'
+[6.736s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/ld_library_path_lib.dsv'
+[6.736s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/ld_library_path_lib.sh'
+[6.737s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/bin'
+[6.737s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/pkgconfig/unitree_go.pc'
+[6.737s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/python3.8/site-packages'
+[6.737s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_go', 'pythonpath')
+[6.737s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/pythonpath.ps1'
+[6.738s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/pythonpath.dsv'
+[6.738s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/hook/pythonpath.sh'
+[6.739s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/bin'
+[6.739s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/package.ps1'
+[6.740s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/package.dsv'
+[6.741s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/package.sh'
+[6.742s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/package.bash'
+[6.742s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/package.zsh'
+[6.743s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/colcon-core/packages/unitree_go)
+[6.743s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src' with build type 'ament_cmake'
+[6.743s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src'
+[6.744s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.744s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.763s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example
+[7.214s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/livox_ros_driver2 -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2
+[7.217s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2 -- -j8 -l8
+[7.552s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2 -- -j8 -l8
+[7.554s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2
+[7.626s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(livox_ros_driver2)
+[7.627s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2' for CMake module files
+[7.629s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2' for CMake config files
+[7.630s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/livox_ros_driver2
+[7.631s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'cmake_prefix_path')
+[7.631s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.ps1'
+[7.632s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.dsv'
+[7.633s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.sh'
+[7.634s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib'
+[7.634s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'ld_library_path_lib')
+[7.634s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.ps1'
+[7.635s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.dsv'
+[7.636s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.sh'
+[7.636s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/bin'
+[7.636s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/pkgconfig/livox_ros_driver2.pc'
+[7.637s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages'
+[7.637s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'pythonpath')
+[7.637s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/pythonpath.ps1'
+[7.638s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/pythonpath.dsv'
+[7.639s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/pythonpath.sh'
+[7.640s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/bin'
+[7.640s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.ps1'
+[7.642s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv'
+[7.643s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.sh'
+[7.644s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.bash'
+[7.644s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.zsh'
+[7.645s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/colcon-core/packages/livox_ros_driver2)
+[7.646s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(livox_ros_driver2)
+[7.647s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2' for CMake module files
+[7.648s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2' for CMake config files
+[7.649s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'cmake_prefix_path')
+[7.649s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.ps1'
+[7.650s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.dsv'
+[7.651s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.sh'
+[7.651s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib'
+[7.652s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'ld_library_path_lib')
+[7.652s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.ps1'
+[7.653s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.dsv'
+[7.653s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.sh'
+[7.654s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/bin'
+[7.654s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/pkgconfig/livox_ros_driver2.pc'
+[7.654s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages'
+[7.654s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'pythonpath')
+[7.655s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/pythonpath.ps1'
+[7.655s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/pythonpath.dsv'
+[7.657s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/pythonpath.sh'
+[7.658s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/bin'
+[7.659s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.ps1'
+[7.660s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv'
+[7.661s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.sh'
+[7.664s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.bash'
+[7.665s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.zsh'
+[7.665s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/share/colcon-core/packages/livox_ros_driver2)
+[7.666s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/go2_real' with build type 'ament_cmake'
+[7.667s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/alireza/thesis1/navigation_go2/go2_ws/src/go2_real'
+[7.667s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.667s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.692s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/opt/ros/foxy LD_LIBRARY_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/go2_real -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real
+[8.039s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real' returned '0': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/opt/ros/foxy LD_LIBRARY_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/go2_real -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real
+[8.043s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/opt/ros/foxy LD_LIBRARY_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real -- -j8 -l8
+[8.088s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real' returned '0': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/opt/ros/foxy LD_LIBRARY_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real -- -j8 -l8
+[8.090s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/opt/ros/foxy LD_LIBRARY_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real
+[8.104s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_real)
+[8.104s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real' for CMake module files
+[8.105s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real' returned '0': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/opt/ros/foxy LD_LIBRARY_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_real
+[8.105s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real' for CMake config files
+[8.106s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_real', 'cmake_prefix_path')
+[8.106s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/hook/cmake_prefix_path.ps1'
+[8.107s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/hook/cmake_prefix_path.dsv'
+[8.107s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/hook/cmake_prefix_path.sh'
+[8.108s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/lib'
+[8.108s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/bin'
+[8.108s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/lib/pkgconfig/go2_real.pc'
+[8.109s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/lib/python3.8/site-packages'
+[8.109s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/bin'
+[8.110s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/package.ps1'
+[8.111s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/package.dsv'
+[8.111s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/package.sh'
+[8.111s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/package.bash'
+[8.112s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/package.zsh'
+[8.112s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/colcon-core/packages/go2_real)
+[8.113s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(go2_real)
+[8.114s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real' for CMake module files
+[8.114s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real' for CMake config files
+[8.115s] Level 1:colcon.colcon_core.shell:create_environment_hook('go2_real', 'cmake_prefix_path')
+[8.115s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/hook/cmake_prefix_path.ps1'
+[8.115s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/hook/cmake_prefix_path.dsv'
+[8.116s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/hook/cmake_prefix_path.sh'
+[8.116s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/lib'
+[8.117s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/bin'
+[8.117s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/lib/pkgconfig/go2_real.pc'
+[8.117s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/lib/python3.8/site-packages'
+[8.117s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/bin'
+[8.117s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/package.ps1'
+[8.118s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/package.dsv'
+[8.119s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/package.sh'
+[8.119s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/package.bash'
+[8.120s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/go2_real/package.zsh'
+[8.120s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real/share/colcon-core/packages/go2_real)
+[9.180s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example' returned '0': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example
+[9.184s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example -- -j8 -l8
+[9.953s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example' returned '0': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example -- -j8 -l8
+[9.958s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example
+[9.978s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(unitree_ros2_example)
+[9.979s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example' for CMake module files
+[9.980s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example' returned '0': CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example
+[9.980s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example' for CMake config files
+[9.981s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_ros2_example', 'cmake_prefix_path')
+[9.981s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/cmake_prefix_path.ps1'
+[9.982s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/cmake_prefix_path.dsv'
+[9.983s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/cmake_prefix_path.sh'
+[9.984s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin'
+[9.984s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_ros2_example', 'path')
+[9.984s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/path.ps1'
+[9.985s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/path.dsv'
+[9.985s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/path.sh'
+[9.986s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/lib/pkgconfig/unitree_ros2_example.pc'
+[9.986s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/lib/python3.8/site-packages'
+[9.987s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin'
+[9.987s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_ros2_example', 'pythonscriptspath')
+[9.987s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/pythonscriptspath.ps1'
+[9.988s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/pythonscriptspath.dsv'
+[9.989s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/pythonscriptspath.sh'
+[9.990s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/package.ps1'
+[9.991s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/package.dsv'
+[9.992s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/package.sh'
+[9.993s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/package.bash'
+[9.993s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/package.zsh'
+[9.994s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/colcon-core/packages/unitree_ros2_example)
+[9.995s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(unitree_ros2_example)
+[9.996s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example' for CMake module files
+[9.997s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example' for CMake config files
+[9.997s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_ros2_example', 'cmake_prefix_path')
+[9.997s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/cmake_prefix_path.ps1'
+[9.998s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/cmake_prefix_path.dsv'
+[9.999s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/cmake_prefix_path.sh'
+[9.999s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin'
+[10.000s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_ros2_example', 'path')
+[10.000s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/path.ps1'
+[10.000s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/path.dsv'
+[10.001s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/path.sh'
+[10.005s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/lib/pkgconfig/unitree_ros2_example.pc'
+[10.005s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/lib/python3.8/site-packages'
+[10.005s] Level 1:colcon.colcon_core.environment:checking '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin'
+[10.006s] Level 1:colcon.colcon_core.shell:create_environment_hook('unitree_ros2_example', 'pythonscriptspath')
+[10.006s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/pythonscriptspath.ps1'
+[10.006s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/pythonscriptspath.dsv'
+[10.007s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/hook/pythonscriptspath.sh'
+[10.008s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/package.ps1'
+[10.009s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/package.dsv'
+[10.009s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/package.sh'
+[10.010s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/package.bash'
+[10.011s] INFO:colcon.colcon_core.shell:Creating package script '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/package.zsh'
+[10.011s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/colcon-core/packages/unitree_ros2_example)
+[10.012s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[10.012s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[10.012s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[10.012s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.017s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.017s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.018s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.033s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.033s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alireza/thesis1/navigation_go2/go2_ws/install/local_setup.ps1'
+[10.035s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/alireza/thesis1/navigation_go2/go2_ws/install/_local_setup_util_ps1.py'
+[10.037s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alireza/thesis1/navigation_go2/go2_ws/install/setup.ps1'
+[10.039s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alireza/thesis1/navigation_go2/go2_ws/install/local_setup.sh'
+[10.039s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/alireza/thesis1/navigation_go2/go2_ws/install/_local_setup_util_sh.py'
+[10.040s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alireza/thesis1/navigation_go2/go2_ws/install/setup.sh'
+[10.041s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alireza/thesis1/navigation_go2/go2_ws/install/local_setup.bash'
+[10.042s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alireza/thesis1/navigation_go2/go2_ws/install/setup.bash'
+[10.044s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alireza/thesis1/navigation_go2/go2_ws/install/local_setup.zsh'
+[10.044s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alireza/thesis1/navigation_go2/go2_ws/install/setup.zsh'

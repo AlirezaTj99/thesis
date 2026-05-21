@@ -1,0 +1,300 @@
+[0.000000] (-) TimerEvent: {}
+[0.000383] (-) JobUnselected: {'identifier': 'go2_description'}
+[0.000419] (-) JobUnselected: {'identifier': 'go2_gazebo'}
+[0.000483] (-) JobUnselected: {'identifier': 'go2_real'}
+[0.000587] (-) JobUnselected: {'identifier': 'livox_ros_driver2'}
+[0.000611] (-) JobUnselected: {'identifier': 'unitree_api'}
+[0.000654] (-) JobUnselected: {'identifier': 'unitree_go'}
+[0.000675] (-) JobUnselected: {'identifier': 'unitree_hg'}
+[0.000857] (-) JobUnselected: {'identifier': 'unitree_ros2_example'}
+[0.000879] (pointcloud_to_laserscan) JobQueued: {'identifier': 'pointcloud_to_laserscan', 'dependencies': OrderedDict()}
+[0.000956] (pointcloud_to_laserscan) JobStarted: {'identifier': 'pointcloud_to_laserscan'}
+[0.011994] (pointcloud_to_laserscan) JobProgress: {'identifier': 'pointcloud_to_laserscan', 'progress': 'cmake'}
+[0.012602] (pointcloud_to_laserscan) Command: {'cmd': ['/usr/bin/cmake', '/home/alireza/thesis1/navigation_go2/go2_ws/src/pointcloud_to_laserscan', '-DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan'], 'cwd': '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/alireza'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('AI_AGENT', 'claude-code_2-1-145_agent'), ('USER', 'alireza'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('LC_TIME', 'it_IT.UTF-8'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}'), ('GIT_EDITOR', 'true'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('SSH_AGENT_PID', '1488'), ('XDG_SESSION_TYPE', 'x11'), ('CLAUDE_AGENT_SDK_VERSION', '0.3.145'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/alireza'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/alireza/thesis1/navigation_go2/go2_ws/src/pointcloud_to_laserscan'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-4dbabf3c-1.12-main.sock'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'it_IT.UTF-8'), ('MANAGERPID', '1349'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/alireza/thesis1/navigation_go2/go2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'alireza'), ('JOURNAL_STREAM', '8:39778'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'alireza'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('MCP_CONNECTION_NONBLOCKING', 'true'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/alirezasComputer:@/tmp/.ICE-unix/1537,unix/alirezasComputer:/tmp/.ICE-unix/1537'), ('INVOCATION_ID', 'dd5a5bb5b43f4604bc583a3dc5e30103'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/95ed8b3b_f5b4_4848_b3f4_d13b286fa461'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('CLAUDE_EFFORT', 'high'), ('DISPLAY', ':1'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.101'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('CLAUDE_CODE_ENABLE_SDK_FILE_CHECKPOINTING', 'true'), ('CLAUDE_CODE_SESSION_ID', 'b8d76cd5-9c20-482b-9b54-792db226d4dd'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan'), ('VSCODE_CLI', '1'), ('TURTLEBOT3_MODEL', 'burger'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/alireza/.config/Code/CachedData/0958016b2af9f09bb4257e0df4a95e2f90590f9f'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('CLAUDE_CODE_EXECPATH', '/home/alireza/.vscode/extensions/anthropic.claude-code-2.1.145-linux-x64/resources/native-binary/claude'), ('PYTHONPATH', '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('CLAUDE_CODE_ENABLE_TASKS', '0'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('ELECTRON_NO_ATTACH_CONSOLE', '1'), ('CMAKE_PREFIX_PATH', '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy'), ('VSCODE_PID', '4279')]), 'shell': False}
+[0.076938] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.099583] (-) TimerEvent: {}
+[0.135744] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.141479] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.199690] (-) TimerEvent: {}
+[0.213612] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.214381] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.286268] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.299066] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.299362] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.299755] (-) TimerEvent: {}
+[0.301908] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.383521] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.384526] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.399872] (-) TimerEvent: {}
+[0.465869] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.479214] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.479785] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.482790] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.499967] (-) TimerEvent: {}
+[0.512477] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.512731] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.600068] (-) TimerEvent: {}
+[0.700243] (-) TimerEvent: {}
+[0.743027] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found laser_geometry: 2.2.0 (/opt/ros/foxy/share/laser_geometry/cmake)\n'}
+[0.762563] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found message_filters: 3.2.7 (/opt/ros/foxy/share/message_filters/cmake)\n'}
+[0.767027] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.800328] (-) TimerEvent: {}
+[0.822431] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.832223] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.900423] (-) TimerEvent: {}
+[0.924819] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.960169] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[1.000531] (-) TimerEvent: {}
+[1.057515] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.100628] (-) TimerEvent: {}
+[1.133337] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[1.135599] (pointcloud_to_laserscan) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[1.136665] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.200733] (-) TimerEvent: {}
+[1.228320] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.228562] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.300850] (-) TimerEvent: {}
+[1.311491] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[1.311766] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[1.387399] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[1.387789] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[1.400956] (-) TimerEvent: {}
+[1.478103] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[1.479292] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.501060] (-) TimerEvent: {}
+[1.601224] (-) TimerEvent: {}
+[1.676213] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found rclcpp_components: 2.4.3 (/opt/ros/foxy/share/rclcpp_components/cmake)\n'}
+[1.701327] (-) TimerEvent: {}
+[1.754860] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[1.801450] (-) TimerEvent: {}
+[1.891199] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found tf2: 0.13.14 (/opt/ros/foxy/share/tf2/cmake)\n'}
+[1.901550] (-) TimerEvent: {}
+[1.906735] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)\n'}
+[2.001650] (-) TimerEvent: {}
+[2.101835] (-) TimerEvent: {}
+[2.202018] (-) TimerEvent: {}
+[2.242373] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found tf2_sensor_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_sensor_msgs/cmake)\n'}
+[2.293101] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[2.302112] (-) TimerEvent: {}
+[2.378105] (pointcloud_to_laserscan) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.378592] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/alireza/thesis1/navigation_go2/go2_ws/src/pointcloud_to_laserscan/include\n'}
+[2.378749] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.381586] (pointcloud_to_laserscan) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[2.381730] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[2.382434] (pointcloud_to_laserscan) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[2.383529] (pointcloud_to_laserscan) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.384346] (pointcloud_to_laserscan) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[2.387261] (pointcloud_to_laserscan) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.387400] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.388142] (pointcloud_to_laserscan) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.392217] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.402230] (-) TimerEvent: {}
+[2.433015] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Generating done\n'}
+[2.450993] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Build files have been written to: /home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan\n'}
+[2.460952] (pointcloud_to_laserscan) CommandEnded: {'returncode': 0}
+[2.461968] (pointcloud_to_laserscan) JobProgress: {'identifier': 'pointcloud_to_laserscan', 'progress': 'build'}
+[2.462858] (pointcloud_to_laserscan) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan', '--', '-j8', '-l8'], 'cwd': '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/alireza'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('AI_AGENT', 'claude-code_2-1-145_agent'), ('USER', 'alireza'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('LC_TIME', 'it_IT.UTF-8'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}'), ('GIT_EDITOR', 'true'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('SSH_AGENT_PID', '1488'), ('XDG_SESSION_TYPE', 'x11'), ('CLAUDE_AGENT_SDK_VERSION', '0.3.145'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/alireza'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/alireza/thesis1/navigation_go2/go2_ws/src/pointcloud_to_laserscan'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-4dbabf3c-1.12-main.sock'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'it_IT.UTF-8'), ('MANAGERPID', '1349'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/alireza/thesis1/navigation_go2/go2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'alireza'), ('JOURNAL_STREAM', '8:39778'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'alireza'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('MCP_CONNECTION_NONBLOCKING', 'true'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/alirezasComputer:@/tmp/.ICE-unix/1537,unix/alirezasComputer:/tmp/.ICE-unix/1537'), ('INVOCATION_ID', 'dd5a5bb5b43f4604bc583a3dc5e30103'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/95ed8b3b_f5b4_4848_b3f4_d13b286fa461'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('CLAUDE_EFFORT', 'high'), ('DISPLAY', ':1'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.101'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('CLAUDE_CODE_ENABLE_SDK_FILE_CHECKPOINTING', 'true'), ('CLAUDE_CODE_SESSION_ID', 'b8d76cd5-9c20-482b-9b54-792db226d4dd'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan'), ('VSCODE_CLI', '1'), ('TURTLEBOT3_MODEL', 'burger'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/alireza/.config/Code/CachedData/0958016b2af9f09bb4257e0df4a95e2f90590f9f'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('CLAUDE_CODE_EXECPATH', '/home/alireza/.vscode/extensions/anthropic.claude-code-2.1.145-linux-x64/resources/native-binary/claude'), ('PYTHONPATH', '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('CLAUDE_CODE_ENABLE_TASKS', '0'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('ELECTRON_NO_ATTACH_CONSOLE', '1'), ('CMAKE_PREFIX_PATH', '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy'), ('VSCODE_PID', '4279')]), 'shell': False}
+[2.502382] (-) TimerEvent: {}
+[2.547096] (pointcloud_to_laserscan) StdoutLine: {'line': b'Scanning dependencies of target laserscan_to_pointcloud_node\n'}
+[2.547705] (pointcloud_to_laserscan) StdoutLine: {'line': b'Scanning dependencies of target dummy_pointcloud_publisher\n'}
+[2.558468] (pointcloud_to_laserscan) StdoutLine: {'line': b'Scanning dependencies of target pointcloud_to_laserscan_node\n'}
+[2.577681] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 20%] Building CXX object CMakeFiles/laserscan_to_pointcloud_node.dir/rclcpp_components/node_main_laserscan_to_pointcloud_node.cpp.o\n'}
+[2.577935] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 20%] Building CXX object CMakeFiles/dummy_pointcloud_publisher.dir/src/dummy_pointcloud_publisher.cpp.o\n'}
+[2.586842] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 30%] Building CXX object CMakeFiles/pointcloud_to_laserscan_node.dir/rclcpp_components/node_main_pointcloud_to_laserscan_node.cpp.o\n'}
+[2.602458] (-) TimerEvent: {}
+[2.655370] (pointcloud_to_laserscan) StdoutLine: {'line': b'Scanning dependencies of target laserscan_to_pointcloud\n'}
+[2.662206] (pointcloud_to_laserscan) StdoutLine: {'line': b'Scanning dependencies of target pointcloud_to_laserscan\n'}
+[2.688986] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 40%] Building CXX object CMakeFiles/laserscan_to_pointcloud.dir/src/laserscan_to_pointcloud_node.cpp.o\n'}
+[2.701123] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/pointcloud_to_laserscan.dir/src/pointcloud_to_laserscan_node.cpp.o\n'}
+[2.702544] (-) TimerEvent: {}
+[2.802721] (-) TimerEvent: {}
+[2.902910] (-) TimerEvent: {}
+[3.003151] (-) TimerEvent: {}
+[3.103438] (-) TimerEvent: {}
+[3.203632] (-) TimerEvent: {}
+[3.303831] (-) TimerEvent: {}
+[3.404049] (-) TimerEvent: {}
+[3.505239] (-) TimerEvent: {}
+[3.605563] (-) TimerEvent: {}
+[3.705773] (-) TimerEvent: {}
+[3.805993] (-) TimerEvent: {}
+[3.910341] (-) TimerEvent: {}
+[4.010546] (-) TimerEvent: {}
+[4.110793] (-) TimerEvent: {}
+[4.211003] (-) TimerEvent: {}
+[4.311195] (-) TimerEvent: {}
+[4.411396] (-) TimerEvent: {}
+[4.511675] (-) TimerEvent: {}
+[4.611892] (-) TimerEvent: {}
+[4.712110] (-) TimerEvent: {}
+[4.812318] (-) TimerEvent: {}
+[4.920116] (-) TimerEvent: {}
+[5.020302] (-) TimerEvent: {}
+[5.121596] (-) TimerEvent: {}
+[5.222186] (-) TimerEvent: {}
+[5.322375] (-) TimerEvent: {}
+[5.422538] (-) TimerEvent: {}
+[5.524369] (-) TimerEvent: {}
+[5.624571] (-) TimerEvent: {}
+[5.725878] (-) TimerEvent: {}
+[5.826135] (-) TimerEvent: {}
+[5.926702] (-) TimerEvent: {}
+[6.027101] (-) TimerEvent: {}
+[6.128821] (-) TimerEvent: {}
+[6.239371] (-) TimerEvent: {}
+[6.339594] (-) TimerEvent: {}
+[6.439820] (-) TimerEvent: {}
+[6.445622] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 60%] Linking CXX executable laserscan_to_pointcloud_node\n'}
+[6.539941] (-) TimerEvent: {}
+[6.541722] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 70%] Linking CXX executable pointcloud_to_laserscan_node\n'}
+[6.640063] (-) TimerEvent: {}
+[6.740318] (-) TimerEvent: {}
+[6.764639] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 70%] Built target laserscan_to_pointcloud_node\n'}
+[6.840474] (-) TimerEvent: {}
+[6.860165] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 70%] Built target pointcloud_to_laserscan_node\n'}
+[6.940597] (-) TimerEvent: {}
+[7.040832] (-) TimerEvent: {}
+[7.141063] (-) TimerEvent: {}
+[7.241229] (-) TimerEvent: {}
+[7.341419] (-) TimerEvent: {}
+[7.441618] (-) TimerEvent: {}
+[7.541826] (-) TimerEvent: {}
+[7.642028] (-) TimerEvent: {}
+[7.742230] (-) TimerEvent: {}
+[7.842782] (-) TimerEvent: {}
+[7.942982] (-) TimerEvent: {}
+[8.043203] (-) TimerEvent: {}
+[8.068180] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 80%] Linking CXX executable dummy_pointcloud_publisher\n'}
+[8.143307] (-) TimerEvent: {}
+[8.243537] (-) TimerEvent: {}
+[8.273241] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 80%] Built target dummy_pointcloud_publisher\n'}
+[8.343628] (-) TimerEvent: {}
+[8.443826] (-) TimerEvent: {}
+[8.544033] (-) TimerEvent: {}
+[8.644241] (-) TimerEvent: {}
+[8.744438] (-) TimerEvent: {}
+[8.844632] (-) TimerEvent: {}
+[8.944862] (-) TimerEvent: {}
+[9.045129] (-) TimerEvent: {}
+[9.145394] (-) TimerEvent: {}
+[9.245818] (-) TimerEvent: {}
+[9.346276] (-) TimerEvent: {}
+[9.446734] (-) TimerEvent: {}
+[9.547431] (-) TimerEvent: {}
+[9.647908] (-) TimerEvent: {}
+[9.748459] (-) TimerEvent: {}
+[9.848928] (-) TimerEvent: {}
+[9.949350] (-) TimerEvent: {}
+[10.049911] (-) TimerEvent: {}
+[10.150383] (-) TimerEvent: {}
+[10.250855] (-) TimerEvent: {}
+[10.351309] (-) TimerEvent: {}
+[10.451736] (-) TimerEvent: {}
+[10.552174] (-) TimerEvent: {}
+[10.652589] (-) TimerEvent: {}
+[10.752921] (-) TimerEvent: {}
+[10.853124] (-) TimerEvent: {}
+[10.953329] (-) TimerEvent: {}
+[11.053535] (-) TimerEvent: {}
+[11.153771] (-) TimerEvent: {}
+[11.254011] (-) TimerEvent: {}
+[11.354208] (-) TimerEvent: {}
+[11.454409] (-) TimerEvent: {}
+[11.554610] (-) TimerEvent: {}
+[11.654829] (-) TimerEvent: {}
+[11.755053] (-) TimerEvent: {}
+[11.855266] (-) TimerEvent: {}
+[11.955470] (-) TimerEvent: {}
+[12.055675] (-) TimerEvent: {}
+[12.155870] (-) TimerEvent: {}
+[12.256065] (-) TimerEvent: {}
+[12.356258] (-) TimerEvent: {}
+[12.456447] (-) TimerEvent: {}
+[12.556639] (-) TimerEvent: {}
+[12.656825] (-) TimerEvent: {}
+[12.757020] (-) TimerEvent: {}
+[12.857212] (-) TimerEvent: {}
+[12.957446] (-) TimerEvent: {}
+[13.057671] (-) TimerEvent: {}
+[13.157877] (-) TimerEvent: {}
+[13.258099] (-) TimerEvent: {}
+[13.358316] (-) TimerEvent: {}
+[13.458522] (-) TimerEvent: {}
+[13.558739] (-) TimerEvent: {}
+[13.658948] (-) TimerEvent: {}
+[13.759140] (-) TimerEvent: {}
+[13.859306] (-) TimerEvent: {}
+[13.959490] (-) TimerEvent: {}
+[14.059718] (-) TimerEvent: {}
+[14.159929] (-) TimerEvent: {}
+[14.260139] (-) TimerEvent: {}
+[14.360347] (-) TimerEvent: {}
+[14.460552] (-) TimerEvent: {}
+[14.560755] (-) TimerEvent: {}
+[14.660961] (-) TimerEvent: {}
+[14.761186] (-) TimerEvent: {}
+[14.861385] (-) TimerEvent: {}
+[14.961591] (-) TimerEvent: {}
+[15.061818] (-) TimerEvent: {}
+[15.162042] (-) TimerEvent: {}
+[15.262234] (-) TimerEvent: {}
+[15.362429] (-) TimerEvent: {}
+[15.462632] (-) TimerEvent: {}
+[15.562864] (-) TimerEvent: {}
+[15.663102] (-) TimerEvent: {}
+[15.763333] (-) TimerEvent: {}
+[15.863570] (-) TimerEvent: {}
+[15.963771] (-) TimerEvent: {}
+[16.064005] (-) TimerEvent: {}
+[16.079864] (pointcloud_to_laserscan) StdoutLine: {'line': b'[ 90%] Linking CXX shared library liblaserscan_to_pointcloud.so\n'}
+[16.091727] (pointcloud_to_laserscan) StdoutLine: {'line': b'[100%] Linking CXX shared library libpointcloud_to_laserscan.so\n'}
+[16.164095] (-) TimerEvent: {}
+[16.264315] (-) TimerEvent: {}
+[16.364542] (-) TimerEvent: {}
+[16.464762] (-) TimerEvent: {}
+[16.564964] (-) TimerEvent: {}
+[16.612025] (pointcloud_to_laserscan) StdoutLine: {'line': b'[100%] Built target pointcloud_to_laserscan\n'}
+[16.665072] (-) TimerEvent: {}
+[16.714736] (pointcloud_to_laserscan) StdoutLine: {'line': b'[100%] Built target laserscan_to_pointcloud\n'}
+[16.727234] (pointcloud_to_laserscan) CommandEnded: {'returncode': 0}
+[16.728564] (pointcloud_to_laserscan) JobProgress: {'identifier': 'pointcloud_to_laserscan', 'progress': 'install'}
+[16.741485] (pointcloud_to_laserscan) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan'], 'cwd': '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/alireza'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('AI_AGENT', 'claude-code_2-1-145_agent'), ('USER', 'alireza'), ('CLAUDE_CODE_ENTRYPOINT', 'claude-vscode'), ('LC_TIME', 'it_IT.UTF-8'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}'), ('GIT_EDITOR', 'true'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('SSH_AGENT_PID', '1488'), ('XDG_SESSION_TYPE', 'x11'), ('CLAUDE_AGENT_SDK_VERSION', '0.3.145'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/alireza'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/alireza/thesis1/navigation_go2/go2_ws/src/pointcloud_to_laserscan'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-4dbabf3c-1.12-main.sock'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'it_IT.UTF-8'), ('MANAGERPID', '1349'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/alireza/thesis1/navigation_go2/go2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'alireza'), ('JOURNAL_STREAM', '8:39778'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'alireza'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('MCP_CONNECTION_NONBLOCKING', 'true'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/alirezasComputer:@/tmp/.ICE-unix/1537,unix/alirezasComputer:/tmp/.ICE-unix/1537'), ('INVOCATION_ID', 'dd5a5bb5b43f4604bc583a3dc5e30103'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/95ed8b3b_f5b4_4848_b3f4_d13b286fa461'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('CLAUDE_EFFORT', 'high'), ('DISPLAY', ':1'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.101'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('CLAUDE_CODE_ENABLE_SDK_FILE_CHECKPOINTING', 'true'), ('CLAUDE_CODE_SESSION_ID', 'b8d76cd5-9c20-482b-9b54-792db226d4dd'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CLAUDECODE', '1'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/alireza/thesis1/navigation_go2/go2_ws/build/pointcloud_to_laserscan'), ('VSCODE_CLI', '1'), ('TURTLEBOT3_MODEL', 'burger'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/alireza/.config/Code/CachedData/0958016b2af9f09bb4257e0df4a95e2f90590f9f'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('CLAUDE_CODE_EXECPATH', '/home/alireza/.vscode/extensions/anthropic.claude-code-2.1.145-linux-x64/resources/native-binary/claude'), ('PYTHONPATH', '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('CLAUDE_CODE_ENABLE_TASKS', '0'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('ELECTRON_NO_ATTACH_CONSOLE', '1'), ('CMAKE_PREFIX_PATH', '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/home/alireza/thesis1/navigation_go2/go2_ws/install/livox_ros_driver2:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_real:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_gazebo:/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description:/opt/ros/foxy'), ('VSCODE_PID', '4279')]), 'shell': False}
+[16.750465] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[16.750777] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/laserscan_to_pointcloud_node\n'}
+[16.751199] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/laserscan_to_pointcloud_node" to ""\n'}
+[16.751422] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node\n'}
+[16.751857] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node" to ""\n'}
+[16.752045] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/liblaserscan_to_pointcloud.so\n'}
+[16.756736] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/liblaserscan_to_pointcloud.so" to ""\n'}
+[16.756972] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/libpointcloud_to_laserscan.so\n'}
+[16.761576] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/libpointcloud_to_laserscan.so" to ""\n'}
+[16.761878] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/dummy_pointcloud_publisher\n'}
+[16.762755] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/dummy_pointcloud_publisher" to ""\n'}
+[16.762904] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/include/include\n'}
+[16.763131] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/include/include/pointcloud_to_laserscan\n'}
+[16.763393] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/include/include/pointcloud_to_laserscan/visibility_control.h\n'}
+[16.763510] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/include/include/pointcloud_to_laserscan/laserscan_to_pointcloud_node.hpp\n'}
+[16.763682] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/include/include/pointcloud_to_laserscan/pointcloud_to_laserscan_node.hpp\n'}
+[16.763848] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch\n'}
+[16.764013] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch/sample_pointcloud_to_laserscan_launch.py\n'}
+[16.764176] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch/sample_laserscan_to_pointcloud_launch.py\n'}
+[16.764383] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/ament_index/resource_index/package_run_dependencies/pointcloud_to_laserscan\n'}
+[16.764545] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/ament_index/resource_index/parent_prefix_path/pointcloud_to_laserscan\n'}
+[16.764659] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/ament_prefix_path.sh\n'}
+[16.764873] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/ament_prefix_path.dsv\n'}
+[16.765034] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/path.sh\n'}
+[16.765202] (-) TimerEvent: {}
+[16.765239] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/path.dsv\n'}
+[16.765420] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.bash\n'}
+[16.765585] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.sh\n'}
+[16.765697] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.zsh\n'}
+[16.765983] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.dsv\n'}
+[16.766143] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv\n'}
+[16.766260] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/ament_index/resource_index/packages/pointcloud_to_laserscan\n'}
+[16.766383] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/ament_index/resource_index/rclcpp_components/pointcloud_to_laserscan\n'}
+[16.766492] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/pointcloud_to_laserscanConfig.cmake\n'}
+[16.766598] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/pointcloud_to_laserscanConfig-version.cmake\n'}
+[16.766697] (pointcloud_to_laserscan) StdoutLine: {'line': b'-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.xml\n'}
+[16.768018] (pointcloud_to_laserscan) CommandEnded: {'returncode': 0}
+[16.790078] (pointcloud_to_laserscan) JobEnded: {'identifier': 'pointcloud_to_laserscan', 'rc': 0}
+[16.790769] (-) EventReactorShutdown: {}

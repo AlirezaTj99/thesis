@@ -1,0 +1,213 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				},
+				{
+					"build" : "unitree_hg__py",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg/unitree_hg__py",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "unitree_hg",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-480bfc48addf0dc9e5bf.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unitree_hg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unitree_hg-e83c3403071a554e00eb.json",
+					"name" : "unitree_hg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unitree_hg__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unitree_hg__cpp-e36a6692bba56911d3c1.json",
+					"name" : "unitree_hg__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "unitree_hg__py::@7c5e60903780e3debc97",
+					"jsonFile" : "target-unitree_hg__py-5ff11809fe825556041c.json",
+					"name" : "unitree_hg__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unitree_hg__python::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unitree_hg__python-27141ee6f8c798a1de65.json",
+					"name" : "unitree_hg__python",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unitree_hg__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unitree_hg__rosidl_generator_c-74d55460af4924072680.json",
+					"name" : "unitree_hg__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unitree_hg__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unitree_hg__rosidl_typesupport_c-ceffd9f66ad874efdc1d.json",
+					"name" : "unitree_hg__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unitree_hg__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unitree_hg__rosidl_typesupport_c__pyext-f55630ee4c87d2c287cd.json",
+					"name" : "unitree_hg__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unitree_hg__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unitree_hg__rosidl_typesupport_cpp-9723c236f504c03bfa27.json",
+					"name" : "unitree_hg__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unitree_hg__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unitree_hg__rosidl_typesupport_fastrtps_c-1ce5b6e8d1c84b365336.json",
+					"name" : "unitree_hg__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unitree_hg__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unitree_hg__rosidl_typesupport_fastrtps_c__pyext-ab1a0455aea9bf1fbad5.json",
+					"name" : "unitree_hg__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unitree_hg__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unitree_hg__rosidl_typesupport_fastrtps_cpp-40d995374a900b26c920.json",
+					"name" : "unitree_hg__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unitree_hg__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unitree_hg__rosidl_typesupport_introspection_c-53c78c3dbd63ba3ce925.json",
+					"name" : "unitree_hg__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unitree_hg__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unitree_hg__rosidl_typesupport_introspection_c__pyext-ac191f76df983db2c898.json",
+					"name" : "unitree_hg__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unitree_hg__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unitree_hg__rosidl_typesupport_introspection_cpp-085ca65773c5e8515457.json",
+					"name" : "unitree_hg__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unitree_hg_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unitree_hg_uninstall-5833aea235c20c556ab3.json",
+					"name" : "unitree_hg_uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg",
+		"source" : "/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

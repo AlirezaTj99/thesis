@@ -1,0 +1,38 @@
+[0.051s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/go2_description -DROS_EDITION=ROS2 -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description
+[0.111s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.126s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.622s] -- Configuring done
+[0.628s] -- Generating done
+[0.635s] CMake Warning:
+[0.635s]   Manually-specified variables were not used by the project:
+[0.635s] 
+[0.635s]     ROS_EDITION
+[0.635s] 
+[0.636s] 
+[0.637s] -- Build files have been written to: /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description
+[0.647s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/go2_description -DROS_EDITION=ROS2 -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description
+[0.648s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description -- -j8 -l8
+[0.754s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description -- -j8 -l8
+[0.775s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description
+[0.799s] -- Install configuration: ""
+[0.800s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/urdf
+[0.800s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/urdf/go2_real.urdf.xacro
+[0.800s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/urdf/go2.urdf.xacro
+[0.800s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/launch
+[0.800s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/meshes
+[0.801s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/ament_index/resource_index/package_run_dependencies/go2_description
+[0.801s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/ament_index/resource_index/parent_prefix_path/go2_description
+[0.801s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/environment/ament_prefix_path.sh
+[0.802s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/environment/ament_prefix_path.dsv
+[0.802s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/environment/path.sh
+[0.802s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/environment/path.dsv
+[0.802s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/local_setup.bash
+[0.803s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/local_setup.sh
+[0.803s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/local_setup.zsh
+[0.803s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/local_setup.dsv
+[0.803s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/package.dsv
+[0.804s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/ament_index/resource_index/packages/go2_description
+[0.804s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/cmake/go2_descriptionConfig.cmake
+[0.804s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/cmake/go2_descriptionConfig-version.cmake
+[0.804s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/package.xml
+[0.814s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description

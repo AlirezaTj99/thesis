@@ -1,0 +1,8 @@
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api/rosidl_adapter/unitree_api:msg/Request.idl
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api/rosidl_adapter/unitree_api:msg/RequestHeader.idl
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api/rosidl_adapter/unitree_api:msg/RequestIdentity.idl
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api/rosidl_adapter/unitree_api:msg/RequestLease.idl
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api/rosidl_adapter/unitree_api:msg/RequestPolicy.idl
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api/rosidl_adapter/unitree_api:msg/Response.idl
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api/rosidl_adapter/unitree_api:msg/ResponseHeader.idl
+/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_api/rosidl_adapter/unitree_api:msg/ResponseStatus.idl

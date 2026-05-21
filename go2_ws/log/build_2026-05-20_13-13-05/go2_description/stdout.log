@@ -1,0 +1,41 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/alireza/thesis1/navigation_go2/go2_ws/build/go2_description
+-- Install configuration: ""
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/urdf
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/urdf/go2_real.urdf.xacro
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/urdf/go2.urdf.xacro
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/launch
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/meshes
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/ament_index/resource_index/package_run_dependencies/go2_description
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/ament_index/resource_index/parent_prefix_path/go2_description
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/environment/ament_prefix_path.sh
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/environment/ament_prefix_path.dsv
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/environment/path.sh
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/environment/path.dsv
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/local_setup.bash
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/local_setup.sh
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/local_setup.zsh
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/local_setup.dsv
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/package.dsv
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/ament_index/resource_index/packages/go2_description
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/cmake/go2_descriptionConfig.cmake
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/cmake/go2_descriptionConfig-version.cmake
+-- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/go2_description/share/go2_description/package.xml

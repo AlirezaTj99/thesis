@@ -1,0 +1,479 @@
+[0.024s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg
+[0.049s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.087s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.421s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[0.460s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.466s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.687s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.858s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.906s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[1.225s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[1.580s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.740s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.774s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[1.776s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[1.820s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[1.820s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.820s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[1.820s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[1.863s] -- Found PythonExtra: .so  
+[2.002s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.043s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.046s] -- Added test 'lint_cmake' to check CMake code style
+[2.048s] -- Added test 'xmllint' to check XML markup files
+[2.057s] -- Configuring done
+[2.215s] -- Generating done
+[2.258s] -- Build files have been written to: /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg
+[2.278s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_hg -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg
+[2.280s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg -- -j8 -l8
+[2.352s] Scanning dependencies of target unitree_hg__cpp
+[2.356s] [  1%] Generating C code for ROS interfaces
+[2.372s] [  1%] Generating C++ code for ROS interfaces
+[5.501s] [  1%] Built target unitree_hg__cpp
+[5.599s] [  1%] Generating C++ type support for eProsima Fast-RTPS
+[5.619s] [  2%] Generating C++ introspection for ROS interfaces
+[5.620s] [  3%] Generating C++ type support dispatch for ROS interfaces
+[6.073s] Scanning dependencies of target unitree_hg__rosidl_generator_c
+[6.115s] [  4%] Building C object CMakeFiles/unitree_hg__rosidl_generator_c.dir/rosidl_generator_c/unitree_hg/msg/detail/bms_cmd__functions.c.o
+[6.132s] [  5%] Building C object CMakeFiles/unitree_hg__rosidl_generator_c.dir/rosidl_generator_c/unitree_hg/msg/detail/bms_state__functions.c.o
+[6.171s] [  6%] Building C object CMakeFiles/unitree_hg__rosidl_generator_c.dir/rosidl_generator_c/unitree_hg/msg/detail/hand_cmd__functions.c.o
+[6.183s] [  7%] Building C object CMakeFiles/unitree_hg__rosidl_generator_c.dir/rosidl_generator_c/unitree_hg/msg/detail/hand_state__functions.c.o
+[6.228s] [  8%] Building C object CMakeFiles/unitree_hg__rosidl_generator_c.dir/rosidl_generator_c/unitree_hg/msg/detail/imu_state__functions.c.o
+[6.386s] [  8%] Building C object CMakeFiles/unitree_hg__rosidl_generator_c.dir/rosidl_generator_c/unitree_hg/msg/detail/low_cmd__functions.c.o
+[6.469s] [  9%] Building C object CMakeFiles/unitree_hg__rosidl_generator_c.dir/rosidl_generator_c/unitree_hg/msg/detail/low_state__functions.c.o
+[6.556s] [ 10%] Building C object CMakeFiles/unitree_hg__rosidl_generator_c.dir/rosidl_generator_c/unitree_hg/msg/detail/main_board_state__functions.c.o
+[6.602s] [ 11%] Building C object CMakeFiles/unitree_hg__rosidl_generator_c.dir/rosidl_generator_c/unitree_hg/msg/detail/motor_cmd__functions.c.o
+[6.609s] [ 12%] Building C object CMakeFiles/unitree_hg__rosidl_generator_c.dir/rosidl_generator_c/unitree_hg/msg/detail/motor_state__functions.c.o
+[6.638s] [ 13%] Building C object CMakeFiles/unitree_hg__rosidl_generator_c.dir/rosidl_generator_c/unitree_hg/msg/detail/press_sensor_state__functions.c.o
+[6.980s] [ 14%] Linking C shared library libunitree_hg__rosidl_generator_c.so
+[7.340s] [ 14%] Built target unitree_hg__rosidl_generator_c
+[7.432s] [ 15%] Generating C type support dispatch for ROS interfaces
+[7.480s] [ 16%] Generating C introspection for ROS interfaces
+[9.014s] Scanning dependencies of target unitree_hg__rosidl_typesupport_introspection_cpp
+[9.073s] [ 17%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/unitree_hg/msg/detail/bms_cmd__type_support.cpp.o
+[9.108s] [ 18%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/unitree_hg/msg/detail/hand_cmd__type_support.cpp.o
+[9.137s] [ 18%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/unitree_hg/msg/detail/bms_state__type_support.cpp.o
+[9.151s] [ 19%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/unitree_hg/msg/detail/hand_state__type_support.cpp.o
+[10.542s] [ 20%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/unitree_hg/msg/detail/imu_state__type_support.cpp.o
+[11.032s] Scanning dependencies of target unitree_hg__rosidl_typesupport_fastrtps_cpp
+[11.171s] [ 21%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/unitree_hg/msg/detail/dds_fastrtps/bms_cmd__type_support.cpp.o
+[11.279s] Scanning dependencies of target unitree_hg__rosidl_typesupport_cpp
+[11.437s] [ 22%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/unitree_hg/msg/bms_cmd__type_support.cpp.o
+[11.979s] [ 23%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/unitree_hg/msg/detail/low_cmd__type_support.cpp.o
+[12.289s] [ 24%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/unitree_hg/msg/detail/low_state__type_support.cpp.o
+[12.586s] [ 25%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/unitree_hg/msg/detail/main_board_state__type_support.cpp.o
+[12.629s] [ 26%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/unitree_hg/msg/bms_state__type_support.cpp.o
+[12.679s] Scanning dependencies of target unitree_hg__rosidl_typesupport_c
+[12.802s] [ 27%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_c.dir/rosidl_typesupport_c/unitree_hg/msg/bms_cmd__type_support.cpp.o
+[12.967s] [ 28%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_c.dir/rosidl_typesupport_c/unitree_hg/msg/bms_state__type_support.cpp.o
+[13.049s] [ 29%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/unitree_hg/msg/detail/dds_fastrtps/bms_state__type_support.cpp.o
+[13.089s] [ 30%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/unitree_hg/msg/detail/motor_cmd__type_support.cpp.o
+[13.159s] [ 31%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/unitree_hg/msg/detail/motor_state__type_support.cpp.o
+[13.211s] [ 31%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_c.dir/rosidl_typesupport_c/unitree_hg/msg/hand_cmd__type_support.cpp.o
+[13.528s] [ 32%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_c.dir/rosidl_typesupport_c/unitree_hg/msg/hand_state__type_support.cpp.o
+[13.874s] [ 33%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_c.dir/rosidl_typesupport_c/unitree_hg/msg/imu_state__type_support.cpp.o
+[14.145s] [ 34%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_c.dir/rosidl_typesupport_c/unitree_hg/msg/low_cmd__type_support.cpp.o
+[14.351s] [ 35%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/unitree_hg/msg/hand_cmd__type_support.cpp.o
+[14.502s] [ 36%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_c.dir/rosidl_typesupport_c/unitree_hg/msg/low_state__type_support.cpp.o
+[14.720s] [ 37%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_c.dir/rosidl_typesupport_c/unitree_hg/msg/main_board_state__type_support.cpp.o
+[14.968s] [ 38%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_c.dir/rosidl_typesupport_c/unitree_hg/msg/motor_cmd__type_support.cpp.o
+[15.004s] [ 39%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/unitree_hg/msg/detail/press_sensor_state__type_support.cpp.o
+[15.041s] [ 40%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_c.dir/rosidl_typesupport_c/unitree_hg/msg/press_sensor_state__type_support.cpp.o
+[15.046s] [ 41%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_c.dir/rosidl_typesupport_c/unitree_hg/msg/motor_state__type_support.cpp.o
+[15.129s] [ 42%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/unitree_hg/msg/hand_state__type_support.cpp.o
+[15.163s] [ 43%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/unitree_hg/msg/imu_state__type_support.cpp.o
+[15.221s] [ 44%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/unitree_hg/msg/low_cmd__type_support.cpp.o
+[15.254s] [ 45%] Linking CXX shared library libunitree_hg__rosidl_typesupport_c.so
+[15.299s] Scanning dependencies of target unitree_hg__rosidl_typesupport_introspection_c
+[15.362s] [ 46%] Building C object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/unitree_hg/msg/detail/bms_cmd__type_support.c.o
+[15.376s] [ 47%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/unitree_hg/msg/detail/dds_fastrtps/hand_cmd__type_support.cpp.o
+[15.408s] [ 48%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/unitree_hg/msg/low_state__type_support.cpp.o
+[15.625s] [ 48%] Built target unitree_hg__rosidl_typesupport_c
+[15.626s] [ 49%] Building C object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/unitree_hg/msg/detail/bms_state__type_support.c.o
+[15.675s] [ 50%] Building C object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/unitree_hg/msg/detail/hand_cmd__type_support.c.o
+[15.889s] [ 51%] Building C object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/unitree_hg/msg/detail/hand_state__type_support.c.o
+[15.935s] [ 52%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/unitree_hg/msg/detail/dds_fastrtps/hand_state__type_support.cpp.o
+[16.204s] [ 53%] Building C object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/unitree_hg/msg/detail/imu_state__type_support.c.o
+[16.335s] [ 54%] Linking CXX shared library libunitree_hg__rosidl_typesupport_introspection_cpp.so
+[16.474s] [ 55%] Building C object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/unitree_hg/msg/detail/low_cmd__type_support.c.o
+[16.632s] [ 55%] Building C object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/unitree_hg/msg/detail/low_state__type_support.c.o
+[16.640s] [ 55%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/unitree_hg/msg/main_board_state__type_support.cpp.o
+[16.680s] [ 56%] Building C object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/unitree_hg/msg/detail/main_board_state__type_support.c.o
+[16.895s] [ 57%] Building C object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/unitree_hg/msg/detail/motor_cmd__type_support.c.o
+[16.911s] [ 58%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/unitree_hg/msg/detail/dds_fastrtps/imu_state__type_support.cpp.o
+[16.946s] [ 59%] Building C object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/unitree_hg/msg/detail/motor_state__type_support.c.o
+[16.968s] [ 59%] Built target unitree_hg__rosidl_typesupport_introspection_cpp
+[17.016s] [ 60%] Building C object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/unitree_hg/msg/detail/press_sensor_state__type_support.c.o
+[17.098s] [ 61%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/unitree_hg/msg/motor_cmd__type_support.cpp.o
+[17.182s] [ 62%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/unitree_hg/msg/motor_state__type_support.cpp.o
+[17.278s] [ 63%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/unitree_hg/msg/press_sensor_state__type_support.cpp.o
+[17.281s] [ 64%] Linking C shared library libunitree_hg__rosidl_typesupport_introspection_c.so
+[17.665s] [ 64%] Built target unitree_hg__rosidl_typesupport_introspection_c
+[17.732s] [ 65%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/unitree_hg/msg/detail/dds_fastrtps/low_cmd__type_support.cpp.o
+[18.486s] [ 66%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/unitree_hg/msg/detail/dds_fastrtps/low_state__type_support.cpp.o
+[18.648s] [ 67%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/unitree_hg/msg/detail/dds_fastrtps/main_board_state__type_support.cpp.o
+[19.334s] [ 68%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/unitree_hg/msg/detail/dds_fastrtps/motor_cmd__type_support.cpp.o
+[19.809s] [ 68%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/unitree_hg/msg/detail/dds_fastrtps/motor_state__type_support.cpp.o
+[19.837s] [ 69%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/unitree_hg/msg/detail/dds_fastrtps/press_sensor_state__type_support.cpp.o
+[19.878s] [ 70%] Linking CXX shared library libunitree_hg__rosidl_typesupport_cpp.so
+[20.269s] [ 70%] Built target unitree_hg__rosidl_typesupport_cpp
+[21.832s] [ 71%] Linking CXX shared library libunitree_hg__rosidl_typesupport_fastrtps_cpp.so
+[22.144s] [ 71%] Built target unitree_hg__rosidl_typesupport_fastrtps_cpp
+[22.212s] [ 72%] Generating C type support for eProsima Fast-RTPS
+[24.770s] Scanning dependencies of target unitree_hg__rosidl_typesupport_fastrtps_c
+[24.814s] [ 73%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/unitree_hg/msg/detail/bms_cmd__type_support_c.cpp.o
+[25.661s] [ 74%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/unitree_hg/msg/detail/main_board_state__type_support_c.cpp.o
+[26.317s] [ 75%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/unitree_hg/msg/detail/motor_cmd__type_support_c.cpp.o
+[27.004s] [ 76%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/unitree_hg/msg/detail/motor_state__type_support_c.cpp.o
+[27.797s] [ 77%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/unitree_hg/msg/detail/press_sensor_state__type_support_c.cpp.o
+[28.507s] [ 78%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/unitree_hg/msg/detail/low_state__type_support_c.cpp.o
+[29.057s] [ 79%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/unitree_hg/msg/detail/low_cmd__type_support_c.cpp.o
+[29.609s] [ 79%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/unitree_hg/msg/detail/imu_state__type_support_c.cpp.o
+[30.262s] [ 80%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/unitree_hg/msg/detail/hand_state__type_support_c.cpp.o
+[30.918s] [ 81%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/unitree_hg/msg/detail/hand_cmd__type_support_c.cpp.o
+[31.430s] [ 82%] Building CXX object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/unitree_hg/msg/detail/bms_state__type_support_c.cpp.o
+[31.931s] [ 83%] Linking CXX shared library libunitree_hg__rosidl_typesupport_fastrtps_c.so
+[32.088s] [ 83%] Built target unitree_hg__rosidl_typesupport_fastrtps_c
+[32.103s] Scanning dependencies of target unitree_hg
+[32.119s] [ 83%] Built target unitree_hg
+[32.134s] Scanning dependencies of target unitree_hg__py
+[32.154s] [ 84%] Generating Python code for ROS interfaces
+[35.156s] [ 84%] Built target unitree_hg__py
+[35.223s] Scanning dependencies of target unitree_hg__python
+[35.250s] [ 85%] Building C object CMakeFiles/unitree_hg__python.dir/rosidl_generator_py/unitree_hg/msg/_bms_cmd_s.c.o
+[35.433s] [ 86%] Building C object CMakeFiles/unitree_hg__python.dir/rosidl_generator_py/unitree_hg/msg/_main_board_state_s.c.o
+[35.634s] [ 86%] Building C object CMakeFiles/unitree_hg__python.dir/rosidl_generator_py/unitree_hg/msg/_motor_cmd_s.c.o
+[35.814s] [ 87%] Building C object CMakeFiles/unitree_hg__python.dir/rosidl_generator_py/unitree_hg/msg/_motor_state_s.c.o
+[35.995s] [ 88%] Building C object CMakeFiles/unitree_hg__python.dir/rosidl_generator_py/unitree_hg/msg/_press_sensor_state_s.c.o
+[36.118s] [ 89%] Building C object CMakeFiles/unitree_hg__python.dir/rosidl_generator_py/unitree_hg/msg/_low_state_s.c.o
+[36.256s] [ 90%] Building C object CMakeFiles/unitree_hg__python.dir/rosidl_generator_py/unitree_hg/msg/_low_cmd_s.c.o
+[36.444s] [ 91%] Building C object CMakeFiles/unitree_hg__python.dir/rosidl_generator_py/unitree_hg/msg/_imu_state_s.c.o
+[36.640s] [ 92%] Building C object CMakeFiles/unitree_hg__python.dir/rosidl_generator_py/unitree_hg/msg/_hand_state_s.c.o
+[36.775s] [ 93%] Building C object CMakeFiles/unitree_hg__python.dir/rosidl_generator_py/unitree_hg/msg/_hand_cmd_s.c.o
+[36.894s] [ 94%] Building C object CMakeFiles/unitree_hg__python.dir/rosidl_generator_py/unitree_hg/msg/_bms_state_s.c.o
+[37.031s] [ 95%] Linking C shared library rosidl_generator_py/unitree_hg/libunitree_hg__python.so
+[37.098s] [ 95%] Built target unitree_hg__python
+[37.120s] Scanning dependencies of target unitree_hg__rosidl_typesupport_c__pyext
+[37.138s] [ 95%] Building C object CMakeFiles/unitree_hg__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/unitree_hg/_unitree_hg_s.ep.rosidl_typesupport_c.c.o
+[37.343s] [ 96%] Linking C shared library rosidl_generator_py/unitree_hg/unitree_hg_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[37.394s] [ 96%] Built target unitree_hg__rosidl_typesupport_c__pyext
+[37.418s] Scanning dependencies of target unitree_hg__rosidl_typesupport_fastrtps_c__pyext
+[37.436s] [ 97%] Building C object CMakeFiles/unitree_hg__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/unitree_hg/_unitree_hg_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[37.585s] [ 98%] Linking CXX shared library rosidl_generator_py/unitree_hg/unitree_hg_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[37.681s] [ 98%] Built target unitree_hg__rosidl_typesupport_fastrtps_c__pyext
+[37.703s] Scanning dependencies of target unitree_hg__rosidl_typesupport_introspection_c__pyext
+[37.723s] [ 99%] Building C object CMakeFiles/unitree_hg__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/unitree_hg/_unitree_hg_s.ep.rosidl_typesupport_introspection_c.c.o
+[37.867s] [100%] Linking C shared library rosidl_generator_py/unitree_hg/unitree_hg_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[37.918s] [100%] Built target unitree_hg__rosidl_typesupport_introspection_c__pyext
+[37.933s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg -- -j8 -l8
+[37.934s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg
+[37.954s] -- Install configuration: ""
+[37.954s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/ament_index/resource_index/rosidl_interfaces/unitree_hg
+[37.956s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg
+[37.956s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg
+[37.957s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/press_sensor_state.h
+[37.957s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/motor_state.h
+[37.957s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/hand_state.h
+[37.958s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/bms_state.h
+[37.959s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/motor_cmd.h
+[37.959s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/imu_state.h
+[37.959s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/low_state.h
+[37.960s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail
+[37.960s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/imu_state__struct.h
+[37.961s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/main_board_state__functions.c
+[37.961s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_state__functions.h
+[37.961s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_state__functions.h
+[37.961s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_cmd__functions.c
+[37.961s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_state__functions.c
+[37.961s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_cmd__struct.h
+[37.962s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_state__struct.h
+[37.962s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_cmd__functions.c
+[37.962s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/press_sensor_state__type_support.h
+[37.962s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/main_board_state__type_support.h
+[37.962s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_state__type_support.h
+[37.962s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/press_sensor_state__functions.h
+[37.962s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_cmd__functions.c
+[37.962s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_cmd__struct.h
+[37.962s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_state__type_support.h
+[37.962s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_cmd__struct.h
+[37.962s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_state__functions.c
+[37.963s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_cmd__functions.h
+[37.963s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_state__functions.h
+[37.963s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/imu_state__functions.h
+[37.963s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/press_sensor_state__struct.h
+[37.963s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_state__type_support.h
+[37.963s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_cmd__type_support.h
+[37.963s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_state__struct.h
+[37.963s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/imu_state__functions.c
+[37.964s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/main_board_state__functions.h
+[37.965s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_state__functions.c
+[37.965s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_state__functions.h
+[37.965s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/imu_state__type_support.h
+[37.965s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/press_sensor_state__functions.c
+[37.966s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_cmd__type_support.h
+[37.966s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_cmd__type_support.h
+[37.966s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_state__struct.h
+[37.966s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_cmd__struct.h
+[37.966s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_cmd__functions.h
+[37.966s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_state__struct.h
+[37.966s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_cmd__functions.c
+[37.966s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_cmd__functions.h
+[37.967s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_cmd__functions.h
+[37.967s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_cmd__type_support.h
+[37.967s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_state__functions.c
+[37.967s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_state__type_support.h
+[37.967s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/main_board_state__struct.h
+[37.967s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/main_board_state.h
+[37.968s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/bms_cmd.h
+[37.968s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/low_cmd.h
+[37.968s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/rosidl_generator_c__visibility_control.h
+[37.968s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/hand_cmd.h
+[37.968s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/environment/library_path.sh
+[37.968s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/environment/library_path.dsv
+[37.968s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/libunitree_hg__rosidl_generator_c.so
+[37.968s] -- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/libunitree_hg__rosidl_generator_c.so" to ""
+[37.968s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg
+[37.968s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg
+[37.968s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail
+[37.969s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/imu_state__rosidl_typesupport_fastrtps_c.h
+[37.969s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_state__rosidl_typesupport_fastrtps_c.h
+[37.969s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_cmd__rosidl_typesupport_fastrtps_c.h
+[37.969s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/press_sensor_state__rosidl_typesupport_fastrtps_c.h
+[37.969s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_cmd__rosidl_typesupport_fastrtps_c.h
+[37.969s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_cmd__rosidl_typesupport_fastrtps_c.h
+[37.969s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_state__rosidl_typesupport_fastrtps_c.h
+[37.969s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_state__rosidl_typesupport_fastrtps_c.h
+[37.970s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_state__rosidl_typesupport_fastrtps_c.h
+[37.970s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/main_board_state__rosidl_typesupport_fastrtps_c.h
+[37.970s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_cmd__rosidl_typesupport_fastrtps_c.h
+[37.970s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[37.970s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/libunitree_hg__rosidl_typesupport_fastrtps_c.so
+[37.970s] -- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/libunitree_hg__rosidl_typesupport_fastrtps_c.so" to ""
+[37.971s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg
+[37.971s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg
+[37.971s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[37.971s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail
+[37.971s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/imu_state__rosidl_typesupport_fastrtps_cpp.hpp
+[37.971s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/press_sensor_state__rosidl_typesupport_fastrtps_cpp.hpp
+[37.972s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/main_board_state__rosidl_typesupport_fastrtps_cpp.hpp
+[37.972s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_cmd__rosidl_typesupport_fastrtps_cpp.hpp
+[37.972s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_cmd__rosidl_typesupport_fastrtps_cpp.hpp
+[37.972s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_state__rosidl_typesupport_fastrtps_cpp.hpp
+[37.972s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_state__rosidl_typesupport_fastrtps_cpp.hpp
+[37.972s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_cmd__rosidl_typesupport_fastrtps_cpp.hpp
+[37.972s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/dds_fastrtps
+[37.972s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_cmd__rosidl_typesupport_fastrtps_cpp.hpp
+[37.973s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_state__rosidl_typesupport_fastrtps_cpp.hpp
+[37.973s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_state__rosidl_typesupport_fastrtps_cpp.hpp
+[37.973s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/libunitree_hg__rosidl_typesupport_fastrtps_cpp.so
+[37.974s] -- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/libunitree_hg__rosidl_typesupport_fastrtps_cpp.so" to ""
+[37.974s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg
+[37.974s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg
+[37.975s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[37.975s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail
+[37.975s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/press_sensor_state__rosidl_typesupport_introspection_c.h
+[37.975s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_cmd__rosidl_typesupport_introspection_c.h
+[37.975s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_cmd__type_support.c
+[37.976s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_cmd__rosidl_typesupport_introspection_c.h
+[37.976s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/imu_state__rosidl_typesupport_introspection_c.h
+[37.976s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_state__type_support.c
+[37.976s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_state__rosidl_typesupport_introspection_c.h
+[37.976s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_state__type_support.c
+[37.976s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_cmd__type_support.c
+[37.977s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_state__rosidl_typesupport_introspection_c.h
+[37.977s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_cmd__rosidl_typesupport_introspection_c.h
+[37.977s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_cmd__rosidl_typesupport_introspection_c.h
+[37.977s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_state__rosidl_typesupport_introspection_c.h
+[37.978s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/main_board_state__rosidl_typesupport_introspection_c.h
+[37.978s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_cmd__type_support.c
+[37.978s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_state__rosidl_typesupport_introspection_c.h
+[37.978s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/imu_state__type_support.c
+[37.978s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/press_sensor_state__type_support.c
+[37.979s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_state__type_support.c
+[37.979s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_state__type_support.c
+[37.979s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_cmd__type_support.c
+[37.979s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/main_board_state__type_support.c
+[37.979s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/libunitree_hg__rosidl_typesupport_introspection_c.so
+[37.979s] -- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/libunitree_hg__rosidl_typesupport_introspection_c.so" to ""
+[37.979s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/libunitree_hg__rosidl_typesupport_c.so
+[37.980s] -- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/libunitree_hg__rosidl_typesupport_c.so" to ""
+[37.980s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg
+[37.981s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg
+[37.981s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/motor_cmd.hpp
+[37.981s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/rosidl_generator_cpp__visibility_control.hpp
+[37.981s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/main_board_state.hpp
+[37.981s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/hand_state.hpp
+[37.981s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail
+[37.982s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/main_board_state__traits.hpp
+[37.982s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/main_board_state__builder.hpp
+[37.982s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/press_sensor_state__traits.hpp
+[37.982s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_cmd__type_support.hpp
+[37.983s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_state__struct.hpp
+[37.983s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_cmd__builder.hpp
+[37.983s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_state__struct.hpp
+[37.983s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/press_sensor_state__type_support.hpp
+[37.983s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_cmd__traits.hpp
+[37.984s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_cmd__type_support.hpp
+[37.984s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_cmd__builder.hpp
+[37.984s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_cmd__struct.hpp
+[37.984s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_cmd__builder.hpp
+[37.984s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/main_board_state__struct.hpp
+[37.985s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_state__type_support.hpp
+[37.985s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_state__type_support.hpp
+[37.985s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_cmd__type_support.hpp
+[37.985s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_cmd__builder.hpp
+[37.985s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_cmd__traits.hpp
+[37.986s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_state__type_support.hpp
+[37.986s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_state__struct.hpp
+[37.986s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_state__type_support.hpp
+[37.986s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_cmd__traits.hpp
+[37.986s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/imu_state__traits.hpp
+[37.986s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/press_sensor_state__struct.hpp
+[37.986s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_state__builder.hpp
+[37.986s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_state__builder.hpp
+[37.987s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_state__traits.hpp
+[37.987s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_cmd__struct.hpp
+[37.987s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/press_sensor_state__builder.hpp
+[37.987s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_state__traits.hpp
+[37.988s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/main_board_state__type_support.hpp
+[37.988s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_state__builder.hpp
+[37.988s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_cmd__struct.hpp
+[37.988s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_state__traits.hpp
+[37.988s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_state__traits.hpp
+[37.989s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_state__builder.hpp
+[37.989s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_cmd__type_support.hpp
+[37.989s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/imu_state__builder.hpp
+[37.989s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_cmd__traits.hpp
+[37.989s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/imu_state__type_support.hpp
+[37.990s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_state__struct.hpp
+[37.990s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/imu_state__struct.hpp
+[37.990s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_cmd__struct.hpp
+[37.990s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/low_cmd.hpp
+[37.991s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/press_sensor_state.hpp
+[37.991s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/bms_state.hpp
+[37.991s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/low_state.hpp
+[37.991s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/bms_cmd.hpp
+[37.991s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/motor_state.hpp
+[37.991s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/hand_cmd.hpp
+[37.991s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/imu_state.hpp
+[37.991s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg
+[37.992s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg
+[37.992s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail
+[37.992s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_cmd__rosidl_typesupport_introspection_cpp.hpp
+[37.992s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_state__type_support.cpp
+[37.992s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_state__type_support.cpp
+[37.992s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_cmd__type_support.cpp
+[37.992s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_cmd__type_support.cpp
+[37.994s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_state__rosidl_typesupport_introspection_cpp.hpp
+[37.994s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/main_board_state__type_support.cpp
+[37.994s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/press_sensor_state__rosidl_typesupport_introspection_cpp.hpp
+[37.994s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_cmd__type_support.cpp
+[37.995s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_state__rosidl_typesupport_introspection_cpp.hpp
+[37.995s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_state__type_support.cpp
+[37.995s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_cmd__rosidl_typesupport_introspection_cpp.hpp
+[37.995s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_state__type_support.cpp
+[37.995s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/imu_state__rosidl_typesupport_introspection_cpp.hpp
+[37.995s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/press_sensor_state__type_support.cpp
+[37.995s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/hand_state__rosidl_typesupport_introspection_cpp.hpp
+[37.995s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/bms_cmd__type_support.cpp
+[37.995s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/imu_state__type_support.cpp
+[37.995s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_cmd__rosidl_typesupport_introspection_cpp.hpp
+[37.995s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/low_state__rosidl_typesupport_introspection_cpp.hpp
+[37.996s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/main_board_state__rosidl_typesupport_introspection_cpp.hpp
+[37.996s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/include/unitree_hg/msg/detail/motor_cmd__rosidl_typesupport_introspection_cpp.hpp
+[37.996s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/libunitree_hg__rosidl_typesupport_introspection_cpp.so
+[37.996s] -- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/libunitree_hg__rosidl_typesupport_introspection_cpp.so" to ""
+[37.998s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/libunitree_hg__rosidl_typesupport_cpp.so
+[37.999s] -- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/libunitree_hg__rosidl_typesupport_cpp.so" to ""
+[37.999s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/environment/pythonpath.sh
+[37.999s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/environment/pythonpath.dsv
+[37.999s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/__init__.py
+[38.035s] Compiling '/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/__init__.py'...
+[38.042s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg
+[38.042s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_low_cmd_s.c
+[38.042s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_motor_cmd.py
+[38.043s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_imu_state.py
+[38.043s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_hand_state_s.c
+[38.043s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_motor_state.py
+[38.043s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_imu_state_s.c
+[38.043s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/__init__.py
+[38.050s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_bms_cmd_s.c
+[38.050s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_hand_cmd_s.c
+[38.050s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_main_board_state_s.c
+[38.050s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_motor_cmd_s.c
+[38.050s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_low_state.py
+[38.050s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_low_cmd.py
+[38.050s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_bms_state_s.c
+[38.051s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_motor_state_s.c
+[38.051s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_press_sensor_state.py
+[38.051s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_main_board_state.py
+[38.051s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_press_sensor_state_s.c
+[38.051s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_hand_cmd.py
+[38.051s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_bms_state.py
+[38.051s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_bms_cmd.py
+[38.051s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_hand_state.py
+[38.052s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/msg/_low_state_s.c
+[38.052s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/unitree_hg_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[38.052s] -- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/unitree_hg_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+[38.052s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/unitree_hg_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[38.052s] -- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/unitree_hg_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+[38.052s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/unitree_hg_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[38.052s] -- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages/unitree_hg/unitree_hg_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+[38.053s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/libunitree_hg__python.so
+[38.053s] -- Set runtime path of "/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/libunitree_hg__python.so" to ""
+[38.053s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/BmsCmd.idl
+[38.053s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/BmsState.idl
+[38.053s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/HandCmd.idl
+[38.053s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/HandState.idl
+[38.053s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/IMUState.idl
+[38.054s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/LowCmd.idl
+[38.055s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/LowState.idl
+[38.055s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/MainBoardState.idl
+[38.055s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/MotorCmd.idl
+[38.055s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/MotorState.idl
+[38.055s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/PressSensorState.idl
+[38.055s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/BmsCmd.msg
+[38.055s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/BmsState.msg
+[38.055s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/HandCmd.msg
+[38.055s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/HandState.msg
+[38.055s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/IMUState.msg
+[38.056s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/LowCmd.msg
+[38.056s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/LowState.msg
+[38.056s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/MainBoardState.msg
+[38.056s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/MotorCmd.msg
+[38.056s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/MotorState.msg
+[38.056s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/msg/PressSensorState.msg
+[38.056s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/ament_index/resource_index/package_run_dependencies/unitree_hg
+[38.057s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/ament_index/resource_index/parent_prefix_path/unitree_hg
+[38.057s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/environment/ament_prefix_path.sh
+[38.057s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/environment/ament_prefix_path.dsv
+[38.058s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/environment/path.sh
+[38.065s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/environment/path.dsv
+[38.065s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/local_setup.bash
+[38.066s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/local_setup.sh
+[38.066s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/local_setup.zsh
+[38.066s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/local_setup.dsv
+[38.066s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/package.dsv
+[38.066s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/ament_index/resource_index/packages/unitree_hg
+[38.066s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/unitree_hg__rosidl_generator_cExport.cmake
+[38.066s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/unitree_hg__rosidl_generator_cExport-noconfig.cmake
+[38.066s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/unitree_hg__rosidl_typesupport_introspection_cExport.cmake
+[38.067s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/unitree_hg__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[38.067s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/unitree_hg__rosidl_typesupport_cExport.cmake
+[38.067s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/unitree_hg__rosidl_typesupport_cExport-noconfig.cmake
+[38.067s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/unitree_hg__rosidl_generator_cppExport.cmake
+[38.067s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/unitree_hg__rosidl_typesupport_introspection_cppExport.cmake
+[38.067s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/unitree_hg__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[38.067s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/unitree_hg__rosidl_typesupport_cppExport.cmake
+[38.067s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/unitree_hg__rosidl_typesupport_cppExport-noconfig.cmake
+[38.067s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/rosidl_cmake-extras.cmake
+[38.067s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/ament_cmake_export_dependencies-extras.cmake
+[38.067s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/ament_cmake_export_libraries-extras.cmake
+[38.067s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/ament_cmake_export_targets-extras.cmake
+[38.068s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/ament_cmake_export_include_directories-extras.cmake
+[38.068s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[38.068s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[38.068s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/unitree_hgConfig.cmake
+[38.068s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake/unitree_hgConfig-version.cmake
+[38.068s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/package.xml
+[38.070s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_hg

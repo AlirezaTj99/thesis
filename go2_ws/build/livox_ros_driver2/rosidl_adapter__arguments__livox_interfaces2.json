@@ -1,0 +1,7 @@
+{
+  "package_name": "livox_ros_driver2",
+  "non_idl_tuples": [
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/livox_ros_driver2:msg/CustomPoint.msg",
+    "/home/alireza/thesis1/navigation_go2/go2_ws/src/livox_ros_driver2:msg/CustomMsg.msg"
+  ]
+}

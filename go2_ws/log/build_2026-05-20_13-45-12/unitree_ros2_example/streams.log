@@ -1,0 +1,92 @@
+[0.018s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example': AMENT_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/opt/ros/foxy LD_LIBRARY_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src -DROS_EDITION=ROS2 -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example
+[0.036s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.066s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.350s] -- Found unitree_go: 0.0.0 (/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/share/unitree_go/cmake)
+[0.387s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.391s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.577s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.763s] -- Found unitree_hg: 0.0.0 (/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/share/unitree_hg/cmake)
+[0.831s] -- Found unitree_api: 0.0.0 (/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/share/unitree_api/cmake)
+[0.900s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.946s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.948s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.350s] -- Found rosbag2_cpp: 0.3.11 (/opt/ros/foxy/share/rosbag2_cpp/cmake)
+[1.472s] -- Setting yaml-cpp_DIR to: '/opt/ros/foxy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/lib/cmake/yaml-cpp'
+[2.288s] -- Found yaml-cpp version 0.6.2
+[2.342s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[3.154s] -- Added test 'copyright' to check source files copyright and LICENSE
+[3.164s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.196s] -- Configured cppcheck include dirs: /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include;/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/common;/home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src/include/nlohmann
+[3.196s] -- Configured cppcheck exclude dirs and/or files: 
+[3.221s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[3.221s] -- Configured cpplint exclude dirs and/or files: 
+[3.226s] -- Added test 'lint_cmake' to check CMake code style
+[3.245s] -- Added test 'uncrustify' to check C / C++ code style
+[3.245s] -- Configured uncrustify additional arguments: 
+[3.247s] -- Added test 'xmllint' to check XML markup files
+[3.252s] -- Configuring done
+[3.849s] -- Generating done
+[4.096s] -- Build files have been written to: /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example
+[4.129s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example' returned '0': AMENT_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/opt/ros/foxy LD_LIBRARY_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/alireza/thesis1/navigation_go2/go2_ws/src/unitree_ros2/example/src -DROS_EDITION=ROS2 -DCMAKE_INSTALL_PREFIX=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example
+[4.130s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example': AMENT_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/opt/ros/foxy LD_LIBRARY_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example -- -j8 -l8
+[4.494s] [  7%] Built target read_low_state_hg
+[4.494s] [  7%] Built target go2_robot_state_client
+[4.506s] [ 12%] Built target low_level_ctrl_hg
+[4.517s] [ 17%] Built target g1_arm_sdk_dds_example
+[4.529s] [ 20%] Built target read_wireless_controller
+[4.535s] [ 25%] Built target g1_ankle_swing_example
+[4.539s] [ 30%] Built target b2w_sport_client
+[4.975s] [ 33%] Built target read_low_state
+[4.976s] [ 38%] Built target h2_ankle_swing_example
+[5.066s] [ 41%] Built target h2_loco_client
+[5.111s] [ 46%] Built target low_level_ctrl
+[5.251s] [ 49%] Built target read_motion_state
+[5.309s] [ 58%] Built target go2_stand_example
+[5.310s] [ 58%] Built target go2_sport_client
+[5.384s] [ 63%] Built target b2_stand_example
+[5.796s] [ 68%] Built target g1_dex3_example
+[5.854s] [ 73%] Built target g1_low_level_example
+[5.900s] [ 77%] Built target g1_loco_client_example
+[6.022s] [ 80%] Built target g1_audio_client_example
+[6.034s] [ 85%] Built target b2w_stand_example
+[6.042s] [ 90%] Built target g1_dual_arm_example
+[6.173s] [ 95%] Built target g1_arm_action_example
+[6.222s] [100%] Built target b2_sport_client
+[6.245s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example' returned '0': AMENT_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/opt/ros/foxy LD_LIBRARY_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example -- -j8 -l8
+[6.250s] Invoking command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example': AMENT_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/opt/ros/foxy LD_LIBRARY_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example
+[6.284s] -- Install configuration: ""
+[6.294s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/low_level_ctrl
+[6.295s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/low_level_ctrl_hg
+[6.295s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_low_level_example
+[6.295s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/read_low_state
+[6.295s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/read_low_state_hg
+[6.300s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/read_motion_state
+[6.300s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/read_wireless_controller
+[6.304s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/go2_sport_client
+[6.304s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/go2_stand_example
+[6.304s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/go2_robot_state_client
+[6.305s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_arm_sdk_dds_example
+[6.305s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_arm_action_example
+[6.308s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_dex3_example
+[6.310s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_loco_client_example
+[6.312s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_ankle_swing_example
+[6.313s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_dual_arm_example
+[6.315s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/g1_audio_client_example
+[6.316s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/h2_loco_client
+[6.318s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/bin/h2_ankle_swing_example
+[6.320s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/ament_index/resource_index/package_run_dependencies/unitree_ros2_example
+[6.321s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/ament_index/resource_index/parent_prefix_path/unitree_ros2_example
+[6.322s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/environment/ament_prefix_path.sh
+[6.323s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/environment/ament_prefix_path.dsv
+[6.325s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/environment/path.sh
+[6.327s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/environment/path.dsv
+[6.329s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/local_setup.bash
+[6.331s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/local_setup.sh
+[6.332s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/local_setup.zsh
+[6.334s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/local_setup.dsv
+[6.336s] -- Installing: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/package.dsv
+[6.337s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/ament_index/resource_index/packages/unitree_ros2_example
+[6.339s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/cmake/unitree_ros2_exampleConfig.cmake
+[6.340s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/cmake/unitree_ros2_exampleConfig-version.cmake
+[6.341s] -- Up-to-date: /home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_ros2_example/share/unitree_ros2_example/package.xml
+[6.357s] Invoked command in '/home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example' returned '0': AMENT_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api:/opt/ros/foxy LD_LIBRARY_PATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_hg/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_go/lib/python3.8/site-packages:/home/alireza/thesis1/navigation_go2/go2_ws/install/unitree_api/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/alireza/thesis1/navigation_go2/go2_ws/build/unitree_ros2_example
