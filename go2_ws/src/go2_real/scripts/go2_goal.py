@@ -2,22 +2,27 @@
 """
 go2_goal.py — Send a navigation goal to Nav2 NavigateToPose action server.
 
-Goals are specified in the MAP frame (absolute, relative to map origin).
-  x     = map x coordinate in metres
-  y     = map y coordinate in metres
+Goals can be given as coordinates or as a named waypoint from ~/maps/waypoints.yaml.
+
+  x, y  = map frame coordinates in metres
   yaw   = final heading in degrees (0 = facing map +x axis)
 
 Usage:
-    python3 go2_goal.py <x> <y>
-    python3 go2_goal.py <x> <y> <yaw_deg>
+    python3 go2_goal.py <x> <y>               go to coordinates
+    python3 go2_goal.py <x> <y> <yaw_deg>     go to coordinates with heading
+    python3 go2_goal.py <waypoint_name>        go to named waypoint
 
 Examples:
-    go2_goal.py 2.0 0.0        go to (2.0, 0.0) in the map
-    go2_goal.py 2.0 1.5 90     go to (2.0, 1.5) and face map +y direction
+    go2_goal.py 2.0 0.0          go to (2.0, 0.0) in the map
+    go2_goal.py 2.0 1.5 90       go to (2.0, 1.5) and face map +y direction
+    go2_goal.py home             go to the 'home' waypoint
+    go2_goal.py node1            go to 'node1' from ~/maps/waypoints.yaml
 """
+import os
 import sys
 import math
 import time
+import yaml
 import rclpy
 from rclpy.node import Node
 from rclpy.action import ActionClient
@@ -33,7 +38,7 @@ class GoalSender(Node):
         self._gy   = gy
         self._gyaw = gyaw_rad
         self._client = ActionClient(self, NavigateToPose, 'navigate_to_pose')
-        self._req_pub = self.create_publisher(Request, '/api/sport/request', 10)
+        self._req_pub = self.create_publisher(Request, '/api/sport/request_wifi', 10)
         self._sit_sent = False
 
     def send(self):
@@ -92,15 +97,40 @@ class GoalSender(Node):
         raise SystemExit(0)
 
 
+def _load_waypoint(name):
+    path = os.path.expanduser('~/maps/waypoints.yaml')
+    if not os.path.exists(path):
+        print(f'Error: waypoints file not found: {path}')
+        print('Create ~/maps/waypoints.yaml with your named locations.')
+        sys.exit(1)
+    with open(path) as f:
+        data = yaml.safe_load(f)
+    wps = data.get('waypoints', {})
+    if name not in wps:
+        available = list(wps.keys())
+        print(f'Error: waypoint "{name}" not found.')
+        print(f'Available waypoints: {available}')
+        sys.exit(1)
+    wp = wps[name]
+    return float(wp['x']), float(wp['y']), math.radians(float(wp.get('yaw', 0)))
+
+
 def main():
-    if len(sys.argv) < 3:
+    if len(sys.argv) < 2:
         print('Usage: go2_goal.py <x> <y> [yaw_deg]')
-        print('  x, y in map frame (metres from map origin); yaw in degrees (0 = map +x)')
+        print('       go2_goal.py <waypoint_name>')
         sys.exit(1)
 
-    gx   = float(sys.argv[1])
-    gy   = float(sys.argv[2])
-    gyaw = math.radians(float(sys.argv[3])) if len(sys.argv) > 3 else 0.0
+    # Named waypoint if first arg is not a number
+    try:
+        gx = float(sys.argv[1])
+        if len(sys.argv) < 3:
+            print('Usage: go2_goal.py <x> <y> [yaw_deg]')
+            sys.exit(1)
+        gy   = float(sys.argv[2])
+        gyaw = math.radians(float(sys.argv[3])) if len(sys.argv) > 3 else 0.0
+    except ValueError:
+        gx, gy, gyaw = _load_waypoint(sys.argv[1])
 
     rclpy.init()
     node = GoalSender(gx, gy, gyaw)
@@ -111,13 +141,15 @@ def main():
     req.header.identity.api_id = 1006   # RecoveryStand — stand up from lying
     node._req_pub.publish(req)
     node.get_logger().info('RecoveryStand sent — standing up...')
+    rclpy.spin_once(node, timeout_sec=0.1)
     time.sleep(2.5)
 
     req = Request()
     req.header.identity.api_id = 1002   # BalanceStand — unlock velocity commands
     node._req_pub.publish(req)
     node.get_logger().info('BalanceStand sent — ready for navigation')
-    time.sleep(1.5)
+    rclpy.spin_once(node, timeout_sec=0.1)
+    time.sleep(4.0)   # wait for robot to fully stand and AMCL to publish fresh TF
 
     node.send()
     try:
