@@ -9,6 +9,7 @@ import subprocess
 import yaml
 import rclpy
 from rclpy.node import Node
+from std_msgs.msg import Bool
 from unitree_api.msg import Request
 
 GOAL_SH       = '/home/alireza/thesis1/navigation_go2/go2_ws/src/go2_real/scripts/go2_goal.sh'
@@ -36,6 +37,10 @@ MENU = """
   NAVIGATION
     n) Navigate to waypoint
     x) Cancel navigation
+
+  STAIR CLIMBING
+    c) Start stair climb  (auto: approach → align → climb)
+    v) Abort stair climb
 
   FUN
     h) Hello (wave)
@@ -169,7 +174,15 @@ def _navigate(waypoints):
 class Go2Controller(Node):
     def __init__(self):
         super().__init__('go2_controller')
-        self._pub = self.create_publisher(Request, '/api/sport/request_wifi', 10)
+        self._pub        = self.create_publisher(Request, '/api/sport/request_wifi', 10)
+        self._stair_pub  = self.create_publisher(Bool,    '/stair_controller/activate', 10)
+        self._stair_climbing = False
+        self.create_subscription(Bool, '/stair_controller/done', self._stair_done_cb, 10)
+
+    def _stair_done_cb(self, msg):
+        if msg.data:
+            self._stair_climbing = False
+            print('\n  [Stair] Climb finished — control returned to you.')
 
     def send(self, api_id: int, parameter: str = ''):
         msg = Request()
@@ -250,6 +263,10 @@ def main():
                 print('  >> STOPPING...')
                 node.send(1003)
             elif choice == 'n':
+                print('  >> Standing up before navigation...')
+                node.send(1006)   # RecoveryStand — works from any posture
+                time.sleep(0.3)
+                node.send(1002)   # BalanceStand — unlock velocity mode
                 _navigate(waypoints)
             elif choice == 'x':
                 print('  >> Cancelling navigation...')
@@ -258,6 +275,25 @@ def main():
                     print('  Navigation cancelled.')
                 else:
                     print('  No navigation was running.')
+            elif choice == 'c':
+                if node._stair_climbing:
+                    print('  Already climbing — press v to abort first.')
+                else:
+                    print('  >> Starting stair climb sequence...')
+                    print('     (approach → align → climb → land)')
+                    print('     Press v to abort at any time.')
+                    node._stair_climbing = True
+                    node._stair_pub.publish(Bool(data=True))
+                    rclpy.spin_once(node, timeout_sec=0.1)
+            elif choice == 'v':
+                if node._stair_climbing:
+                    print('  >> Aborting stair climb...')
+                    node._stair_climbing = False
+                    node._stair_pub.publish(Bool(data=False))
+                    rclpy.spin_once(node, timeout_sec=0.1)
+                    node.send(1003)   # Stop
+                else:
+                    print('  No stair climb running.')
             elif choice == 'h':
                 print('  >> Hello!')
                 node.send(1016)
