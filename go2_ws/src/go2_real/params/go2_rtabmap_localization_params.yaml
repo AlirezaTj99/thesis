@@ -1,0 +1,4 @@
+rtabmap:
+  ros__parameters:
+    Mem/IncrementalMemory:  "false"   # localization only — no new nodes
+    Mem/InitWMWithAllNodes: "true"    # load full DB into working memory for complete map

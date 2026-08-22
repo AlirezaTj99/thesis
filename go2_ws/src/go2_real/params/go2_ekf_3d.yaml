@@ -1,0 +1,35 @@
+ekf_filter_node:
+  ros__parameters:
+
+    frequency: 50.0
+    sensor_timeout: 0.2
+    two_d_mode: false          # 3D mode — track z, roll, pitch for stair climbing
+
+    map_frame:       map
+    odom_frame:      odom
+    base_link_frame: base_link
+    world_frame:     odom
+
+    publish_tf: true
+    publish_acceleration: false
+
+    odom0: /odom
+    # [x,     y,     z,     roll,  pitch, yaw,   vx,    vy,    vz,    vroll, vpitch, vyaw,  ax,    ay,    az]
+    odom0_config: [false, false, false,
+                   false, false, true,
+                   true,  true,  true,
+                   false, false, true,
+                   false, false, false]
+    odom0_differential: false
+    odom0_relative: false
+
+    imu0: /imu/data
+    # [x,     y,     z,     roll,  pitch, yaw,   vx,    vy,    vz,    vroll, vpitch, vyaw,  ax,    ay,    az]
+    imu0_config: [false, false, false,
+                  true,  true,  false,
+                  false, false, false,
+                  true,  true,  true,
+                  true,  false, false]
+    imu0_differential: false
+    imu0_relative: false
+    imu0_remove_gravitational_acceleration: true

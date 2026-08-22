@@ -27,72 +27,93 @@ import rclpy
 from rclpy.node import Node
 from rclpy.action import ActionClient
 from nav2_msgs.action import NavigateToPose
-from geometry_msgs.msg import PoseStamped
+from geometry_msgs.msg import PoseStamped, Twist
 from unitree_api.msg import Request
 
 
 class GoalSender(Node):
-    def __init__(self, gx, gy, gyaw_rad):
+    def __init__(self, goals):
         super().__init__('go2_goal')
-        self._gx   = gx
-        self._gy   = gy
-        self._gyaw = gyaw_rad
-        self._client = ActionClient(self, NavigateToPose, 'navigate_to_pose')
+        self._goals   = list(goals)   # list of (gx, gy, gyaw)
+        self._current = 0
+        self._total   = len(goals)
+        self._client  = ActionClient(self, NavigateToPose, 'navigate_to_pose')
         self._req_pub = self.create_publisher(Request, '/api/sport/request_wifi', 10)
         self._sit_sent = False
+        self._cmd_vel = Twist()
+        self.create_subscription(Twist, '/cmd_vel', self._vel_cb, 10)
 
     def send(self):
+        gx, gy, gyaw = self._goals[self._current]
         self.get_logger().info(
-            f'Goal (map): x={self._gx:.2f} y={self._gy:.2f} yaw={math.degrees(self._gyaw):.1f}°'
+            f'Goal {self._current + 1}/{self._total} (map): '
+            f'x={gx:.2f} y={gy:.2f} yaw={math.degrees(gyaw):.1f}°'
         )
 
-        self.get_logger().info('Waiting for navigate_to_pose server...')
-        self._client.wait_for_server()
-
+        if self._current == 0:
+            self.get_logger().info('Waiting for navigate_to_pose server...')
+            if not self._client.wait_for_server(timeout_sec=30.0):
+                self.get_logger().error(
+                    'navigate_to_pose server not available after 30 s — '
+                    'is the Nav2 stack running? Check the Navigation terminal.'
+                )
+                raise SystemExit(1)
         goal = NavigateToPose.Goal()
         goal.pose = PoseStamped()
         goal.pose.header.frame_id = 'map'
         goal.pose.header.stamp = self.get_clock().now().to_msg()
-        goal.pose.pose.position.x = self._gx
-        goal.pose.pose.position.y = self._gy
-        goal.pose.pose.orientation.z = math.sin(self._gyaw / 2)
-        goal.pose.pose.orientation.w = math.cos(self._gyaw / 2)
+        goal.pose.pose.position.x = gx
+        goal.pose.pose.position.y = gy
+        goal.pose.pose.orientation.z = math.sin(gyaw / 2)
+        goal.pose.pose.orientation.w = math.cos(gyaw / 2)
 
         future = self._client.send_goal_async(goal, feedback_callback=self._feedback)
         future.add_done_callback(self._goal_response)
 
+    def _vel_cb(self, msg):
+        self._cmd_vel = msg
+
     def _feedback(self, fb):
-        self.get_logger().info(f'Distance remaining: {fb.feedback.distance_remaining:.2f} m')
+        v = self._cmd_vel
+        self.get_logger().info(
+            f'[{self._current + 1}/{self._total}] dist={fb.feedback.distance_remaining:.2f}m  '
+            f'cmd_vel: lin.x={v.linear.x:+.3f}  lin.y={v.linear.y:+.3f}  ang.z={v.angular.z:+.3f}'
+        )
 
     def _goal_response(self, future):
         handle = future.result()
         if not handle.accepted:
             self.get_logger().error('Goal REJECTED by Nav2')
             raise SystemExit(1)
-        self.get_logger().info('Goal accepted — navigating...')
+        self.get_logger().info(f'Goal {self._current + 1}/{self._total} accepted — navigating...')
         handle.get_result_async().add_done_callback(self._result)
 
     def _laydown(self):
         if self._sit_sent:
             return
         self._sit_sent = True
-        # Wait for Nav2 to publish cmd_vel=0 and for go2_bridge's 0.3s zero-holdoff
-        # to expire so the bridge is fully silent before we issue StandDown.
-        # (StopMove was removed — it makes a lying robot stand up to neutral stance.)
         self.get_logger().info('Waiting for bridge to go silent before lay-down...')
         time.sleep(2.0)
         down = Request()
         down.header.identity.api_id = 1005   # StandDown / lay down
         self._req_pub.publish(down)
-        time.sleep(1.0)   # let DDS deliver the message before node is destroyed
+        time.sleep(1.0)
         self.get_logger().info('Lay-down command sent')
 
     def _result(self, future):
         status = future.result().status
         if status == 4:
-            self.get_logger().info('GOAL REACHED')
+            self.get_logger().info(f'Waypoint {self._current + 1}/{self._total} REACHED')
+            self._current += 1
+            if self._current < self._total:
+                self.get_logger().info('Moving to next waypoint...')
+                self.send()
+                return
+            self.get_logger().info('All waypoints reached!')
         else:
-            self.get_logger().warn(f'Navigation ended with status {status}')
+            self.get_logger().warn(
+                f'Waypoint {self._current + 1}/{self._total} failed (status {status}) — aborting chain'
+            )
         self._laydown()
         raise SystemExit(0)
 
@@ -115,25 +136,55 @@ def _load_waypoint(name):
     return float(wp['x']), float(wp['y']), math.radians(float(wp.get('yaw', 0)))
 
 
+def _parse_goals(argv):
+    """Parse argv[1:] into a list of (x, y, yaw_rad) tuples.
+
+    Each token is either a named waypoint or the start of an x y [yaw] triple.
+    Mixed usage is fine: go2_goal.py home 3.0 1.5 90 kitchen
+    """
+    goals = []
+    i = 1
+    while i < len(argv):
+        try:
+            x = float(argv[i])
+            if i + 1 >= len(argv):
+                print(f'Error: x={x} provided but no y coordinate follows it')
+                sys.exit(1)
+            y = float(argv[i + 1])
+            i += 2
+            if i < len(argv):
+                try:
+                    yaw = math.radians(float(argv[i]))
+                    i += 1
+                except ValueError:
+                    yaw = 0.0
+            else:
+                yaw = 0.0
+            goals.append((x, y, yaw))
+        except ValueError:
+            x, y, yaw = _load_waypoint(argv[i])
+            goals.append((x, y, yaw))
+            i += 1
+    return goals
+
+
 def main():
     if len(sys.argv) < 2:
-        print('Usage: go2_goal.py <x> <y> [yaw_deg]')
-        print('       go2_goal.py <waypoint_name>')
+        print('Usage: go2_goal.py <waypoint_name> [waypoint_name2 ...]')
+        print('       go2_goal.py <x> <y> [yaw_deg]')
         sys.exit(1)
 
-    # Named waypoint if first arg is not a number
-    try:
-        gx = float(sys.argv[1])
-        if len(sys.argv) < 3:
-            print('Usage: go2_goal.py <x> <y> [yaw_deg]')
-            sys.exit(1)
-        gy   = float(sys.argv[2])
-        gyaw = math.radians(float(sys.argv[3])) if len(sys.argv) > 3 else 0.0
-    except ValueError:
-        gx, gy, gyaw = _load_waypoint(sys.argv[1])
+    goals = _parse_goals(sys.argv)
+    if not goals:
+        print('Error: no valid goals parsed from arguments')
+        sys.exit(1)
 
     rclpy.init()
-    node = GoalSender(gx, gy, gyaw)
+    node = GoalSender(goals)
+
+    # Allow DDS to discover go2_bridge before sending any commands.
+    # Without this wait the first publish is lost (bridge not yet visible).
+    rclpy.spin_once(node, timeout_sec=2.0)
 
     # Wake-up: stand the robot up and unlock velocity mode before sending goal.
     # Safe to call even when robot is already standing.

@@ -12,11 +12,22 @@ install(DIRECTORY launch params rviz scripts
 install(PROGRAMS
   scripts/go2_bridge.py
   scripts/obstacle_repulsion.py
+  scripts/velocity_combiner.py
+  scripts/repulsion_gate.py
+  scripts/stair_cloud_persist.py
   scripts/go2_goal.py
   scripts/go2_goal.sh
+  scripts/run_goal.sh
+  scripts/monitor_robot.py
+  scripts/map_saver_node.py
+  scripts/run_monitor_robot.sh
   scripts/start_go2_real.sh
   scripts/start_go2_repulsion.sh
+  scripts/start_go2_mapping.sh
   scripts/setup_sdk.sh
+  scripts/height_filter_map.py
+  scripts/go2_panel.py
+  scripts/body_filter.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

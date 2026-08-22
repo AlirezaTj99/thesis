@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import math
+import os
+import yaml
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy
@@ -8,13 +10,20 @@ from geometry_msgs.msg import Twist
 from visualization_msgs.msg import Marker, MarkerArray
 from nav2_msgs.srv import ClearEntireCostmap
 
+WAYPOINTS_FILE = os.path.expanduser('~/maps/waypoints.yaml')
+
 
 class Go2VizNode(Node):
     def __init__(self):
         super().__init__('go2_viz')
         self.goal_pub   = self.create_publisher(Marker,      '/viz/goal_marker', 10)
         self.arrows_pub = self.create_publisher(MarkerArray, '/viz/path_arrows', 10)
+        self._wp_pub    = self.create_publisher(MarkerArray, '/viz/waypoints',   10)
         self.create_subscription(Path, '/plan', self.plan_cb, 10)
+
+        self._wp_mtime = None
+        self._cached_waypoints = {}
+        self.create_timer(5.0, self._waypoints_timer_cb)  # republish waypoints every 5 s
 
         # Velocity watchdog — stops the robot and clears stale costmap data when
         # Nav2 aborts. controller_server publishes at 5 Hz during navigation, so a
@@ -58,6 +67,80 @@ class Go2VizNode(Node):
                 self._local_clear.call_async(ClearEntireCostmap.Request())
             if self._global_clear.service_is_ready():
                 self._global_clear.call_async(ClearEntireCostmap.Request())
+
+    def _waypoints_timer_cb(self):
+        if os.path.exists(WAYPOINTS_FILE):
+            mtime = os.path.getmtime(WAYPOINTS_FILE)
+            if mtime != self._wp_mtime:
+                self._wp_mtime = mtime
+                try:
+                    with open(WAYPOINTS_FILE) as f:
+                        data = yaml.safe_load(f) or {}
+                    self._cached_waypoints = data.get('waypoints', {})
+                except Exception:
+                    pass
+        if self._cached_waypoints:
+            self._publish_waypoints(self._cached_waypoints)
+
+    def _publish_waypoints(self, waypoints: dict):
+        arr = MarkerArray()
+        stamp = self.get_clock().now().to_msg()
+
+        # Clear previous markers
+        for ns in ('wp_dot', 'wp_label'):
+            clr = Marker()
+            clr.header.frame_id = 'map'
+            clr.header.stamp = stamp
+            clr.ns = ns
+            clr.action = Marker.DELETEALL
+            arr.markers.append(clr)
+
+        for idx, (name, wp) in enumerate(waypoints.items()):
+            x = float(wp.get('x', 0.0))
+            y = float(wp.get('y', 0.0))
+
+            # Green sphere
+            dot = Marker()
+            dot.header.frame_id = 'map'
+            dot.header.stamp = stamp
+            dot.ns = 'wp_dot'
+            dot.id = idx
+            dot.type = Marker.SPHERE
+            dot.action = Marker.ADD
+            dot.pose.position.x = x
+            dot.pose.position.y = y
+            dot.pose.position.z = 0.05
+            dot.pose.orientation.w = 1.0
+            dot.scale.x = 0.20
+            dot.scale.y = 0.20
+            dot.scale.z = 0.20
+            dot.color.r = 0.0
+            dot.color.g = 1.0
+            dot.color.b = 0.2
+            dot.color.a = 1.0
+            arr.markers.append(dot)
+
+            # Text label above the sphere
+            lbl = Marker()
+            lbl.header.frame_id = 'map'
+            lbl.header.stamp = stamp
+            lbl.ns = 'wp_label'
+            lbl.id = idx
+            lbl.type = Marker.TEXT_VIEW_FACING
+            lbl.action = Marker.ADD
+            lbl.pose.position.x = x
+            lbl.pose.position.y = y
+            lbl.pose.position.z = 0.40
+            lbl.pose.orientation.w = 1.0
+            lbl.scale.z = 0.22       # text height in metres
+            lbl.color.r = 1.0
+            lbl.color.g = 1.0
+            lbl.color.b = 1.0
+            lbl.color.a = 1.0
+            lbl.text = name
+            arr.markers.append(lbl)
+
+        self._wp_pub.publish(arr)
 
     def plan_cb(self, msg):
         if len(msg.poses) < 2:

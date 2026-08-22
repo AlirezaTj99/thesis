@@ -141,34 +141,51 @@ def _navigate(waypoints):
         print('  ERROR: no waypoints found in ~/maps/waypoints.yaml')
         return
     names = list(waypoints.keys())
-    print('\n  Choose destination:')
-    for i, name in enumerate(names, 1):
-        wp = waypoints[name]
-        print(f'    {i}) {name:12s}  x={wp["x"]}  y={wp["y"]}  yaw={wp.get("yaw", 0)}°')
-    print('    q) back')
-    choice = input('\n  Your choice: ').strip().lower()
-    if choice == 'q':
-        return
-    try:
-        idx = int(choice) - 1
-        if idx < 0 or idx >= len(names):
-            print('  Invalid choice.')
+    chain = []
+
+    while True:
+        print(f'\n  Choose waypoint {len(chain) + 1}:')
+        for i, name in enumerate(names, 1):
+            wp = waypoints[name]
+            print(f'    {i}) {name:12s}  x={wp["x"]}  y={wp["y"]}  yaw={wp.get("yaw", 0)}°')
+        print('    q) cancel')
+        choice = input('\n  Your choice: ').strip().lower()
+        if choice == 'q':
+            if not chain:
+                return
+            print('  Cancelled.')
             return
-        target = names[idx]
-    except ValueError:
-        if choice in names:
-            target = choice
-        else:
-            print('  Invalid choice.')
-            return
+        try:
+            idx = int(choice) - 1
+            if idx < 0 or idx >= len(names):
+                print('  Invalid choice.')
+                continue
+            target = names[idx]
+        except ValueError:
+            if choice in names:
+                target = choice
+            else:
+                print('  Invalid choice.')
+                continue
+
+        chain.append(target)
+        print(f'\n  ----------------------------------------')
+        print(f'  >> Added "{target}" to route.')
+        print(f'     Route so far: {" → ".join(chain)}')
+        print(f'  ----------------------------------------')
+        last = input('  Add another waypoint? (y = yes / n = this is the last one): ').strip().lower()
+        if last != 'y':
+            break
 
     # Kill any existing navigation goal first
     subprocess.run(['pkill', '-f', 'go2_goal.py'], capture_output=True)
     time.sleep(0.5)
 
-    cmd = f'bash {GOAL_SH} {target}'
-    _open_terminal(f'Nav → {target}', cmd)
-    print(f'  Navigating to "{target}" — check the Nav terminal for progress.')
+    chain_args = ' '.join(chain)
+    cmd = f'bash {GOAL_SH} {chain_args}'
+    label = ' → '.join(chain)
+    _open_terminal(f'Nav → {label}', cmd)
+    print(f'  Navigating: {label}')
 
 
 class Go2Controller(Node):

@@ -39,6 +39,7 @@ pkill -9 -f go2_viz                 2>/dev/null
 pkill -9 -f go2_bridge              2>/dev/null
 pkill -9 -f obstacle_repulsion     2>/dev/null
 pkill -9 -f velocity_combiner      2>/dev/null
+pkill -9 -f body_filter            2>/dev/null
 pkill -9 -f go2_goal               2>/dev/null
 pkill -9 -f robot_state_publisher   2>/dev/null
 pkill -9 -f waypoint_follower       2>/dev/null
@@ -100,7 +101,6 @@ _open_if_dead() {
 
 echo ""
 echo "=== Checking companion terminals ==="
-_open_if_dead "go2_control.py"      "Go2 Control"     "bash /home/alireza/Desktop/go2_control.sh"
 _open_if_dead "monitor_robot.py"    "Robot Monitor"   "bash ${SCRIPTS_DIR}/run_monitor_robot.sh"
 _open_if_dead "go2_goal_session.sh" "Go2 Goal"        "bash ${SCRIPTS_DIR}/go2_goal_session.sh"
 echo "===================================="
@@ -108,8 +108,21 @@ echo ""
 
 cleanup() {
     pkill -f "ros2 topic" 2>/dev/null
+    kill "$CLEAR_PID" 2>/dev/null
 }
 trap cleanup INT TERM
+
+# Periodic costmap clear — wait 28 s for RTAB-Map to localize, then clear
+# every 5 s so self-detection marks and TF-drift artifacts never accumulate.
+(sleep 28 \
+  && while true; do
+       ros2 service call /global_costmap/clear_entirely_global_costmap \
+           nav2_msgs/srv/ClearEntireCostmap '{}' > /dev/null 2>&1
+       ros2 service call /local_costmap/clear_entirely_local_costmap  \
+           nav2_msgs/srv/ClearEntireCostmap '{}' > /dev/null 2>&1
+       sleep 5
+     done) &
+CLEAR_PID=$!
 
 ros2 launch go2_real go2_real.launch.py
 

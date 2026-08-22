@@ -1,0 +1,27 @@
+icp_odometry:
+  ros__parameters:
+
+    # ── Frames ────────────────────────────────────────────────────────────────
+    frame_id:      base_link
+    odom_frame_id: odom
+    publish_tf:    false       # go2_bridge already owns odom→base_link TF
+
+    # Use go2_bridge's odom→base_link TF as the initial pose seed for ICP.
+    # ICP then refines from there — tighter alignment than pure LIO-SAM output.
+    guess_frame_id: odom
+
+    # ── ICP — tuned for utlidar point cloud density ───────────────────────────
+    Icp/PointToPlane:              "true"
+    Icp/Iterations:                "30"    # more iterations than mapping (was 10)
+    Icp/MaxCorrespondenceDistance: "0.8"   # 80 cm — relaxed to prevent ratio=0 failures
+    Icp/CorrespondenceRatio:       "0.3"   # reject frame if <30% of points matched
+    Icp/MaxTranslation:            "0.5"   # m — reject unrealistic ICP result
+    Icp/MaxRotation:               "1.396" # rad (80°)
+
+    # ── Odometry strategy ─────────────────────────────────────────────────────
+    # F2M (Frame-to-Map): accumulate a local cloud map, match each new scan
+    # against it. More robust than scan-to-scan (F2F) in corridors.
+    Odom/Strategy:        "0"     # 0 = F2M
+    Odom/GuessMotion:     "true"  # use velocity model to seed each ICP call
+    OdomF2M/MaxSize:      "20000" # keep last ~20k points in local reference map
+    OdomF2M/MaxNewPoints: "5000"  # add at most 5k new points per frame

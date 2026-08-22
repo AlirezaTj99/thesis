@@ -48,15 +48,18 @@ from unitree_api.msg import Request
 APPROACH_VEL       = 0.18   # m/s  — forward speed while searching
 APPROACH_DIST      = 0.70   # m    — stop approach when first step is this close
 APPROACH_TIMEOUT   = 30.0   # s    — abort if no confirmed stair found
-ALIGN_YAW_TOL      = 0.10   # rad (~6°) — acceptable yaw error to stair axis
-ALIGN_LAT_TOL      = 0.12   # m    — acceptable lateral offset to stair centre
-ALIGN_ROT_VEL      = 0.22   # rad/s
+ALIGN_YAW_TOL      = 12.0   # deg — acceptable yaw error (measurement noise ~±30° so keep generous)
+ALIGN_LAT_TOL      = 0.20   # m    — acceptable lateral offset to stair centre
+ALIGN_ROT_VEL      = 0.40   # rad/s
 ALIGN_LAT_VEL      = 0.08   # m/s
-ALIGN_TIMEOUT      = 20.0   # s
-CLIMB_VEL          = 0.15   # m/s  — slow and steady up the steps
+ALIGN_TIMEOUT      = 40.0   # s
+CLIMB_VEL          = 0.35   # m/s  — fast enough for trot gait to clear step risers
 CLIMB_TIMEOUT      = 45.0   # s    — hard abort
-STAIR_LOST_TIMEOUT = 4.0    # s    — stair gone this long = reached the top
+STAIR_LOST_TIMEOUT = 6.0    # s    — fallback: stair gone this long = reached the top
+CLIMB_PITCH_HIGH   = 6.0    # deg  — pitch above this confirms we are climbing
+CLIMB_PITCH_FLAT   = 3.0    # deg  — pitch below this (after peaking) = back on flat ground
 DETECT_CONFIRM     = 3      # consecutive positive detections before trusting
+DIR_EMA_ALPHA      = 0.15   # EMA smoothing for direction_deg (low α = more noise rejection)
 
 # ── Safety limits ─────────────────────────────────────────────────────────────
 MAX_PITCH_DEG      = 50.0
@@ -90,6 +93,10 @@ class StairController(Node):
         self._roll_deg     = 0.0
         self._state_enter  = time.time()
         self._stair_lost_t = None   # time when stair detection last dropped to zero
+        self._pitch_peaked     = False  # True once pitch exceeded CLIMB_PITCH_HIGH during climb
+        self._dir_ema          = 0.0    # EMA-smoothed direction_deg for yaw alignment
+        self._dir_ema_init     = False  # True after first valid direction reading
+        self._yaw_ok_count     = 0      # consecutive yaw-OK readings needed before lateral phase
 
         self.create_timer(0.1, self._loop)
         self.get_logger().info('StairController ready — IDLE')
@@ -98,9 +105,11 @@ class StairController(Node):
 
     def _activate_cb(self, msg: Bool):
         if msg.data and self._state == 'IDLE':
-            self.get_logger().info('Activated — RecoveryStand then APPROACH')
-            self._send_api(API_STAND)
+            self.get_logger().info('Activated — RecoveryStand + BalanceStand then APPROACH')
+            self._send_api(API_STAND)    # RecoveryStand — get up from any posture
             time.sleep(2.0)
+            self._send_api(1002)         # BalanceStand — unlock velocity control mode
+            time.sleep(0.5)
             self._transition('APPROACH')
         elif not msg.data and self._state != 'IDLE':
             self.get_logger().info('Deactivated by operator')
@@ -119,6 +128,25 @@ class StairController(Node):
     def _geometry_cb(self, msg: String):
         try:
             self._geo = json.loads(msg.data)
+            # Use bearing to first step (atan2(y, x)) as yaw reference.
+            # When stair is directly ahead: x>0, y≈0 → bearing≈0°.
+            # Positive bearing → step is LEFT → positive vyaw (CCW) turns left toward it.
+            # Negative bearing → step is RIGHT → negative vyaw (CW) turns right toward it.
+            fx = self._geo.get('first_step_x_m', 1.0)
+            fy = self._geo.get('first_step_y_m', 0.0)
+            d  = math.degrees(math.atan2(fy, fx))
+            if not self._dir_ema_init:
+                self._dir_ema      = d
+                self._dir_ema_init = True
+            else:
+                diff = ((d - self._dir_ema + 180.0) % 360.0) - 180.0
+                if abs(diff) > 30.0:   # skip large jumps — bearing should be stable
+                    return
+                self._dir_ema += DIR_EMA_ALPHA * diff
+                if self._dir_ema > 180.0:
+                    self._dir_ema -= 360.0
+                elif self._dir_ema < -180.0:
+                    self._dir_ema += 360.0
         except Exception:
             pass
 
@@ -165,7 +193,7 @@ class StairController(Node):
         stair_confirmed = self._detect_count >= DETECT_CONFIRM and self._geo is not None
 
         if not stair_confirmed:
-            self._move(APPROACH_VEL * 0.4, 0.0, 0.0)   # creep forward
+            self._move(0.2, 0.0, 0.0)   # creep forward
             return
 
         dist = self._geo.get('first_step_x_m', 999.0)
@@ -190,21 +218,46 @@ class StairController(Node):
             self._stop()
             return
 
-        yaw_err = math.radians(self._geo.get('direction_deg', 0.0))
-        lat     = self._geo.get('first_step_y_m', 0.0)
+        # ── Phase 1: yaw — rotate until first step is directly ahead (bearing→0°) ─
+        # _dir_ema holds EMA of atan2(first_step_y, first_step_x).
+        # Target = 0°: step straight ahead.  Positive = step LEFT → turn LEFT (positive vyaw).
+        yaw_err = self._dir_ema   # error from 0°
         yaw_ok  = abs(yaw_err) < ALIGN_YAW_TOL
-        lat_ok  = abs(lat)     < ALIGN_LAT_TOL
+        if not yaw_ok:
+            self._yaw_ok_count = 0
+            vyaw = self._clamp(math.radians(yaw_err) * 2.0, -ALIGN_ROT_VEL, ALIGN_ROT_VEL)
+            self._move(0.0, 0.0, vyaw)
+            self.get_logger().info(
+                f'ALIGN yaw  bearing_ema={self._dir_ema:.1f}°  err={yaw_err:.1f}°  vyaw={vyaw:.3f}',
+                throttle_duration_sec=2.0,
+            )
+            return
+        self._yaw_ok_count += 1
+        if self._yaw_ok_count < 5:
+            self._stop()
+            self.get_logger().info(
+                f'ALIGN yaw OK {self._yaw_ok_count}/5  bearing_ema={self._dir_ema:.1f}°',
+                throttle_duration_sec=0.5,
+            )
+            return
 
-        if yaw_ok and lat_ok:
+        # ── Phase 2: lateral centering ──────────────────────────────────────────
+        lat    = self._geo.get('first_step_y_m', 0.0)
+        lat_ok = abs(lat) < ALIGN_LAT_TOL
+        self.get_logger().info(
+            f'ALIGN lat  lat={lat:.3f}m  lat_ok={lat_ok}  bearing_ema={self._dir_ema:.1f}° (yaw OK)',
+            throttle_duration_sec=2.0,
+        )
+
+        if lat_ok:
             self._stop()
             time.sleep(0.4)
-            self.get_logger().info('Aligned — CLIMBING')
+            self.get_logger().info('Aligned (yaw + lateral OK) — CLIMBING')
             self._transition('CLIMBING')
             return
 
-        vz = 0.0 if yaw_ok else self._clamp(-yaw_err * 0.8, -ALIGN_ROT_VEL, ALIGN_ROT_VEL)
-        vy = 0.0 if lat_ok  else self._clamp(-lat    * 0.2,  -ALIGN_LAT_VEL, ALIGN_LAT_VEL)
-        self._move(0.0, vy, vz)
+        vy = self._clamp(-lat * 0.2, -ALIGN_LAT_VEL, ALIGN_LAT_VEL)
+        self._move(0.0, vy, 0.0)
 
     def _do_climb(self, elapsed):
         if elapsed > CLIMB_TIMEOUT:
@@ -213,10 +266,29 @@ class StairController(Node):
             self._transition('LANDING')
             return
 
+        # Track whether pitch has peaked (confirms the robot was actually climbing).
+        if abs(self._pitch_deg) > CLIMB_PITCH_HIGH:
+            self._pitch_peaked = True
+
+        # Primary top-detection: pitch returns to flat after having peaked.
+        # This fires the moment the robot crests the stairs onto level ground,
+        # without waiting for the stair detection timer.
+        if self._pitch_peaked and abs(self._pitch_deg) < CLIMB_PITCH_FLAT and elapsed > 3.0:
+            self.get_logger().info(
+                f'Pitch flat (pitch={self._pitch_deg:.1f}°) after climbing — reached top, LANDING'
+            )
+            self._stop()
+            self._transition('LANDING')
+            return
+
+        # Fallback: stair detection gone long enough (handles gentle slopes where pitch stays low).
+        # Only applies after pitch has peaked — prevents false LANDING from LiDAR dead zone
+        # oscillations while the robot is still at the base of the stair.
         stair_gone_long_enough = (
+            self._pitch_peaked and
             self._stair_lost_t is not None and
             time.time() - self._stair_lost_t > STAIR_LOST_TIMEOUT and
-            elapsed > 3.0   # must have climbed for at least 3 s
+            elapsed > 3.0
         )
         if stair_gone_long_enough:
             self.get_logger().info('Stair no longer visible — reached top, LANDING')
@@ -224,6 +296,10 @@ class StairController(Node):
             self._transition('LANDING')
             return
 
+        self.get_logger().info(
+            f'CLIMBING  pitch={self._pitch_deg:.1f}°  peaked={self._pitch_peaked}',
+            throttle_duration_sec=2.0,
+        )
         lat = self._geo.get('first_step_y_m', 0.0) if self._geo else 0.0
         vy  = self._clamp(-lat * 0.12, -ALIGN_LAT_VEL, ALIGN_LAT_VEL)
         self._move(CLIMB_VEL, vy, 0.0)
@@ -269,6 +345,15 @@ class StairController(Node):
         self._state       = new_state
         self._state_enter = time.time()
         self._state_pub.publish(String(data=new_state))
+        if new_state == 'CLIMBING':
+            self._pitch_peaked = False
+        if new_state == 'APPROACH':
+            self._dir_ema      = 0.0
+            self._dir_ema_init = False
+            self._yaw_ok_count = 0
+            self._detect_count = 0
+            self._stair_lost_t = None
+            self._geo          = None
 
     def _abort(self, reason):
         self.get_logger().error(f'Abort ({reason})')

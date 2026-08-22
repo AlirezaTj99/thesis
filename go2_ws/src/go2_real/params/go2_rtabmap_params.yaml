@@ -1,0 +1,58 @@
+rtabmap:
+  ros__parameters:
+
+    # ── Frames ────────────────────────────────────────────────────────────────
+    frame_id:       base_link
+    odom_frame_id:  odom
+    map_frame_id:   map
+
+    # ── Input — LiDAR only (no camera) ───────────────────────────────────────
+    subscribe_scan_cloud: true
+    subscribe_odom:       true
+    subscribe_depth:      false    # disable RGB-D requirement
+    subscribe_rgb:        false
+    subscribe_stereo:     false
+
+    # ── Output ────────────────────────────────────────────────────────────────
+    publish_tf: true          # RTAB-Map owns the map→odom TF during 3D mapping
+
+    # ── Database — saves full session; reload to continue mapping later ───────
+    database_path: /home/alireza/maps/rtabmap.db
+
+    # ── Memory ────────────────────────────────────────────────────────────────
+    Mem/IncrementalMemory:   "true"
+    Mem/InitWMWithAllNodes:  "false"
+    Mem/STMSize:             "30"    # short-term memory size (nodes)
+
+    # ── 3D Occupancy Grid ─────────────────────────────────────────────────────
+    Grid/3D:                 "true"
+    Grid/CellSize:           "0.05"  # 5 cm resolution
+    Grid/RangeMin:           "0.3"   # ignore points closer than this
+    Grid/RangeMax:           "30.0"
+    Grid/MaxGroundAngle:     "45"    # deg — surface below this angle = ground
+    Grid/MaxObstacleHeight:  "2.0"   # m — cap obstacle height
+    Grid/MinClusterSize:     "10"    # min points per cluster to be an obstacle
+    Grid/NormalsSegmentation: "true" # use surface normals to classify ground
+
+    # ── Loop Closure ──────────────────────────────────────────────────────────
+    Reg/Strategy:            "1"     # 1 = ICP (best for LiDAR)
+    Icp/PointToPlane:        "true"
+    Icp/Iterations:          "30"    # more iterations for better loop confirmation
+    Icp/MaxTranslation:      "1.0"   # m — reject ICP if shift > 1 m (noise guard)
+    Icp/MaxRotation:         "1.396" # rad (80°)
+    Icp/MaxCorrespondenceDistance: "0.8"  # was 0.1 — 10cm too tight when odom drifts; ICP needs reach to bootstrap
+    Icp/CorrespondenceRatio:       "0.3"  # require 30% of points matched to accept loop
+
+    # Proximity search — wider net so loop candidates are found despite LIO-SAM drift
+    RGBD/ProximityBySpace:          "true"  # enable space-based candidate search
+    RGBD/ProximityPathMaxNeighbors: "5"     # check 5 graph neighbors per proximity link
+    Rtabmap/LocalRadius:            "20.0"  # search 20 m radius (default was 10 m)
+
+    # Pose graph optimizer
+    Optimizer/Strategy:  "1"   # 1 = g2o (better convergence than TORO)
+
+    # ── Timing ────────────────────────────────────────────────────────────────
+    Rtabmap/TimeThr:         "700"   # ms — process budget per frame
+    Rtabmap/DetectionRate:   "1"     # Hz — loop closure check rate
+    Rtabmap/LinearUpdate:    "0.1"   # add new node every 10 cm of travel
+    Rtabmap/AngularUpdate:   "0.1"   # or every ~6° of rotation

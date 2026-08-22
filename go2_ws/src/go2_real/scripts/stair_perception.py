@@ -24,10 +24,10 @@ from geometry_msgs.msg import Point
 from builtin_interfaces.msg import Duration
 
 # ── Go2 physical limits ───────────────────────────────────────────────────────
-MIN_STEP_H  = 0.05    # m  — below = ramp or noise
+MIN_STEP_H  = 0.03    # m  — below = ramp or noise (actual measured inter-plane spacing ~0.04 m)
 MAX_STEP_H  = 0.25    # m  — Go2 maximum obstacle height
 MIN_TREAD_D = 0.12    # m  — minimum tread depth
-MIN_WIDTH   = 0.70    # m  — Go2 body 354 mm + safety margin
+MIN_WIDTH   = 0.45    # m  — Go2 body 354 mm; 60 cm stairs need margin below 0.70
 MAX_SLOPE   = 45.0    # deg
 MIN_STEPS   = 2       # need at least 2 treads to confirm staircase
 MIN_CONF    = 0.50    # confidence threshold for publishing

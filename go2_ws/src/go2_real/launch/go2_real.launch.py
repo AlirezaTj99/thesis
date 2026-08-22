@@ -1,5 +1,6 @@
 import os
 import subprocess
+import yaml
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
@@ -15,10 +16,19 @@ def generate_launch_description():
     nav2_bringup_dir    = get_package_share_directory('nav2_bringup')
 
     urdf_xacro  = os.path.join(go2_description_dir, 'urdf', 'go2_real.urdf.xacro')
-    nav2_params = os.path.join(go2_real_dir, 'params', 'go2_nav2_real_params.yaml')
-    rviz_config = os.path.join(go2_real_dir, 'rviz', 'go2_nav2_real.rviz')
+    nav2_params          = os.path.join(go2_real_dir, 'params', 'go2_nav2_real_params.yaml')
+    rtab_params          = os.path.join(go2_real_dir, 'params', 'go2_rtabmap_params.yaml')
+    rtab_loc_params      = os.path.join(go2_real_dir, 'params', 'go2_rtabmap_localization_params.yaml')
+    icp_odom_params      = os.path.join(go2_real_dir, 'params', 'go2_icp_odom_params.yaml')
+    rviz_config     = os.path.join(go2_real_dir, 'rviz', 'go2_nav2_real.rviz')
 
     robot_description = subprocess.check_output(['xacro', urdf_xacro], text=True)
+
+    # Read desired_linear_vel from Nav2 params — used to set max repulsion velocity
+    with open(nav2_params) as f:
+        _params = yaml.safe_load(f)
+    _desired_linear_vel = _params['controller_server']['ros__parameters']['FollowPath']['desired_linear_vel']
+    _max_repulsion_vel  = round(1.2 * _desired_linear_vel, 4)
 
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
     autostart    = LaunchConfiguration('autostart',    default='true')
@@ -37,13 +47,39 @@ def generate_launch_description():
         }],
     )
 
-    # ── 2. Go2 Bridge (cmd_vel → sport API only) ────────────────────────────────
+    # ── 1b. utlidar_lidar alias TF ───────────────────────────────────────────────
+    # The robot SDK publishes /cloud_relay with frame_id='utlidar_lidar', but the
+    # URDF names the lidar frame 'laser_frame'. Publish an alias so RViz can
+    # render the 3D point cloud with Fixed Frame=map.
+    utlidar_lidar_tf = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='utlidar_lidar_tf',
+        output='screen',
+        arguments=['0.08', '0', '0.15', '0', '0', '0', 'base_link', 'utlidar_lidar'],
+    )
+
+    # ── 2. Go2 Bridge — relays odom/cloud and broadcasts odom→base_link TF ────
     # The Go2 already publishes odom→base_link TF and /utlidar/cloud_base
     # via its internal DDS. This node only forwards Nav2 velocity commands.
     go2_bridge = Node(
         package='go2_real',
         executable='go2_bridge.py',
         name='go2_bridge',
+        output='screen',
+        parameters=[{'use_sim_time': use_sim_time}],
+    )
+
+    # ── 2b. Body self-filter ──────────────────────────────────────────────────────
+    # Transforms each /cloud_relay point into base_link frame and removes any
+    # point that falls inside the robot's body bounding box (body + full leg reach
+    # during trot gait).  Publishes clean cloud to /cloud_filtered.
+    # Only the costmap subscribes to /cloud_filtered; SLAM/ICP/laserscan still
+    # use the full /cloud_relay so their quality is unaffected.
+    body_filter = Node(
+        package='go2_real',
+        executable='body_filter.py',
+        name='body_filter',
         output='screen',
         parameters=[{'use_sim_time': use_sim_time}],
     )
@@ -76,29 +112,108 @@ def generate_launch_description():
         }],
     )
 
-    # ── 4. Nav2 + SLAM (4 s delay — wait for TF from robot) ─────────────────────
+    # ── 4. ICP odometry — refines go2_bridge odom with scan-to-map ICP ─────────
+    # Same pipeline as mapping: /cloud_relay → icp_odometry → /icp_odom → rtabmap.
+    # Starts at 3 s so the local map accumulates before RTAB-Map wakes.
+    icp_odometry = TimerAction(
+        period=3.0,
+        actions=[
+            Node(
+                package='rtabmap_odom',
+                executable='icp_odometry',
+                name='icp_odometry',
+                output='screen',
+                parameters=[
+                    icp_odom_params,
+                    {'use_sim_time': use_sim_time},
+                ],
+                remappings=[
+                    ('scan_cloud', '/cloud_relay'),
+                    ('odom',       '/icp_odom'),
+                ],
+            )
+        ],
+    )
+
+    # ── 4b. RTAB-Map localization — loads rtabmap.db, publishes map→odom TF ───
+    # Mem/IncrementalMemory=false: map is read-only (localization only).
+    # In localization mode RTAB-Map loads the full DB at startup and publishes
+    # the complete 2D occupancy grid projection to /map (TRANSIENT_LOCAL QoS),
+    # so no separate map_server is needed.
+    # Starts at 5 s (2 s after icp_odometry has cloud data to work with).
+    rtabmap_localization = TimerAction(
+        period=5.0,
+        actions=[
+            Node(
+                package='rtabmap_slam',
+                executable='rtabmap',
+                name='rtabmap',
+                output='screen',
+                parameters=[
+                    rtab_params,       # base params (Mem/IncrementalMemory: "true" by default)
+                    rtab_loc_params,   # override: Mem/IncrementalMemory=false, InitWMWithAllNodes=true
+                    {'use_sim_time': use_sim_time},
+                ],
+                remappings=[
+                    ('scan_cloud', '/cloud_relay'),
+                    ('odom',       '/icp_odom'),
+                    ('map',        '/rtabmap/grid_map_raw'),  # RTAB-Map publishes 'map' (relative) → intercept before Nav2
+                ],
+            )
+        ],
+    )
+
+    # ── 4c. Height-filtered 2D map publisher ─────────────────────────────────────
+    # Subscribes to /rtabmap/grid_map_raw (RTAB-Map's full projection) and
+    # /cloud_map (3D obstacle voxels).  Removes obstacle cells that have no
+    # voxel in [floor_z + min_h, floor_z + max_h] — eliminates ground noise.
+    # Publishes clean /map with TRANSIENT_LOCAL QoS for Nav2.
+    height_filter_map = TimerAction(
+        period=6.0,
+        actions=[
+            Node(
+                package='go2_real',
+                executable='height_filter_map.py',
+                name='height_filter_map',
+                output='screen',
+                parameters=[{
+                    'use_sim_time': use_sim_time,
+                    'floor_z': 0.0,   # floor Z in map frame (update per floor later)
+                    'min_h':   0.20,  # ignore voxels below 20 cm above floor
+                    'max_h':   2.00,  # ignore voxels above 2 m above floor
+                }],
+            )
+        ],
+    )
+
+    # ── 5. Nav2 navigation stack (15 s delay) ───────────────────────────────────
+    # Delayed to 15 s: RTAB-Map loads db at 5 s and needs several seconds to
+    # finish loading all nodes, publish the full /map occupancy grid, and produce
+    # a valid map→odom TF before Nav2 costmaps try to configure.
     nav2_bringup = TimerAction(
-        period=4.0,
+        period=15.0,
         actions=[
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(
-                    os.path.join(nav2_bringup_dir, 'launch', 'bringup_launch.py')
+                    os.path.join(nav2_bringup_dir, 'launch', 'navigation_launch.py')
                 ),
                 launch_arguments={
-                    'slam':        'True',
-                    'map':         '',
                     'use_sim_time': use_sim_time,
                     'params_file':  nav2_params,
                     'autostart':    autostart,
                     'default_bt_xml_filename':
-                        '/opt/ros/foxy/share/nav2_bt_navigator/behavior_trees/'
-                        'navigate_w_replanning_time.xml',
+                        '/home/alireza/thesis1/navigation_go2/go2_ws/src/go2_real/params/'
+                        'navigate_persistent.xml',
+                    'map_subscribe_transient_local': 'true',
                 }.items(),
             )
         ],
     )
 
-    # ── 5. Obstacle Repulsion (5 s delay — wait for /scan to be available) ─────────
+    # ── 6. Obstacle Repulsion (5 s delay — wait for /scan to be available) ─────────
+    # max_vel is set to 1.2 × Nav2 desired_linear_vel (read from params YAML above).
+    # Output is remapped to /repulsion_vel_raw so repulsion_gate can zero it during
+    # stair climbing without modifying obstacle_repulsion.py.
     obstacle_repulsion = TimerAction(
         period=5.0,
         actions=[
@@ -107,12 +222,60 @@ def generate_launch_description():
                 executable='obstacle_repulsion.py',
                 name='obstacle_repulsion',
                 output='screen',
+                parameters=[{
+                    'use_sim_time': use_sim_time,
+                    'max_vel': _max_repulsion_vel,
+                    'deadband_vel': 0.1,
+                }],
+                remappings=[('/repulsion_vel', '/repulsion_vel_raw')],
+            )
+        ],
+    )
+
+    # ── 6b. Repulsion Gate — zeros repulsion while stair controller is active ────
+    repulsion_gate = Node(
+        package='go2_real',
+        executable='repulsion_gate.py',
+        name='repulsion_gate',
+        output='screen',
+        parameters=[{'use_sim_time': use_sim_time}],
+    )
+
+    # ── 6b-2. Map Repulsion (10 s delay — needs Nav2 global costmap + TF ready) ─────
+    # Uses same max_vel as obstacle_repulsion; other params match obstacle_repulsion defaults.
+    map_repulsion = TimerAction(
+        period=10.0,
+        actions=[
+            Node(
+                package='go2_real',
+                executable='map_repulsion.py',
+                name='map_repulsion',
+                output='screen',
+                parameters=[{
+                    'use_sim_time': use_sim_time,
+                    'max_vel': _max_repulsion_vel,
+                    'deadband_vel': 0.1,
+                }],
+            )
+        ],
+    )
+
+    # ── 6c. Velocity Combiner (3 s delay — needs go2_bridge + repulsion_gate up) ─
+    velocity_combiner = TimerAction(
+        period=3.0,
+        actions=[
+            Node(
+                package='go2_real',
+                executable='velocity_combiner.py',
+                name='velocity_combiner',
+                output='screen',
                 parameters=[{'use_sim_time': use_sim_time}],
             )
         ],
     )
 
-    # ── 6. Visualization (goal circle + path arrows) ─────────────────────────────
+
+    # ── 7. Visualization (goal circle + path arrows) ─────────────────────────────
     go2_viz = Node(
         package='go2_gazebo',
         executable='go2_viz.py',
@@ -121,7 +284,9 @@ def generate_launch_description():
         parameters=[{'use_sim_time': use_sim_time}],
     )
 
-    # ── 7. RViz2 (5 s delay) ─────────────────────────────────────────────────────
+    # ── 8. RViz2 (5 s delay) ─────────────────────────────────────────────────────
+    # LIBGL_ALWAYS_SOFTWARE=1 avoids GL vertex-buffer crashes from exhausted
+    # hardware OpenGL contexts left by prior sessions.
     rviz2 = TimerAction(
         period=5.0,
         actions=[
@@ -132,16 +297,25 @@ def generate_launch_description():
                 output='screen',
                 arguments=['-d', rviz_config],
                 parameters=[{'use_sim_time': use_sim_time}],
+                additional_env={'LIBGL_ALWAYS_SOFTWARE': '1'},
             )
         ],
     )
 
     return LaunchDescription([
         robot_state_publisher,
+        utlidar_lidar_tf,
         go2_bridge,
+        body_filter,
         pointcloud_to_laserscan,
+        icp_odometry,
+        rtabmap_localization,
+        height_filter_map,
         nav2_bringup,
         obstacle_repulsion,
+        repulsion_gate,
+        map_repulsion,
+        velocity_combiner,
         go2_viz,
         rviz2,
     ])
