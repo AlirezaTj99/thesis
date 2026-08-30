@@ -135,6 +135,22 @@ def generate_launch_description():
         ],
     )
 
+    # ── 4a. Auto initial pose — injects /initialpose from robot_initial_pose.yaml ─
+    # Fires 9 s after launch (RTAB-Map starts at 5 s and needs ~4 s to load the DB).
+    # Tells RTAB-Map exactly where the robot starts so it finds the matching nodes
+    # immediately instead of waiting for a lucky loop closure.
+    auto_initial_pose = TimerAction(
+        period=9.0,
+        actions=[
+            Node(
+                package='go2_real',
+                executable='auto_initial_pose.py',
+                name='auto_initial_pose',
+                output='screen',
+            )
+        ],
+    )
+
     # ── 4b. RTAB-Map localization — loads rtabmap.db, publishes map→odom TF ───
     # Mem/IncrementalMemory=false: map is read-only (localization only).
     # In localization mode RTAB-Map loads the full DB at startup and publishes
@@ -275,6 +291,34 @@ def generate_launch_description():
     )
 
 
+    # ── 6d. Stair Perception (5 s delay — needs /cloud_relay from go2_bridge) ────
+    stair_perception = TimerAction(
+        period=5.0,
+        actions=[
+            Node(
+                package='go2_real',
+                executable='stair_perception.py',
+                name='stair_perception',
+                output='screen',
+                parameters=[{'use_sim_time': use_sim_time}],
+            )
+        ],
+    )
+
+    # ── 6e. Stair Controller (3 s delay — needs /odom and /imu/data) ─────────────
+    stair_controller = TimerAction(
+        period=3.0,
+        actions=[
+            Node(
+                package='go2_real',
+                executable='stair_controller.py',
+                name='stair_controller',
+                output='screen',
+                parameters=[{'use_sim_time': use_sim_time}],
+            )
+        ],
+    )
+
     # ── 7. Visualization (goal circle + path arrows) ─────────────────────────────
     go2_viz = Node(
         package='go2_gazebo',
@@ -309,6 +353,7 @@ def generate_launch_description():
         body_filter,
         pointcloud_to_laserscan,
         icp_odometry,
+        auto_initial_pose,
         rtabmap_localization,
         height_filter_map,
         nav2_bringup,
@@ -316,6 +361,8 @@ def generate_launch_description():
         repulsion_gate,
         map_repulsion,
         velocity_combiner,
+        stair_perception,
+        stair_controller,
         go2_viz,
         rviz2,
     ])

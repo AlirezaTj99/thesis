@@ -28,6 +28,10 @@ install(PROGRAMS
   scripts/height_filter_map.py
   scripts/go2_panel.py
   scripts/body_filter.py
+  scripts/stair_controller.py
+  scripts/stair_perception.py
+  scripts/map_repulsion.py
+  scripts/auto_initial_pose.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

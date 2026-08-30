@@ -1,42 +1,45 @@
 #!/usr/bin/env python3
 """
-stair_controller.py — State machine for stair approach, alignment, and climbing.
+stair_controller.py — Straight-line stair follower.
 
-                IDLE
-                 │  activate=True
-                 ▼
-              APPROACH  ← creep forward until stair confirmed + close enough
-                 │  dist < APPROACH_DIST
-                 ▼
-               ALIGN    ← correct yaw and lateral offset vs stair axis
-                 │  yaw_err < tol  AND  lat_err < tol
-                 ▼
-              CLIMBING  ← forward at CLIMB_VEL, hold centerline
-                 │  stair gone > STAIR_LOST_TIMEOUT  OR  timeout
-                 ▼
-              LANDING   ← stop, brief settle, signal done
-                 │
-                 ▼
-                IDLE
+go2_goal.py delivers the robot to the stair entry waypoint via Nav2 (with an
+approach alignment point), then activates this node.  From that point this node
+rotates in place to align with the stair bearing, then drives straight to the
+stair exit waypoint using odometry-based cross-track correction.
 
-Activation:    /stair_controller/activate  (Bool)
-               go2_control.py publishes True/False here.
+                 IDLE
+                  │  activate=True + target received
+                  ▼
+              ALIGNING  ← rotate in place until yaw matches bearing (±ALIGN_TOL)
+                  │  aligned
+                  ▼
+              CLIMBING  ← forward at CLIMB_VEL, gravity toward centre-line
+                  │  arrived (remaining ≤ ARRIVAL_DIST)  OR  pitch flat after peak
+                  ▼
+              LANDING   ← stop, settle, publish done
+                  │
+                  ▼
+                 IDLE
+
+Activation sequence (from go2_goal.py):
+  1. Publish /stair_controller/target  (String JSON)  — bearing + line length
+  2. Publish /stair_controller/activate True
 
 Subscribes:
-    /stair_controller/activate  (Bool)
-    /stair/detected             (Bool)
-    /stair/geometry             (String — JSON)
+    /stair_controller/activate  (std_msgs/Bool)
+    /stair_controller/target    (std_msgs/String)  JSON: {bearing_rad, line_length_m}
     /odom                       (nav_msgs/Odometry)
     /imu/data                   (sensor_msgs/Imu)
 
 Publishes:
-    /api/sport/request_wifi     (unitree_api/Request)  — direct robot sport API
-    /stair_controller/state     (std_msgs/String)
-    /stair_controller/done      (std_msgs/Bool)        — pulses True on completion/abort
+    /stair_controller/state     (std_msgs/String)  — repulsion_gate uses this
+    /stair_controller/done      (std_msgs/Bool)    — pulses True when finished
+    /api/sport/request_wifi     (unitree_api/Request)
 """
 import json
 import math
 import time
+
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Bool, String
@@ -44,31 +47,34 @@ from nav_msgs.msg import Odometry
 from sensor_msgs.msg import Imu
 from unitree_api.msg import Request
 
-# ── Motion parameters ─────────────────────────────────────────────────────────
-APPROACH_VEL       = 0.18   # m/s  — forward speed while searching
-APPROACH_DIST      = 0.70   # m    — stop approach when first step is this close
-APPROACH_TIMEOUT   = 30.0   # s    — abort if no confirmed stair found
-ALIGN_YAW_TOL      = 12.0   # deg — acceptable yaw error (measurement noise ~±30° so keep generous)
-ALIGN_LAT_TOL      = 0.20   # m    — acceptable lateral offset to stair centre
-ALIGN_ROT_VEL      = 0.40   # rad/s
-ALIGN_LAT_VEL      = 0.08   # m/s
-ALIGN_TIMEOUT      = 40.0   # s
-CLIMB_VEL          = 0.35   # m/s  — fast enough for trot gait to clear step risers
-CLIMB_TIMEOUT      = 45.0   # s    — hard abort
-STAIR_LOST_TIMEOUT = 6.0    # s    — fallback: stair gone this long = reached the top
-CLIMB_PITCH_HIGH   = 6.0    # deg  — pitch above this confirms we are climbing
-CLIMB_PITCH_FLAT   = 3.0    # deg  — pitch below this (after peaking) = back on flat ground
-DETECT_CONFIRM     = 3      # consecutive positive detections before trusting
-DIR_EMA_ALPHA      = 0.15   # EMA smoothing for direction_deg (low α = more noise rejection)
+# ── Motion ────────────────────────────────────────────────────────────────────
+CLIMB_VEL       = 0.33    # m/s — forward speed on stairs (+30% from 0.25)
 
-# ── Safety limits ─────────────────────────────────────────────────────────────
-MAX_PITCH_DEG      = 50.0
-MAX_ROLL_DEG       = 35.0
+# Yaw alignment before climbing
+ALIGN_TOL       = 0.08    # rad (~5°) — yaw error below this → start climbing
+ALIGN_KP        = 1.5     # proportional gain for in-place rotation
+ALIGN_MAX_YAW   = 0.6     # rad/s — clamp on alignment rotation speed
+ALIGN_TIMEOUT   = 5.0     # s — abort if can't align (go2_goal pre-aligns, this is a safety net)
 
-# ── Go2 sport API ─────────────────────────────────────────────────────────────
-API_STOP           = 1003
-API_STAND          = 1006   # RecoveryStand — ensure robot is upright before climb
-API_MOVE           = 1008
+# Cross-track gravity (lateral correction)
+MAX_GRAVITY_VEL = 0.35    # m/s lateral — maximum correction velocity
+MIN_GRAVITY_VEL = 0.05    # m/s lateral — high-pass cutoff; below this = no correction
+GRAVITY_RANGE   = 0.20    # m  — gravity scales linearly from 0 at centre to MAX at this offset
+
+# Completion
+ARRIVAL_DIST    = 0.30    # m remaining on the line → declare done
+CLIMB_TIMEOUT   = 90.0    # s — hard abort
+
+# IMU-based secondary completion (pitch returns flat after climbing)
+CLIMB_PITCH_HIGH = 6.0    # deg — pitch above this confirms we are climbing
+CLIMB_PITCH_FLAT = 3.0    # deg — pitch below this AFTER peak = crested stairs
+
+# Safety
+MAX_PITCH_DEG   = 50.0
+MAX_ROLL_DEG    = 35.0
+
+API_MOVE = 1008
+API_STOP = 1003
 
 
 class StairController(Node):
@@ -77,84 +83,73 @@ class StairController(Node):
         super().__init__('stair_controller')
 
         self.create_subscription(Bool,     '/stair_controller/activate', self._activate_cb, 10)
-        self.create_subscription(Bool,     '/stair/detected',            self._detected_cb,  10)
-        self.create_subscription(String,   '/stair/geometry',            self._geometry_cb,  10)
-        self.create_subscription(Odometry, '/odom',                      self._odom_cb,      10)
-        self.create_subscription(Imu,      '/imu/data',                  self._imu_cb,       10)
+        self.create_subscription(String,   '/stair_controller/target',   self._target_cb,   10)
+        self.create_subscription(Odometry, '/odom',                       self._odom_cb,     10)
+        self.create_subscription(Imu,      '/imu/data',                   self._imu_cb,      10)
 
+        self._state_pub = self.create_publisher(String,  '/stair_controller/state', 10)
+        self._done_pub  = self.create_publisher(Bool,    '/stair_controller/done',  10)
         self._cmd_pub   = self.create_publisher(Request, '/api/sport/request_wifi', 10)
-        self._state_pub = self.create_publisher(String,  '/stair_controller/state',  10)
-        self._done_pub  = self.create_publisher(Bool,    '/stair_controller/done',   10)
 
-        self._state        = 'IDLE'
-        self._geo          = None
-        self._detect_count = 0
+        self._state       = 'IDLE'
+        self._state_enter = time.time()
+
+        # Target stair line — set via /stair_controller/target before activation
+        self._bearing  = None   # radians — travel direction in odom frame
+        self._line_len = None   # metres  — total length from entry to exit
+
+        # Odometry: updated at ~50 Hz by go2_bridge
+        self._odom_x   = 0.0
+        self._odom_y   = 0.0
+        self._odom_yaw = 0.0
+
+        # Recorded at CLIMBING start
+        self._climb_start_x = None
+        self._climb_start_y = None
+
+        # IMU
         self._pitch_deg    = 0.0
         self._roll_deg     = 0.0
-        self._state_enter  = time.time()
-        self._stair_lost_t = None   # time when stair detection last dropped to zero
-        self._pitch_peaked     = False  # True once pitch exceeded CLIMB_PITCH_HIGH during climb
-        self._dir_ema          = 0.0    # EMA-smoothed direction_deg for yaw alignment
-        self._dir_ema_init     = False  # True after first valid direction reading
-        self._yaw_ok_count     = 0      # consecutive yaw-OK readings needed before lateral phase
+        self._yaw_rad      = 0.0
+        self._pitch_peaked = False
 
-        self.create_timer(0.1, self._loop)
+        self.create_timer(0.1, self._loop)   # 10 Hz control loop
         self.get_logger().info('StairController ready — IDLE')
 
-    # ── Subscription callbacks ────────────────────────────────────────────────
+    # ── Callbacks ──────────────────────────────────────────────────────────────
+
+    def _target_cb(self, msg: String):
+        try:
+            data = json.loads(msg.data)
+            self._bearing  = float(data['bearing_rad'])
+            self._line_len = float(data['line_length_m'])
+            self.get_logger().info(
+                f'Target set: bearing={math.degrees(self._bearing):.1f}°  '
+                f'length={self._line_len:.2f} m'
+            )
+        except Exception as e:
+            self.get_logger().error(f'Bad target message: {e}')
 
     def _activate_cb(self, msg: Bool):
-        if msg.data and self._state == 'IDLE':
-            self.get_logger().info('Activated — RecoveryStand + BalanceStand then APPROACH')
-            self._send_api(API_STAND)    # RecoveryStand — get up from any posture
-            time.sleep(2.0)
-            self._send_api(1002)         # BalanceStand — unlock velocity control mode
-            time.sleep(0.5)
-            self._transition('APPROACH')
-        elif not msg.data and self._state != 'IDLE':
-            self.get_logger().info('Deactivated by operator')
-            self._abort('manual_stop')
-
-    def _detected_cb(self, msg: Bool):
         if msg.data:
-            self._detect_count = min(self._detect_count + 1, DETECT_CONFIRM + 5)
-            self._stair_lost_t = None
+            if self._state != 'IDLE':
+                return
+            if self._bearing is None or self._line_len is None:
+                self.get_logger().error('Activated but /stair_controller/target not received — ignoring')
+                return
+            self._begin_climb()
         else:
-            if self._detect_count > 0:
-                self._detect_count -= 1
-            if self._detect_count == 0 and self._stair_lost_t is None:
-                self._stair_lost_t = time.time()
-
-    def _geometry_cb(self, msg: String):
-        try:
-            self._geo = json.loads(msg.data)
-            # Use bearing to first step (atan2(y, x)) as yaw reference.
-            # When stair is directly ahead: x>0, y≈0 → bearing≈0°.
-            # Positive bearing → step is LEFT → positive vyaw (CCW) turns left toward it.
-            # Negative bearing → step is RIGHT → negative vyaw (CW) turns right toward it.
-            fx = self._geo.get('first_step_x_m', 1.0)
-            fy = self._geo.get('first_step_y_m', 0.0)
-            d  = math.degrees(math.atan2(fy, fx))
-            if not self._dir_ema_init:
-                self._dir_ema      = d
-                self._dir_ema_init = True
-            else:
-                diff = ((d - self._dir_ema + 180.0) % 360.0) - 180.0
-                if abs(diff) > 30.0:   # skip large jumps — bearing should be stable
-                    return
-                self._dir_ema += DIR_EMA_ALPHA * diff
-                if self._dir_ema > 180.0:
-                    self._dir_ema -= 360.0
-                elif self._dir_ema < -180.0:
-                    self._dir_ema += 360.0
-        except Exception:
-            pass
+            if self._state != 'IDLE':
+                self.get_logger().warn('Stair controller deactivated externally')
+                self._finish()
 
     def _odom_cb(self, msg: Odometry):
+        self._odom_x = msg.pose.pose.position.x
+        self._odom_y = msg.pose.pose.position.y
         q = msg.pose.pose.orientation
         siny = 2.0 * (q.w * q.z + q.x * q.y)
         cosy = 1.0 - 2.0 * (q.y * q.y + q.z * q.z)
-        self._yaw = math.atan2(siny, cosy)
+        self._odom_yaw = math.atan2(siny, cosy)
 
     def _imu_cb(self, msg: Imu):
         q = msg.orientation
@@ -163,207 +158,184 @@ class StairController(Node):
         self._roll_deg  = math.degrees(math.atan2(sinr, cosr))
         sinp = 2.0 * (q.w * q.y - q.z * q.x)
         self._pitch_deg = math.degrees(math.asin(max(-1.0, min(1.0, sinp))))
+        siny = 2.0 * (q.w * q.z + q.x * q.y)
+        cosy = 1.0 - 2.0 * (q.y * q.y + q.z * q.z)
+        self._yaw_rad   = math.atan2(siny, cosy)
 
-    # ── Main 10 Hz control loop ───────────────────────────────────────────────
+    # ── Main control loop ──────────────────────────────────────────────────────
 
     def _loop(self):
+        self._state_pub.publish(String(data=self._state))
+
         if self._state == 'IDLE':
             return
-
-        self._state_pub.publish(String(data=self._state))
 
         if not self._safety_ok():
             return
 
         elapsed = time.time() - self._state_enter
 
-        if   self._state == 'APPROACH':  self._do_approach(elapsed)
-        elif self._state == 'ALIGN':     self._do_align(elapsed)
-        elif self._state == 'CLIMBING':  self._do_climb(elapsed)
-        elif self._state == 'LANDING':   self._do_landing()
+        if self._state == 'ALIGNING':
+            self._do_align(elapsed)
+        elif self._state == 'CLIMBING':
+            self._do_climb(elapsed)
+        elif self._state == 'LANDING':
+            self._do_landing()
 
-    # ── State behaviours ──────────────────────────────────────────────────────
-
-    def _do_approach(self, elapsed):
-        if elapsed > APPROACH_TIMEOUT:
-            self.get_logger().warn('Approach timeout — no confirmed stair found')
-            self._abort('approach_timeout')
-            return
-
-        stair_confirmed = self._detect_count >= DETECT_CONFIRM and self._geo is not None
-
-        if not stair_confirmed:
-            self._move(0.2, 0.0, 0.0)   # creep forward
-            return
-
-        dist = self._geo.get('first_step_x_m', 999.0)
-        lat  = self._geo.get('first_step_y_m', 0.0)
-        vy   = self._clamp(-lat * 0.15, -ALIGN_LAT_VEL, ALIGN_LAT_VEL)
-
-        if dist <= APPROACH_DIST:
-            self._stop()
-            self.get_logger().info(f'Stair at {dist:.2f} m — ALIGN')
-            self._transition('ALIGN')
-            return
-
-        self._move(APPROACH_VEL, vy, 0.0)
+    def _begin_climb(self):
+        self._pitch_peaked = False
+        self._transition('ALIGNING')
+        self.get_logger().info(
+            f'ALIGNING: current_yaw={math.degrees(self._odom_yaw):.1f}°  '
+            f'target_bearing={math.degrees(self._bearing):.1f}°'
+        )
 
     def _do_align(self, elapsed):
         if elapsed > ALIGN_TIMEOUT:
-            self.get_logger().warn('Align timeout')
-            self._abort('align_timeout')
+            self.get_logger().warn('Align timeout — proceeding to climb anyway')
+            self._start_climbing()
             return
 
-        if self._geo is None:
-            self._stop()
-            return
-
-        # ── Phase 1: yaw — rotate until first step is directly ahead (bearing→0°) ─
-        # _dir_ema holds EMA of atan2(first_step_y, first_step_x).
-        # Target = 0°: step straight ahead.  Positive = step LEFT → turn LEFT (positive vyaw).
-        yaw_err = self._dir_ema   # error from 0°
-        yaw_ok  = abs(yaw_err) < ALIGN_YAW_TOL
-        if not yaw_ok:
-            self._yaw_ok_count = 0
-            vyaw = self._clamp(math.radians(yaw_err) * 2.0, -ALIGN_ROT_VEL, ALIGN_ROT_VEL)
-            self._move(0.0, 0.0, vyaw)
-            self.get_logger().info(
-                f'ALIGN yaw  bearing_ema={self._dir_ema:.1f}°  err={yaw_err:.1f}°  vyaw={vyaw:.3f}',
-                throttle_duration_sec=2.0,
-            )
-            return
-        self._yaw_ok_count += 1
-        if self._yaw_ok_count < 5:
-            self._stop()
-            self.get_logger().info(
-                f'ALIGN yaw OK {self._yaw_ok_count}/5  bearing_ema={self._dir_ema:.1f}°',
-                throttle_duration_sec=0.5,
-            )
-            return
-
-        # ── Phase 2: lateral centering ──────────────────────────────────────────
-        lat    = self._geo.get('first_step_y_m', 0.0)
-        lat_ok = abs(lat) < ALIGN_LAT_TOL
+        err = (self._bearing - self._odom_yaw + math.pi) % (2 * math.pi) - math.pi
         self.get_logger().info(
-            f'ALIGN lat  lat={lat:.3f}m  lat_ok={lat_ok}  bearing_ema={self._dir_ema:.1f}° (yaw OK)',
-            throttle_duration_sec=2.0,
+            f'ALIGNING  yaw={math.degrees(self._odom_yaw):.1f}°  '
+            f'target={math.degrees(self._bearing):.1f}°  err={math.degrees(err):.1f}°',
+            throttle_duration_sec=1.0,
         )
 
-        if lat_ok:
+        if abs(err) < ALIGN_TOL:
+            self.get_logger().info(
+                f'Aligned (err={math.degrees(err):.1f}°) — starting climb'
+            )
             self._stop()
-            time.sleep(0.4)
-            self.get_logger().info('Aligned (yaw + lateral OK) — CLIMBING')
-            self._transition('CLIMBING')
+            self._start_climbing()
             return
 
-        vy = self._clamp(-lat * 0.2, -ALIGN_LAT_VEL, ALIGN_LAT_VEL)
-        self._move(0.0, vy, 0.0)
+        vyaw = max(-ALIGN_MAX_YAW, min(ALIGN_MAX_YAW, ALIGN_KP * err))
+        self._move(0.0, 0.0, vyaw)
+
+    def _start_climbing(self):
+        self._climb_start_x = self._odom_x
+        self._climb_start_y = self._odom_y
+        self._transition('CLIMBING')
+        self.get_logger().info(
+            f'CLIMBING: start=({self._climb_start_x:.2f}, {self._climb_start_y:.2f})  '
+            f'bearing={math.degrees(self._bearing):.1f}°  length={self._line_len:.2f} m'
+        )
 
     def _do_climb(self, elapsed):
         if elapsed > CLIMB_TIMEOUT:
-            self.get_logger().warn('Climb timeout — forcing LANDING')
+            self.get_logger().warn('Climb timeout — stopping')
             self._stop()
             self._transition('LANDING')
             return
 
-        # Track whether pitch has peaked (confirms the robot was actually climbing).
+        # ── Progress along the stair line (odom frame) ───────────────────────
+        dx = self._odom_x - self._climb_start_x
+        dy = self._odom_y - self._climb_start_y
+        cb = math.cos(self._bearing)
+        sb = math.sin(self._bearing)
+
+        forward_progress = dx * cb + dy * sb          # metres along stair direction
+        cross_track      = dx * (-sb) + dy * cb       # metres perpendicular (+ve = left of line)
+        remaining        = self._line_len - forward_progress
+
+        # ── IMU pitch tracking ────────────────────────────────────────────────
         if abs(self._pitch_deg) > CLIMB_PITCH_HIGH:
             self._pitch_peaked = True
 
-        # Primary top-detection: pitch returns to flat after having peaked.
-        # This fires the moment the robot crests the stairs onto level ground,
-        # without waiting for the stair detection timer.
-        if self._pitch_peaked and abs(self._pitch_deg) < CLIMB_PITCH_FLAT and elapsed > 3.0:
+        # ── Completion checks ─────────────────────────────────────────────────
+        if remaining <= ARRIVAL_DIST:
             self.get_logger().info(
-                f'Pitch flat (pitch={self._pitch_deg:.1f}°) after climbing — reached top, LANDING'
+                f'Arrived at stair exit (remaining={remaining:.2f} m) — LANDING'
             )
             self._stop()
             self._transition('LANDING')
             return
 
-        # Fallback: stair detection gone long enough (handles gentle slopes where pitch stays low).
-        # Only applies after pitch has peaked — prevents false LANDING from LiDAR dead zone
-        # oscillations while the robot is still at the base of the stair.
-        stair_gone_long_enough = (
-            self._pitch_peaked and
-            self._stair_lost_t is not None and
-            time.time() - self._stair_lost_t > STAIR_LOST_TIMEOUT and
-            elapsed > 3.0
-        )
-        if stair_gone_long_enough:
-            self.get_logger().info('Stair no longer visible — reached top, LANDING')
+        if self._pitch_peaked and abs(self._pitch_deg) < CLIMB_PITCH_FLAT and elapsed > 3.0:
+            self.get_logger().info(
+                f'Pitch flat after peak ({self._pitch_deg:.1f}°) — crested stairs, LANDING'
+            )
             self._stop()
             self._transition('LANDING')
             return
 
+        # ── Cross-track gravity correction ────────────────────────────────────
+        # Velocity scales linearly from 0 at centre to MAX_GRAVITY_VEL at GRAVITY_RANGE.
+        # High-pass filter: corrections below MIN_GRAVITY_VEL are suppressed.
+        gravity_raw = min(abs(cross_track) / GRAVITY_RANGE * MAX_GRAVITY_VEL, MAX_GRAVITY_VEL)
+        if gravity_raw < MIN_GRAVITY_VEL:
+            gravity_raw = 0.0
+        # Positive cross_track = robot left of line → pull right (negative vy in body frame)
+        vy = -math.copysign(gravity_raw, cross_track)
+
         self.get_logger().info(
-            f'CLIMBING  pitch={self._pitch_deg:.1f}°  peaked={self._pitch_peaked}',
-            throttle_duration_sec=2.0,
+            f'CLIMBING  fwd={forward_progress:.2f}m  remain={remaining:.2f}m  '
+            f'xtrack={cross_track:+.3f}m  vy={vy:+.3f}  pitch={self._pitch_deg:.1f}°  '
+            f'peaked={self._pitch_peaked}',
+            throttle_duration_sec=0.5,
         )
-        lat = self._geo.get('first_step_y_m', 0.0) if self._geo else 0.0
-        vy  = self._clamp(-lat * 0.12, -ALIGN_LAT_VEL, ALIGN_LAT_VEL)
         self._move(CLIMB_VEL, vy, 0.0)
 
     def _do_landing(self):
         self._stop()
-        time.sleep(0.8)
-        self.get_logger().info('Climb complete — returning control to operator')
+        time.sleep(0.5)
+        self.get_logger().info('Stair climb complete')
         self._done_pub.publish(Bool(data=True))
+        self._reset()
         self._transition('IDLE')
 
-    # ── Safety ────────────────────────────────────────────────────────────────
+    # ── Safety ─────────────────────────────────────────────────────────────────
 
     def _safety_ok(self):
         if abs(self._pitch_deg) > MAX_PITCH_DEG:
             self.get_logger().error(f'SAFETY STOP: pitch={self._pitch_deg:.1f}°')
-            self._abort('pitch_limit')
+            self._stop()
+            self._done_pub.publish(Bool(data=True))
+            self._reset()
+            self._transition('IDLE')
             return False
         if abs(self._roll_deg) > MAX_ROLL_DEG:
             self.get_logger().error(f'SAFETY STOP: roll={self._roll_deg:.1f}°')
-            self._abort('roll_limit')
+            self._stop()
+            self._done_pub.publish(Bool(data=True))
+            self._reset()
+            self._transition('IDLE')
             return False
         return True
 
-    # ── Helpers ───────────────────────────────────────────────────────────────
+    # ── Helpers ────────────────────────────────────────────────────────────────
 
-    def _send_api(self, api_id, param=''):
-        req = Request()
-        req.header.identity.api_id = api_id
-        req.parameter = param
-        self._cmd_pub.publish(req)
+    def _finish(self):
+        self._stop()
+        self._done_pub.publish(Bool(data=True))
+        self._reset()
+        self._transition('IDLE')
 
-    def _move(self, vx, vy, vz):
-        self._send_api(API_MOVE, json.dumps({
-            'x': round(vx, 4), 'y': round(vy, 4), 'z': round(vz, 4),
-        }))
-
-    def _stop(self):
-        self._send_api(API_STOP)
+    def _reset(self):
+        self._bearing       = None
+        self._line_len      = None
+        self._climb_start_x = None
+        self._climb_start_y = None
+        self._pitch_peaked  = False
 
     def _transition(self, new_state):
         self.get_logger().info(f'  {self._state} → {new_state}')
         self._state       = new_state
         self._state_enter = time.time()
         self._state_pub.publish(String(data=new_state))
-        if new_state == 'CLIMBING':
-            self._pitch_peaked = False
-        if new_state == 'APPROACH':
-            self._dir_ema      = 0.0
-            self._dir_ema_init = False
-            self._yaw_ok_count = 0
-            self._detect_count = 0
-            self._stair_lost_t = None
-            self._geo          = None
 
-    def _abort(self, reason):
-        self.get_logger().error(f'Abort ({reason})')
-        self._stop()
-        self._done_pub.publish(Bool(data=True))
-        self._transition('IDLE')
+    def _move(self, vx: float, vy: float, vyaw: float):
+        req = Request()
+        req.header.identity.api_id = API_MOVE
+        req.parameter = json.dumps({'x': round(vx, 4), 'y': round(vy, 4), 'z': round(vyaw, 4)})
+        self._cmd_pub.publish(req)
 
-    @staticmethod
-    def _clamp(v, lo, hi):
-        return max(lo, min(hi, v))
+    def _stop(self):
+        req = Request()
+        req.header.identity.api_id = API_STOP
+        self._cmd_pub.publish(req)
 
 
 def main():
